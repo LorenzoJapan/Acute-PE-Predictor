@@ -113,7 +113,11 @@
   .page{
     max-width:1180px;
     margin:0 auto;
-    padding:56px 24px 80px;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
   }
 
   /* ---------- Page header ---------- */
@@ -148,11 +152,11 @@
   }
 
   /* ---------- Stage / Device frame ---------- */
-  .stage{display:flex;justify-content:center;padding:8px 0 64px;}
+  .stage{display:flex;justify-content:center;}
   .device{
     position:relative;
-    width:390px;
-    height:844px;
+    width:428px;
+    height:926px;
     background:#000;
     border-radius:56px;
     padding:14px;
@@ -654,20 +658,27 @@
   }
   .page-foot a{color:var(--color-primary);}
 
-  @media (max-width:460px){
-    .device{width:100%;max-width:390px;height:82vh;min-height:700px;}
-    .page{padding:32px 14px 56px;}
+  /* On an actual phone-width viewport (iPhone 13 Pro Max at 428px CSS-wide,
+     and every current larger model), drop the desktop "mockup" bezel and
+     let the screen fill the real device edge-to-edge instead of floating
+     a smaller frame inside it. */
+  @media (max-width:500px){
+    .page{padding:0;min-height:100dvh;}
+    .device{
+      width:100%;
+      max-width:none;
+      height:100vh;
+      height:100dvh;
+      border-radius:0;
+      padding:0;
+      box-shadow:none;
+    }
+    .device-screen{border-radius:0;}
+    .notch{display:none;}
   }
 </style>
 
 <div class="page">
-
-  <header class="page-head">
-    <div class="mark">🫁</div>
-    <span class="eyebrow">iOS Clinical Decision Support · Prototype</span>
-    <h1>Acute PE Predictor</h1>
-    <p>A bedside pretest-probability workflow for suspected acute pulmonary embolism — built on the Wells clinical model (Wells et al., <em>Ann Intern Med</em> 1998) and the PEGeD D-dimer thresholds (Kearon et al., <em>NEJM</em> 2019).</p>
-  </header>
 
   <main class="stage">
     <div class="device">
@@ -895,10 +906,6 @@
       <div class="home-indicator" aria-hidden="true"></div>
     </div>
   </main>
-
-  <footer class="page-foot">
-    <p>Design prototype for interaction-design and workflow review. Not a certified medical device; verify against institutional protocol before any clinical use.</p>
-  </footer>
 
 </div>
 
