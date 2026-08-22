@@ -896,72 +896,8 @@
     </div>
   </main>
 
-  <!-- ============ DESIGN TOKENS DOCUMENTATION ============ -->
-  <section class="tokens-doc" aria-label="Design system reference">
-    <h2>Design tokens</h2>
-    <p>The palette, type, and spacing values driving the screens above — muted teal for trust and focus, warm charcoal ink instead of pure black, and a soft/solid pairing on every semantic color so status pills always clear 4.5:1 contrast.</p>
-
-    <div class="doc-grid">
-      <div class="doc-card">
-        <h3>Core palette</h3>
-        <div class="swatch-row"><div class="swatch" style="background:#0E7C74"></div><div class="swatch-meta"><span class="name">Primary — Teal</span><span class="val">--color-primary #0E7C74</span></div></div>
-        <div class="swatch-row"><div class="swatch" style="background:#0A5F59"></div><div class="swatch-meta"><span class="name">Primary Strong</span><span class="val">--color-primary-strong #0A5F59</span></div></div>
-        <div class="swatch-row"><div class="swatch" style="background:#182420"></div><div class="swatch-meta"><span class="name">Ink</span><span class="val">--color-ink #182420</span></div></div>
-        <div class="swatch-row"><div class="swatch" style="background:#48564F"></div><div class="swatch-meta"><span class="name">Ink Soft</span><span class="val">--color-ink-soft #48564F</span></div></div>
-        <div class="swatch-row"><div class="swatch" style="background:#F6F9F7;border-color:#DCE6E1"></div><div class="swatch-meta"><span class="name">Background</span><span class="val">--color-bg #F6F9F7</span></div></div>
-        <div class="swatch-row"><div class="swatch" style="background:#DCE6E1"></div><div class="swatch-meta"><span class="name">Border</span><span class="val">--color-border #DCE6E1</span></div></div>
-      </div>
-
-      <div class="doc-card">
-        <h3>Semantic status</h3>
-        <div class="swatch-row"><div class="swatch" style="background:#177A5A"></div><div class="swatch-meta"><span class="name">Low probability</span><span class="val">--color-low #177A5A</span></div></div>
-        <div class="swatch-row"><div class="swatch" style="background:#93650F"></div><div class="swatch-meta"><span class="name">Moderate probability</span><span class="val">--color-moderate #93650F</span></div></div>
-        <div class="swatch-row"><div class="swatch" style="background:#A93B37"></div><div class="swatch-meta"><span class="name">High probability</span><span class="val">--color-high #A93B37</span></div></div>
-        <div class="swatch-row"><div class="swatch" style="background:#E0F3E9;border-color:#DCE6E1"></div><div class="swatch-meta"><span class="name">Low — soft fill</span><span class="val">--color-low-soft #E0F3E9</span></div></div>
-        <div class="swatch-row"><div class="swatch" style="background:#FBF0DA;border-color:#DCE6E1"></div><div class="swatch-meta"><span class="name">Moderate — soft fill</span><span class="val">--color-moderate-soft #FBF0DA</span></div></div>
-        <div class="swatch-row"><div class="swatch" style="background:#FBE7E4;border-color:#DCE6E1"></div><div class="swatch-meta"><span class="name">High — soft fill</span><span class="val">--color-high-soft #FBE7E4</span></div></div>
-      </div>
-
-      <div class="doc-card">
-        <h3>Typography</h3>
-        <div class="type-sample"><span class="tag">Display / Headings — Manrope 800</span><div class="demo">High pretest probability</div></div>
-        <div class="type-sample"><span class="tag">Body / UI — SF Pro Text (system)</span><div class="demo body">Check any that apply before continuing.</div></div>
-        <div class="type-sample"><span class="tag">Data / numeric — IBM Plex Mono 600</span><div class="demo mono">D-dimer &lt;1000 ng/mL</div></div>
-      </div>
-
-      <div class="doc-card">
-        <h3>Radius &amp; elevation</h3>
-        <div class="swatch-row"><div class="swatch" style="background:var(--color-surface-muted);border-radius:26px;"></div><div class="swatch-meta"><span class="name">radius-xl</span><span class="val">26px — outcome cards</span></div></div>
-        <div class="swatch-row"><div class="swatch" style="background:var(--color-surface-muted);border-radius:20px;"></div><div class="swatch-meta"><span class="name">radius-lg</span><span class="val">20px — cards, lists</span></div></div>
-        <div class="swatch-row"><div class="swatch" style="background:var(--color-surface-muted);border-radius:14px;"></div><div class="swatch-meta"><span class="name">radius-md</span><span class="val">14px — inputs, chips</span></div></div>
-        <div class="swatch-row"><div class="swatch" style="background:var(--color-surface-muted);border-radius:100px;"></div><div class="swatch-meta"><span class="name">radius-full</span><span class="val">pill — buttons, badges</span></div></div>
-      </div>
-    </div>
-
-    <div class="table-scroll">
-      <table class="token-table">
-        <thead><tr><th>Token</th><th>Light</th><th>Dark</th><th>Usage</th></tr></thead>
-        <tbody>
-          <tr><td>--color-bg</td><td>#F6F9F7</td><td>#0E1512</td><td>App / page background</td></tr>
-          <tr><td>--color-surface</td><td>#FFFFFF</td><td>#161F1A</td><td>Cards, sheets</td></tr>
-          <tr><td>--color-primary</td><td>#0E7C74</td><td>#39C9BA</td><td>Primary actions, active states</td></tr>
-          <tr><td>--color-on-primary</td><td>#FFFFFF</td><td>#052321</td><td>Text/icon on filled primary</td></tr>
-          <tr><td>--color-ink</td><td>#182420</td><td>#E9F1EC</td><td>Primary text</td></tr>
-          <tr><td>--color-ink-soft</td><td>#48564F</td><td>#AEC0B6</td><td>Secondary text, hints</td></tr>
-          <tr><td>--color-low / -soft</td><td>#177A5A / #E0F3E9</td><td>#57DA9E / #123527</td><td>Low pretest probability, ruled-out</td></tr>
-          <tr><td>--color-moderate / -soft</td><td>#93650F / #FBF0DA</td><td>#EFC066 / #3B2D0E</td><td>Moderate pretest probability</td></tr>
-          <tr><td>--color-high / -soft</td><td>#A93B37 / #FBE7E4</td><td>#F3948C / #3C1815</td><td>High pretest probability, imaging indicated</td></tr>
-          <tr><td>--font-display</td><td colspan="2">Manrope, -apple-system, system-ui, sans-serif</td><td>Headings, nav titles, results</td></tr>
-          <tr><td>--font-body</td><td colspan="2">-apple-system, SF Pro Text, system-ui, sans-serif</td><td>Body copy, list rows, controls</td></tr>
-          <tr><td>--font-mono</td><td colspan="2">IBM Plex Mono, ui-monospace, SF Mono, monospace</td><td>Scores, thresholds, ng/mL values</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
   <footer class="page-foot">
-    <p><strong>Sources</strong> — Wells PS, Ginsberg JS, Anderson DR, et al. "Use of a Clinical Model for Safe Management of Patients with Suspected Pulmonary Embolism." <em>Ann Intern Med.</em> 1998;129(12):997–1005. · Kearon C, de Wit K, Parpia S, et al. "Diagnosis of Pulmonary Embolism with D-Dimer Adjusted to Clinical Probability." <em>N Engl J Med.</em> 2019;381(22):2125–2134.</p>
-    <p style="margin-top:8px;">Design prototype for interaction-design and workflow review. Not a certified medical device; verify against institutional protocol before any clinical use.</p>
+    <p>Design prototype for interaction-design and workflow review. Not a certified medical device; verify against institutional protocol before any clinical use.</p>
   </footer>
 
 </div>
