@@ -1,0 +1,1355 @@
+<title>Acute PE Predictor</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap">
+
+<style>
+  /* ============ TOKENS ============ */
+  :root{
+    --color-bg:#F6F9F7;
+    --color-bg-elevated:#FFFFFF;
+    --color-surface:#FFFFFF;
+    --color-surface-muted:#EEF3F0;
+    --color-surface-sunken:#E7EFEB;
+    --color-border:#DCE6E1;
+    --color-border-strong:#C2D1CA;
+    --color-ink:#182420;
+    --color-ink-soft:#48564F;
+    --color-ink-faint:#748179;
+    --color-primary:#0E7C74;
+    --color-primary-strong:#0A5F59;
+    --color-primary-soft:#E3F1EE;
+    --color-on-primary:#FFFFFF;
+    --color-low:#177A5A;
+    --color-low-soft:#E0F3E9;
+    --color-moderate:#93650F;
+    --color-moderate-soft:#FBF0DA;
+    --color-high:#A93B37;
+    --color-high-soft:#FBE7E4;
+    --color-focus:#1373B8;
+    --shadow-card:0 1px 1px rgba(20,32,27,0.04), 0 6px 20px -10px rgba(15,45,38,0.16);
+    --shadow-pop:0 12px 32px -12px rgba(10,30,25,0.28);
+    --radius-xl:26px;
+    --radius-lg:20px;
+    --radius-md:14px;
+    --radius-sm:10px;
+    --font-display:'Manrope',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    --font-body:-apple-system,BlinkMacSystemFont,'SF Pro Text',system-ui,sans-serif;
+    --font-mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
+    --ease-spring:cubic-bezier(.32,1.4,.44,1);
+    --ease-standard:cubic-bezier(.4,0,.2,1);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --color-bg:#0E1512;
+      --color-bg-elevated:#161F1A;
+      --color-surface:#161F1A;
+      --color-surface-muted:#1D2822;
+      --color-surface-sunken:#121A16;
+      --color-border:#2A3730;
+      --color-border-strong:#3A4A41;
+      --color-ink:#E9F1EC;
+      --color-ink-soft:#AEC0B6;
+      --color-ink-faint:#7C8E84;
+      --color-primary:#39C9BA;
+      --color-primary-strong:#63DACD;
+      --color-primary-soft:#152F2A;
+      --color-on-primary:#052321;
+      --color-low:#57DA9E;
+      --color-low-soft:#123527;
+      --color-moderate:#EFC066;
+      --color-moderate-soft:#3B2D0E;
+      --color-high:#F3948C;
+      --color-high-soft:#3C1815;
+      --color-focus:#6BC1F2;
+      --shadow-card:0 1px 1px rgba(0,0,0,0.3), 0 10px 28px -12px rgba(0,0,0,0.6);
+      --shadow-pop:0 16px 36px -12px rgba(0,0,0,0.7);
+    }
+  }
+  :root[data-theme="dark"]{
+    --color-bg:#0E1512;
+    --color-bg-elevated:#161F1A;
+    --color-surface:#161F1A;
+    --color-surface-muted:#1D2822;
+    --color-surface-sunken:#121A16;
+    --color-border:#2A3730;
+    --color-border-strong:#3A4A41;
+    --color-ink:#E9F1EC;
+    --color-ink-soft:#AEC0B6;
+    --color-ink-faint:#7C8E84;
+    --color-primary:#39C9BA;
+    --color-primary-strong:#63DACD;
+    --color-primary-soft:#152F2A;
+    --color-on-primary:#052321;
+    --color-low:#57DA9E;
+    --color-low-soft:#123527;
+    --color-moderate:#EFC066;
+    --color-moderate-soft:#3B2D0E;
+    --color-high:#F3948C;
+    --color-high-soft:#3C1815;
+    --color-focus:#6BC1F2;
+    --shadow-card:0 1px 1px rgba(0,0,0,0.3), 0 10px 28px -12px rgba(0,0,0,0.6);
+    --shadow-pop:0 16px 36px -12px rgba(0,0,0,0.7);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;}
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--color-bg);
+    color:var(--color-ink);
+    font-family:var(--font-body);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:var(--font-display);margin:0;text-wrap:balance;color:var(--color-ink);}
+  p{margin:0;}
+  button{font-family:inherit;}
+  ::selection{background:var(--color-primary-soft);}
+
+  :focus-visible{outline:2.5px solid var(--color-focus);outline-offset:2px;border-radius:6px;}
+
+  .page{
+    max-width:1180px;
+    margin:0 auto;
+    padding:56px 24px 80px;
+  }
+
+  /* ---------- Page header ---------- */
+  .page-head{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:14px;
+    margin-bottom:48px;
+  }
+  .page-head .mark{
+    width:52px;height:52px;
+    border-radius:16px;
+    background:linear-gradient(160deg,var(--color-primary),var(--color-primary-strong));
+    display:flex;align-items:center;justify-content:center;
+    font-size:26px;
+    box-shadow:var(--shadow-card);
+  }
+  .page-head h1{font-size:clamp(28px,4vw,38px);font-weight:800;letter-spacing:-0.02em;}
+  .page-head p{max-width:560px;color:var(--color-ink-soft);font-size:16px;line-height:1.55;}
+  .page-head .eyebrow{
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    font-weight:600;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--color-primary);
+    background:var(--color-primary-soft);
+    padding:6px 12px;
+    border-radius:100px;
+  }
+
+  /* ---------- Stage / Device frame ---------- */
+  .stage{display:flex;justify-content:center;padding:8px 0 64px;}
+  .device{
+    position:relative;
+    width:390px;
+    height:844px;
+    background:#000;
+    border-radius:56px;
+    padding:14px;
+    box-shadow:var(--shadow-pop), inset 0 0 0 2px rgba(255,255,255,0.06);
+  }
+  .device-screen{
+    position:relative;
+    width:100%;height:100%;
+    background:var(--color-bg);
+    border-radius:42px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+  }
+  .notch{
+    position:absolute;
+    top:14px;left:50%;
+    transform:translateX(-50%);
+    width:150px;height:30px;
+    background:#000;
+    border-radius:0 0 20px 20px;
+    z-index:40;
+  }
+  .statusbar{
+    height:47px;
+    flex:0 0 auto;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    padding:0 26px 8px;
+    font-family:var(--font-display);
+    font-size:15px;
+    font-weight:700;
+    color:var(--color-ink);
+    background:var(--color-bg);
+    z-index:20;
+    position:relative;
+  }
+  .statusbar .icons{display:flex;gap:5px;align-items:center;}
+  .home-indicator{
+    position:absolute;
+    bottom:9px;left:50%;
+    transform:translateX(-50%);
+    width:135px;height:5px;
+    border-radius:100px;
+    background:var(--color-ink);
+    opacity:0.35;
+    z-index:40;
+  }
+
+  .app{
+    position:relative;
+    flex:1 1 auto;
+    overflow:hidden;
+    background:var(--color-bg);
+  }
+
+  /* ---------- Screens & transitions ---------- */
+  .screen{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    background:var(--color-bg);
+    transform:translateX(100%);
+    opacity:0;
+    transition:transform .38s var(--ease-standard), opacity .28s var(--ease-standard);
+    pointer-events:none;
+  }
+  .screen.active{
+    transform:translateX(0);
+    opacity:1;
+    pointer-events:auto;
+    z-index:10;
+  }
+  .screen.leaving-back{transform:translateX(100%);opacity:0;}
+  .screen.entering-back{transform:translateX(-30%);opacity:0;}
+
+  .nav{
+    flex:0 0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    padding:4px 16px 8px;
+    min-height:44px;
+  }
+  .nav .back{
+    position:absolute;left:6px;
+    display:flex;align-items:center;gap:2px;
+    background:none;border:none;
+    color:var(--color-primary);
+    font-size:16.5px;font-weight:600;
+    padding:10px 10px 10px 4px;
+    min-height:44px;
+    border-radius:10px;
+    cursor:pointer;
+  }
+  .nav .back:active{opacity:0.55;}
+  .nav .back svg{width:11px;height:19px;}
+  .nav .info-btn{
+    position:absolute;right:10px;
+    width:32px;height:32px;
+    border-radius:50%;
+    border:none;
+    background:var(--color-surface-muted);
+    color:var(--color-ink-soft);
+    font-family:var(--font-display);font-weight:700;font-size:14px;
+    cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .nav-title{font-family:var(--font-display);font-weight:700;font-size:17px;color:var(--color-ink);}
+
+  .progress-track{
+    flex:0 0 auto;
+    height:4px;
+    margin:0 20px 4px;
+    border-radius:100px;
+    background:var(--color-surface-sunken);
+    overflow:hidden;
+  }
+  .progress-fill{
+    height:100%;
+    background:var(--color-primary);
+    border-radius:100px;
+    transition:width .5s var(--ease-spring);
+  }
+  .step-label{
+    flex:0 0 auto;
+    font-family:var(--font-mono);
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--color-ink-faint);
+    padding:2px 24px 8px;
+  }
+
+  .scroll{
+    flex:1 1 auto;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    padding:2px 20px 12px;
+  }
+  .scroll::-webkit-scrollbar{width:0;}
+
+  .cta-bar{
+    flex:0 0 auto;
+    padding:8px 20px calc(14px + env(safe-area-inset-bottom,0px));
+    background:linear-gradient(to top, var(--color-bg) 60%, transparent);
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    appearance:none;
+    border:none;
+    cursor:pointer;
+    font-family:var(--font-body);
+    font-weight:600;
+    font-size:16.5px;
+    min-height:50px;
+    border-radius:100px;
+    display:flex;align-items:center;justify-content:center;
+    gap:8px;
+    transition:transform .16s var(--ease-spring), opacity .16s var(--ease-standard), background .16s;
+    width:100%;
+  }
+  .btn:active{transform:scale(0.965);}
+  .btn-primary{background:var(--color-primary);color:var(--color-on-primary);}
+  .btn-primary:active{background:var(--color-primary-strong);}
+  .btn-primary:disabled{opacity:0.38;cursor:not-allowed;}
+  .btn-primary:disabled:active{transform:none;}
+  .btn-ghost{background:var(--color-surface-muted);color:var(--color-ink);}
+  .btn-text{background:none;color:var(--color-primary);min-height:44px;font-size:15.5px;}
+
+  /* ---------- Home screen ---------- */
+  .home-hero{
+    padding:28px 24px 8px;
+    text-align:center;
+  }
+  .home-mark{
+    width:84px;height:84px;
+    margin:6px auto 20px;
+    border-radius:24px;
+    background:linear-gradient(160deg,var(--color-primary),var(--color-primary-strong));
+    display:flex;align-items:center;justify-content:center;
+    font-size:42px;
+    box-shadow:0 10px 26px -8px rgba(14,124,116,0.45);
+  }
+  .home-hero h2{font-size:25px;font-weight:800;letter-spacing:-0.02em;margin-bottom:8px;}
+  .home-hero .sub{color:var(--color-ink-soft);font-size:15px;line-height:1.5;padding:0 8px;}
+  .home-actions{padding:20px 20px 8px;display:flex;flex-direction:column;gap:12px;margin-top:auto;}
+  .home-flow{
+    margin:8px 20px 0;
+    background:var(--color-surface);
+    border:1px solid var(--color-border);
+    border-radius:var(--radius-lg);
+    padding:16px 18px;
+    box-shadow:var(--shadow-card);
+  }
+  .flow-step{display:flex;gap:12px;align-items:flex-start;padding:9px 0;}
+  .flow-step + .flow-step{border-top:1px solid var(--color-border);}
+  .flow-num{
+    flex:0 0 auto;width:22px;height:22px;border-radius:50%;
+    background:var(--color-primary-soft);color:var(--color-primary-strong);
+    font-family:var(--font-mono);font-size:11.5px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .flow-step p{font-size:13.5px;color:var(--color-ink-soft);line-height:1.4;}
+  .flow-step strong{color:var(--color-ink);font-weight:600;}
+
+  /* ---------- Cards / list rows ---------- */
+  .card{
+    background:var(--color-surface);
+    border:1px solid var(--color-border);
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-card);
+    overflow:hidden;
+  }
+  .card + .card, .card + .field-block{margin-top:10px;}
+  .card-head{padding:9px 18px 4px;}
+  .card-head h3{font-size:14.5px;font-weight:700;}
+  .card-head .hint{font-size:12px;color:var(--color-ink-faint);margin-top:2px;line-height:1.3;}
+
+  .row{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:9px 18px;
+    min-height:44px;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .row + .row{border-top:1px solid var(--color-border);}
+  .row:active{background:var(--color-surface-muted);}
+  .row .label{flex:1 1 auto;font-size:14.5px;color:var(--color-ink);line-height:1.35;}
+  .row .label small{display:block;color:var(--color-ink-faint);font-size:12px;margin-top:2px;font-weight:400;}
+
+  .checkbox{
+    width:23px;height:23px;flex:0 0 auto;border-radius:7px;
+    border:1.6px solid var(--color-border-strong);
+    display:flex;align-items:center;justify-content:center;
+    transition:background .18s var(--ease-spring), border-color .18s;
+  }
+  .checkbox svg{width:13px;height:10px;opacity:0;transform:scale(0.5);transition:opacity .18s var(--ease-spring), transform .22s var(--ease-spring);}
+  input[type="checkbox"]{position:absolute;opacity:0;width:1px;height:1px;}
+  input[type="checkbox"]:checked + .row-inner .checkbox,
+  .row.is-checked .checkbox{background:var(--color-primary);border-color:var(--color-primary);}
+  .row.is-checked .checkbox svg{opacity:1;transform:scale(1);}
+
+  /* Step 1 has far fewer items than steps 2–3, so it gets roomier rows
+     instead of the compact sizing used where content needs to fit tightly. */
+  #scr-resp .card{margin-top:4px;}
+  #scr-resp .card-head{padding:24px 22px 14px;}
+  #scr-resp .card-head h3{font-size:19px;}
+  #scr-resp .card-head .hint{font-size:14px;line-height:1.55;margin-top:7px;color:var(--color-ink-soft);}
+  #scr-resp .row{min-height:68px;padding:19px 22px;gap:16px;}
+  #scr-resp .row .label{font-size:16.5px;}
+  #scr-resp .row .label small{font-size:13.5px;margin-top:4px;}
+  #scr-resp .checkbox{width:27px;height:27px;border-radius:8px;border-width:1.8px;}
+  #scr-resp .checkbox svg{width:15px;height:12px;}
+
+  /* Step 3 has the most items (8 risk factors + alt-diagnosis), so it gets
+     the tightest sizing of any screen — still ≥44pt tall per row. */
+  #scr-judgment .card + .card{margin-top:8px;}
+  #scr-judgment .card-head{padding:7px 18px 3px;}
+  #scr-judgment .card-head .hint{line-height:1.25;margin-top:1px;}
+  #scr-judgment .row{padding:7px 18px;min-height:44px;}
+  #scr-judgment .row .label{font-size:14px;line-height:1.25;}
+  #scr-judgment .row .label small{font-size:11px;margin-top:1px;}
+  #scr-judgment #seg-altdx{margin:4px 18px 8px !important;}
+
+  /* Step 2 has 4 vitals fields plus 8 exam/EKG items — the densest screen,
+     so its fields and rows get the tightest sizing of any screen. */
+  #scr-assoc .progress-track{margin:0 20px 2px;}
+  #scr-assoc .step-label{padding:2px 24px 5px;}
+  #scr-assoc .scroll{padding:1px 20px 6px;}
+  #scr-assoc .card + .card{margin-top:6px;}
+  #scr-assoc .field-block{padding:6px 18px;}
+  #scr-assoc .field-block label{margin-bottom:2px;font-size:11.5px;}
+  #scr-assoc .num-field{padding:1px 4px 1px 12px;}
+  #scr-assoc .num-field input{padding:4px 4px;font-size:14px;}
+  #scr-assoc .num-field .unit{font-size:10px;padding:0 8px;}
+  #scr-assoc .row{padding:6px 18px;min-height:44px;gap:10px;}
+  #scr-assoc .checkbox{width:21px;height:21px;}
+  #scr-assoc .row .label{font-size:13.5px;line-height:1.2;}
+  #scr-assoc .row .label small{font-size:9.5px;margin-top:1px;line-height:1.15;}
+  #scr-assoc .cta-bar{padding:6px 20px 10px;}
+  #scr-assoc .cta-bar .btn{min-height:46px;}
+  #scr-assoc .required-mark{color:var(--color-high);font-weight:700;}
+  #scr-assoc .field-hint{font-size:10.5px;color:var(--color-ink-faint);margin-top:3px;line-height:1.3;}
+  #scr-assoc .field-hint.is-required{color:var(--color-high);font-weight:600;}
+
+  .toggle-pair{display:flex;gap:8px;padding:14px 18px;}
+  .chip-toggle{
+    flex:1;
+    padding:11px 10px;
+    border-radius:100px;
+    border:1.4px solid var(--color-border);
+    background:var(--color-surface);
+    color:var(--color-ink-soft);
+    font-size:13.5px;font-weight:600;
+    text-align:center;
+    cursor:pointer;
+    transition:all .16s var(--ease-standard);
+  }
+  .chip-toggle.on{background:var(--color-primary);border-color:var(--color-primary);color:var(--color-on-primary);}
+
+  .field-block{padding:9px 18px;}
+  .field-block label{display:block;font-size:12px;font-weight:600;color:var(--color-ink-soft);margin-bottom:4px;}
+  .num-field{
+    display:flex;align-items:center;
+    background:var(--color-surface-muted);
+    border:1.4px solid var(--color-border);
+    border-radius:var(--radius-sm);
+    padding:2px 4px 2px 13px;
+  }
+  .num-field input{
+    flex:1;border:none;background:none;outline:none;
+    font-family:var(--font-mono);font-size:16px;font-weight:600;color:var(--color-ink);
+    padding:6px 4px;min-width:0;
+  }
+  .num-field .unit{
+    font-family:var(--font-mono);font-size:11px;color:var(--color-ink-faint);
+    padding:0 9px;font-weight:600;white-space:nowrap;
+  }
+  .num-field .stepper{display:flex;gap:2px;}
+  .num-field .stepper button{
+    width:34px;height:34px;border-radius:9px;border:none;
+    background:var(--color-surface);color:var(--color-primary);
+    font-size:18px;font-weight:700;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .num-field .stepper button:active{background:var(--color-primary-soft);}
+  .num-field:focus-within{border-color:var(--color-primary);}
+
+  .segmented{
+    display:flex;background:var(--color-surface-muted);
+    border-radius:var(--radius-md);padding:4px;gap:4px;
+  }
+  .segmented button{
+    flex:1;border:none;background:none;
+    padding:9px 6px;border-radius:10px;
+    font-size:12.5px;font-weight:600;color:var(--color-ink-soft);
+    cursor:pointer;line-height:1.25;
+    transition:background .2s var(--ease-standard), color .2s, box-shadow .2s;
+  }
+  .segmented button.on{background:var(--color-surface);color:var(--color-primary-strong);box-shadow:var(--shadow-card);}
+
+  .section-title{
+    font-family:var(--font-mono);
+    font-size:11px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;
+    color:var(--color-ink-faint);
+    margin:22px 4px 10px;
+  }
+  .section-title:first-child{margin-top:6px;}
+
+  /* ---------- Results screen ---------- */
+  .result-hero{padding:10px 20px 4px;text-align:center;}
+  .gauge-wrap{position:relative;width:220px;height:130px;margin:6px auto 4px;}
+  .result-tag{
+    display:inline-flex;align-items:center;gap:7px;
+    padding:7px 16px 7px 12px;border-radius:100px;
+    font-family:var(--font-display);font-weight:800;font-size:15px;
+    letter-spacing:0.01em;
+    margin-top:6px;
+  }
+  .result-tag .dot{width:8px;height:8px;border-radius:50%;}
+  .result-prevalence{font-family:var(--font-mono);font-size:12px;color:var(--color-ink-faint);margin-top:9px;letter-spacing:0.01em;}
+  .result-prevalence strong{font-size:14px;font-weight:700;color:var(--color-ink-soft);}
+  .result-caption{font-size:13px;color:var(--color-ink-soft);margin-top:8px;line-height:1.5;padding:0 10px;}
+
+  .reasoning{
+    margin:18px 0 4px;
+    background:var(--color-surface);
+    border:1px solid var(--color-border);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+  }
+  .reasoning summary{
+    list-style:none;cursor:pointer;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 18px;font-size:14px;font-weight:600;color:var(--color-ink);
+  }
+  .reasoning summary::-webkit-details-marker{display:none;}
+  .reasoning summary .chev{transition:transform .25s var(--ease-standard);color:var(--color-ink-faint);}
+  .reasoning[open] summary .chev{transform:rotate(90deg);}
+  .reasoning-list{padding:0 18px 16px;display:flex;flex-direction:column;gap:10px;}
+  .reasoning-item{display:flex;gap:10px;font-size:13px;color:var(--color-ink-soft);line-height:1.45;}
+  .reasoning-item .bullet{flex:0 0 auto;width:6px;height:6px;border-radius:50%;background:var(--color-primary);margin-top:6px;}
+
+  /* ---------- D-dimer / final recommendation ---------- */
+  .threshold-card{
+    text-align:center;padding:26px 20px;
+    background:var(--color-primary-soft);
+    border-radius:var(--radius-lg);
+    border:1px solid var(--color-border);
+  }
+  .threshold-card .pretext{font-size:12.5px;color:var(--color-ink-soft);font-weight:600;}
+  .threshold-card .value{
+    font-family:var(--font-mono);font-weight:700;font-size:38px;color:var(--color-primary-strong);
+    margin:6px 0 2px;
+  }
+  .threshold-card .value span{font-size:16px;}
+  .threshold-card .cite{font-size:11.5px;color:var(--color-ink-faint);margin-top:6px;}
+
+  .outcome-card{
+    padding:26px 22px;border-radius:var(--radius-xl);
+    text-align:center;
+  }
+  .outcome-card .icon-badge{
+    width:64px;height:64px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 16px;font-size:30px;
+  }
+  .outcome-card h3{font-size:21px;font-weight:800;letter-spacing:-0.01em;margin-bottom:8px;}
+  .outcome-card p{font-size:13.5px;line-height:1.55;color:var(--color-ink-soft);}
+  .outcome-low{background:var(--color-low-soft);}
+  .outcome-low .icon-badge{background:var(--color-low);color:#fff;}
+  .outcome-low h3{color:var(--color-low);}
+  .outcome-high{background:var(--color-high-soft);}
+  .outcome-high .icon-badge{background:var(--color-high);color:#fff;}
+  .outcome-high h3{color:var(--color-high);}
+
+  .cite-box{
+    margin-top:16px;padding:14px 16px;
+    background:var(--color-surface-muted);
+    border-radius:var(--radius-md);
+    font-size:11.5px;color:var(--color-ink-faint);line-height:1.6;
+    text-align:left;
+  }
+  .cite-box strong{color:var(--color-ink-soft);}
+
+  .toast{
+    position:absolute;left:50%;bottom:100px;
+    transform:translate(-50%,12px);
+    background:var(--color-ink);color:var(--color-bg);
+    padding:10px 18px;border-radius:100px;
+    font-size:13px;font-weight:600;
+    opacity:0;pointer-events:none;
+    transition:opacity .25s var(--ease-standard), transform .25s var(--ease-spring);
+    z-index:50;
+    box-shadow:var(--shadow-pop);
+  }
+  .toast.show{opacity:1;transform:translate(-50%,0);}
+
+  /* ---------- About screen ---------- */
+  .about-block{margin-bottom:22px;}
+  .about-block h4{font-size:13.5px;font-weight:700;margin-bottom:6px;}
+  .about-block p{font-size:13px;color:var(--color-ink-soft);line-height:1.6;}
+  .disclaimer{
+    background:var(--color-moderate-soft);
+    border:1px solid var(--color-border);
+    border-radius:var(--radius-md);
+    padding:14px 16px;
+    font-size:12.5px;color:var(--color-ink-soft);line-height:1.6;
+  }
+  .disclaimer strong{color:var(--color-moderate);}
+  .ref-list{margin:0;padding-left:19px;display:flex;flex-direction:column;gap:10px;}
+  .ref-list li{font-size:12px;color:var(--color-ink-soft);line-height:1.6;font-family:var(--font-mono);}
+
+  /* ============ Design-system documentation (below phone) ============ */
+  .tokens-doc{margin-top:24px;}
+  .tokens-doc h2{font-size:26px;font-weight:800;letter-spacing:-0.02em;margin-bottom:6px;}
+  .tokens-doc > p{color:var(--color-ink-soft);font-size:15px;max-width:640px;margin-bottom:36px;line-height:1.55;}
+  .doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:40px;}
+  .doc-card{
+    background:var(--color-surface);border:1px solid var(--color-border);
+    border-radius:var(--radius-lg);padding:22px;box-shadow:var(--shadow-card);
+  }
+  .doc-card h3{font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-ink-faint);margin-bottom:16px;font-family:var(--font-mono);}
+  .swatch-row{display:flex;align-items:center;gap:12px;padding:8px 0;}
+  .swatch-row + .swatch-row{border-top:1px solid var(--color-border);}
+  .swatch{width:34px;height:34px;border-radius:10px;border:1px solid rgba(0,0,0,0.08);flex:0 0 auto;}
+  .swatch-meta{display:flex;flex-direction:column;min-width:0;}
+  .swatch-meta .name{font-size:13px;font-weight:600;color:var(--color-ink);}
+  .swatch-meta .val{font-family:var(--font-mono);font-size:11.5px;color:var(--color-ink-faint);}
+
+  .type-sample{padding:10px 0;}
+  .type-sample + .type-sample{border-top:1px solid var(--color-border);}
+  .type-sample .tag{font-family:var(--font-mono);font-size:10.5px;color:var(--color-ink-faint);text-transform:uppercase;letter-spacing:0.07em;}
+  .type-sample .demo{font-family:var(--font-display);font-weight:800;color:var(--color-ink);margin-top:2px;}
+  .type-sample .demo.body{font-family:var(--font-body);font-weight:400;font-size:15px;}
+  .type-sample .demo.mono{font-family:var(--font-mono);font-weight:600;font-size:15px;}
+
+  .token-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .token-table th{text-align:left;font-family:var(--font-mono);font-weight:600;color:var(--color-ink-faint);padding:6px 8px;font-size:10.5px;text-transform:uppercase;letter-spacing:0.06em;}
+  .token-table td{padding:7px 8px;border-top:1px solid var(--color-border);font-family:var(--font-mono);color:var(--color-ink-soft);}
+  .token-table td:first-child{color:var(--color-ink);}
+  .table-scroll{overflow-x:auto;}
+
+  .page-foot{
+    margin-top:56px;padding-top:28px;border-top:1px solid var(--color-border);
+    font-size:12px;color:var(--color-ink-faint);line-height:1.7;
+    max-width:720px;
+  }
+  .page-foot a{color:var(--color-primary);}
+
+  @media (max-width:460px){
+    .device{width:100%;max-width:390px;height:82vh;min-height:700px;}
+    .page{padding:32px 14px 56px;}
+  }
+</style>
+
+<div class="page">
+
+  <header class="page-head">
+    <div class="mark">🫁</div>
+    <span class="eyebrow">iOS Clinical Decision Support · Prototype</span>
+    <h1>Acute PE Predictor</h1>
+    <p>A bedside pretest-probability workflow for suspected acute pulmonary embolism — built on the Wells clinical model (Wells et al., <em>Ann Intern Med</em> 1998) and the PEGeD D-dimer thresholds (Kearon et al., <em>NEJM</em> 2019).</p>
+  </header>
+
+  <main class="stage">
+    <div class="device">
+      <div class="device-screen">
+        <div class="notch" aria-hidden="true"></div>
+        <div class="statusbar" aria-hidden="true">
+          <span id="clock">9:41</span>
+          <div class="icons">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><rect x="0" y="7" width="3" height="5" rx="0.5" fill="currentColor"/><rect x="4.5" y="5" width="3" height="7" rx="0.5" fill="currentColor"/><rect x="9" y="3" width="3" height="9" rx="0.5" fill="currentColor"/><rect x="13.5" y="0" width="3" height="12" rx="0.5" fill="currentColor"/></svg>
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M8 3.2c2 0 3.8.8 5.1 2.1l-1.4 1.4A5 5 0 0 0 8 5.2a5 5 0 0 0-3.7 1.5L2.9 5.3A7 7 0 0 1 8 3.2Zm0 3.4c1 0 1.9.4 2.6 1.1l-2.6 2.6-2.6-2.6A3.6 3.6 0 0 1 8 6.6Z" fill="currentColor"/></svg>
+            <svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x="1" y="1" width="20" height="10" rx="2.5" stroke="currentColor" stroke-width="1"/><rect x="2.5" y="2.5" width="15" height="7" rx="1.3" fill="currentColor"/><rect x="22" y="4" width="2" height="4" rx="1" fill="currentColor"/></svg>
+          </div>
+        </div>
+
+        <div class="app" id="app" aria-live="polite">
+
+          <!-- HOME -->
+          <section class="screen active" data-screen="home" id="scr-home">
+            <div class="scroll" style="display:flex;flex-direction:column;">
+              <div class="home-hero">
+                <div class="home-mark">🫁</div>
+                <h2>Acute&nbsp;PE Predictor</h2>
+                <p class="sub">Develop a pre-test probability of acute pulmonary embolism by the expanded Wells criteria, then use D-dimer or imaging pathway to evaluate for an acute pulmonary embolus.</p>
+              </div>
+              <div class="home-flow">
+                <div class="flow-step"><div class="flow-num">1</div><p><strong>Cardiopulmonary symptoms</strong> — respiratory findings, syncope</p></div>
+                <div class="flow-step"><div class="flow-num">2</div><p><strong>Vitals, P/E, CXR &amp; EKG findings</strong> — vitals, exam, EKG</p></div>
+                <div class="flow-step"><div class="flow-num">3</div><p><strong>Clinical judgment</strong> — VTE risk factors &amp; alternative diagnosis</p></div>
+              </div>
+              <div class="home-actions">
+                <button class="btn btn-primary" data-go="resp">Begin Assessment</button>
+                <button class="btn btn-text" data-go="about">About this tool &amp; sources</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- STEP 1: RESPIRATORY -->
+          <section class="screen" data-screen="resp" id="scr-resp">
+            <div class="nav">
+              <button class="back" data-back="home" aria-label="Back"><svg viewBox="0 0 11 19" fill="none"><path d="M10 1 1.5 9.5 10 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="nav-title">Symptoms</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width:33%"></div></div>
+            <div class="step-label">Step 1 of 3 · Cardiopulmonary symptoms</div>
+            <div class="scroll">
+              <div class="card">
+                <div class="card-head"><h3>Cardiopulmonary symptoms</h3><p class="hint">Check every finding present. Two or more respiratory points, combined with a typical associated finding, define a "typical" presentation. Syncope alone reclassifies the presentation as severe.</p></div>
+                <div id="resp-list"></div>
+              </div>
+            </div>
+            <div class="cta-bar">
+              <button class="btn btn-primary" data-go="assoc">Continue</button>
+            </div>
+          </section>
+
+          <!-- STEP 2: VITALS, P/E & EKG -->
+          <section class="screen" data-screen="assoc" id="scr-assoc">
+            <div class="nav">
+              <button class="back" data-back="resp" aria-label="Back"><svg viewBox="0 0 11 19" fill="none"><path d="M10 1 1.5 9.5 10 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="nav-title">Vitals, P/E, CXR &amp; EKG</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width:67%"></div></div>
+            <div class="step-label">Step 2 of 3 · Vitals, P/E, CXR &amp; EKG findings</div>
+            <div class="scroll">
+              <div class="card">
+                <div class="field-block">
+                  <label for="f-sbp">SBP at presentation <span class="required-mark">*</span></label>
+                  <div class="num-field"><input id="f-sbp" type="number" inputmode="numeric" placeholder="0" min="0" max="260" required aria-required="true"><span class="unit">mmHg</span></div>
+                </div>
+                <div class="field-block" style="border-top:1px solid var(--color-border);">
+                  <label for="f-hr">HR at presentation <span class="required-mark">*</span></label>
+                  <div class="num-field"><input id="f-hr" type="number" inputmode="numeric" placeholder="0" min="0" max="260" required aria-required="true"><span class="unit">bpm</span></div>
+                </div>
+                <div class="field-block" style="border-top:1px solid var(--color-border);">
+                  <label for="f-raSpo2">Room-air pulse ox <span class="required-mark">*</span></label>
+                  <div class="num-field"><input id="f-raSpo2" type="number" inputmode="numeric" placeholder="0" min="0" max="100" required aria-required="true"><span class="unit">% SpO₂</span></div>
+                </div>
+                <div class="field-block" style="border-top:1px solid var(--color-border);">
+                  <label for="f-fio2Correct">FiO₂ to correct to &gt;92% <span class="required-mark" id="fio2-required-mark" style="display:none;">*</span></label>
+                  <div class="num-field"><input id="f-fio2Correct" type="number" inputmode="numeric" placeholder="0" min="0" max="100"><span class="unit">% FiO₂</span></div>
+                  <p class="field-hint" id="fio2-hint">Only required if room-air pulse ox is below 92%.</p>
+                </div>
+              </div>
+              <div class="card" style="margin-top:8px;">
+                <div id="assoc-list"></div>
+              </div>
+            </div>
+            <div class="cta-bar">
+              <button class="btn btn-primary" id="btn-continue-assoc" disabled data-go="judgment">Continue</button>
+            </div>
+          </section>
+
+          <!-- STEP 3: CLINICAL JUDGMENT -->
+          <section class="screen" data-screen="judgment" id="scr-judgment">
+            <div class="nav">
+              <button class="back" data-back="assoc" aria-label="Back"><svg viewBox="0 0 11 19" fill="none"><path d="M10 1 1.5 9.5 10 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="nav-title">Clinical Judgement</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width:100%"></div></div>
+            <div class="step-label">Step 3 of 3 · VTE Risk Factors and Alternative Diagnosis</div>
+            <div class="scroll">
+              <div class="card">
+                <div class="card-head"><h3>Risk factors for VTE</h3><p class="hint">Check any that apply.</p></div>
+                <div id="risk-list"></div>
+              </div>
+              <div class="card">
+                <div class="card-head"><h3>Alternative diagnosis</h3><p class="hint">Is another diagnosis at least as likely as an acute PE, based on history, exam, and routine tests?</p></div>
+                <div class="segmented" id="seg-altdx" style="margin:4px 18px 10px;">
+                  <button type="button" data-val="lessLikely">Less likely than PE</button>
+                  <button type="button" data-val="asLikely">As likely / more likely</button>
+                </div>
+              </div>
+            </div>
+            <div class="cta-bar">
+              <button class="btn btn-primary" id="btn-see-results" disabled data-go="results">See Pretest Probability</button>
+            </div>
+          </section>
+
+          <!-- RESULTS -->
+          <section class="screen" data-screen="results" id="scr-results">
+            <div class="nav">
+              <button class="back" data-back="judgment" aria-label="Back"><svg viewBox="0 0 11 19" fill="none"><path d="M10 1 1.5 9.5 10 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="nav-title">Result</span>
+            </div>
+            <div class="scroll">
+              <div class="result-hero">
+                <div class="gauge-wrap">
+                  <svg viewBox="0 0 220 130" width="220" height="130">
+                    <path d="M14,120 A96,96 0 0,1 79,26" fill="none" stroke="var(--color-low)" stroke-width="14" stroke-linecap="round" opacity="0.35"/>
+                    <path d="M83,22 A96,96 0 0,1 137,22" fill="none" stroke="var(--color-moderate)" stroke-width="14" stroke-linecap="round" opacity="0.35"/>
+                    <path d="M141,26 A96,96 0 0,1 206,120" fill="none" stroke="var(--color-high)" stroke-width="14" stroke-linecap="round" opacity="0.35"/>
+                    <g id="gauge-needle" style="transform-origin:110px 120px;transition:transform .7s var(--ease-spring);">
+                      <line x1="110" y1="120" x2="110" y2="34" stroke="var(--color-ink)" stroke-width="3" stroke-linecap="round"/>
+                      <circle cx="110" cy="120" r="7" fill="var(--color-ink)"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="result-tag" id="result-tag"><span class="dot"></span><span id="result-tag-text">—</span></div>
+                <p class="result-prevalence" id="result-prevalence"></p>
+                <p class="result-caption" id="result-caption">Complete the assessment to see the pretest probability of acute PE.</p>
+              </div>
+
+              <details class="reasoning">
+                <summary>Show reasoning<svg class="chev" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+                <div class="reasoning-list" id="reasoning-list"></div>
+              </details>
+            </div>
+            <div class="cta-bar">
+              <button class="btn btn-primary" id="btn-next-step" data-go="ddimer">Continue</button>
+            </div>
+          </section>
+
+          <!-- D-DIMER -->
+          <section class="screen" data-screen="ddimer" id="scr-ddimer">
+            <div class="nav">
+              <button class="back" data-back="results" aria-label="Back"><svg viewBox="0 0 11 19" fill="none"><path d="M10 1 1.5 9.5 10 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="nav-title">D-dimer</span>
+            </div>
+            <div class="scroll">
+              <div class="threshold-card">
+                <div class="pretext" id="ddimer-pretext">LOW PRETEST PROBABILITY</div>
+                <div class="value" id="ddimer-threshold-value">&lt;1000<span> ng/mL</span></div>
+                <p class="cite" id="ddimer-cite">Rules out PE per PEGeD, Kearon et al. NEJM 2019</p>
+              </div>
+              <div class="card" style="margin-top:18px;">
+                <div class="field-block">
+                  <label for="f-ddimer">Measured D-dimer</label>
+                  <div class="num-field"><input id="f-ddimer" type="number" inputmode="numeric" placeholder="0"><span class="unit">ng/mL</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="cta-bar">
+              <button class="btn btn-primary" id="btn-interpret" disabled data-go="final">Interpret Result</button>
+            </div>
+          </section>
+
+          <!-- FINAL -->
+          <section class="screen" data-screen="final" id="scr-final">
+            <div class="nav">
+              <span class="nav-title">Recommendation</span>
+            </div>
+            <div class="scroll">
+              <div class="outcome-card" id="outcome-card">
+                <div class="icon-badge" id="outcome-icon">✓</div>
+                <h3 id="outcome-title">Result</h3>
+                <p id="outcome-body">—</p>
+              </div>
+              <div class="cite-box" id="outcome-cite"></div>
+            </div>
+            <div class="cta-bar">
+              <button class="btn btn-ghost" id="btn-copy">Copy Summary</button>
+              <button class="btn btn-primary" data-go="home" id="btn-restart">New Assessment</button>
+            </div>
+            <div class="toast" id="toast">Summary copied</div>
+          </section>
+
+          <!-- ABOUT -->
+          <section class="screen" data-screen="about" id="scr-about">
+            <div class="nav">
+              <button class="back" data-back="home" aria-label="Back"><svg viewBox="0 0 11 19" fill="none"><path d="M10 1 1.5 9.5 10 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="nav-title">About</span>
+            </div>
+            <div class="scroll">
+              <div class="about-block">
+                <h4>Pretest probability model</h4>
+                <p>Categorizes presentation as typical, atypical, or severe, then layers alternative-diagnosis judgment and VTE risk factors to reach Low, Moderate, or High pretest probability.<sup>1</sup></p>
+              </div>
+              <div class="about-block">
+                <h4>D-dimer thresholds</h4>
+                <p>A D-dimer &lt;1000 ng/mL rules out PE in low pretest probability; &lt;500 ng/mL rules out PE in moderate pretest probability. High pretest probability proceeds directly to chest imaging.<sup>2</sup></p>
+              </div>
+              <div class="disclaimer"><strong>Design prototype.</strong> This interface demonstrates the published decision logic for interaction-design purposes. It has not been validated as a medical device and should not guide patient care without independent clinical verification and institutional review.</div>
+              <div class="about-block" style="margin-top:22px;">
+                <h4>References</h4>
+                <ol class="ref-list">
+                  <li>Wells PS, Ginsberg JS, Anderson DR, Kearon C, Turpie AG, Bormanis J, et al. Use of a clinical model for safe management of patients with suspected pulmonary embolism. Ann Intern Med. 1998;129(12):997-1005.</li>
+                  <li>Kearon C, de Wit K, Parpia S, Schulman S, Afilalo M, Hirsch A, et al. Diagnosis of pulmonary embolism with D-dimer adjusted to clinical probability. N Engl J Med. 2019;381(22):2125-2134.</li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+      <div class="home-indicator" aria-hidden="true"></div>
+    </div>
+  </main>
+
+  <!-- ============ DESIGN TOKENS DOCUMENTATION ============ -->
+  <section class="tokens-doc" aria-label="Design system reference">
+    <h2>Design tokens</h2>
+    <p>The palette, type, and spacing values driving the screens above — muted teal for trust and focus, warm charcoal ink instead of pure black, and a soft/solid pairing on every semantic color so status pills always clear 4.5:1 contrast.</p>
+
+    <div class="doc-grid">
+      <div class="doc-card">
+        <h3>Core palette</h3>
+        <div class="swatch-row"><div class="swatch" style="background:#0E7C74"></div><div class="swatch-meta"><span class="name">Primary — Teal</span><span class="val">--color-primary #0E7C74</span></div></div>
+        <div class="swatch-row"><div class="swatch" style="background:#0A5F59"></div><div class="swatch-meta"><span class="name">Primary Strong</span><span class="val">--color-primary-strong #0A5F59</span></div></div>
+        <div class="swatch-row"><div class="swatch" style="background:#182420"></div><div class="swatch-meta"><span class="name">Ink</span><span class="val">--color-ink #182420</span></div></div>
+        <div class="swatch-row"><div class="swatch" style="background:#48564F"></div><div class="swatch-meta"><span class="name">Ink Soft</span><span class="val">--color-ink-soft #48564F</span></div></div>
+        <div class="swatch-row"><div class="swatch" style="background:#F6F9F7;border-color:#DCE6E1"></div><div class="swatch-meta"><span class="name">Background</span><span class="val">--color-bg #F6F9F7</span></div></div>
+        <div class="swatch-row"><div class="swatch" style="background:#DCE6E1"></div><div class="swatch-meta"><span class="name">Border</span><span class="val">--color-border #DCE6E1</span></div></div>
+      </div>
+
+      <div class="doc-card">
+        <h3>Semantic status</h3>
+        <div class="swatch-row"><div class="swatch" style="background:#177A5A"></div><div class="swatch-meta"><span class="name">Low probability</span><span class="val">--color-low #177A5A</span></div></div>
+        <div class="swatch-row"><div class="swatch" style="background:#93650F"></div><div class="swatch-meta"><span class="name">Moderate probability</span><span class="val">--color-moderate #93650F</span></div></div>
+        <div class="swatch-row"><div class="swatch" style="background:#A93B37"></div><div class="swatch-meta"><span class="name">High probability</span><span class="val">--color-high #A93B37</span></div></div>
+        <div class="swatch-row"><div class="swatch" style="background:#E0F3E9;border-color:#DCE6E1"></div><div class="swatch-meta"><span class="name">Low — soft fill</span><span class="val">--color-low-soft #E0F3E9</span></div></div>
+        <div class="swatch-row"><div class="swatch" style="background:#FBF0DA;border-color:#DCE6E1"></div><div class="swatch-meta"><span class="name">Moderate — soft fill</span><span class="val">--color-moderate-soft #FBF0DA</span></div></div>
+        <div class="swatch-row"><div class="swatch" style="background:#FBE7E4;border-color:#DCE6E1"></div><div class="swatch-meta"><span class="name">High — soft fill</span><span class="val">--color-high-soft #FBE7E4</span></div></div>
+      </div>
+
+      <div class="doc-card">
+        <h3>Typography</h3>
+        <div class="type-sample"><span class="tag">Display / Headings — Manrope 800</span><div class="demo">High pretest probability</div></div>
+        <div class="type-sample"><span class="tag">Body / UI — SF Pro Text (system)</span><div class="demo body">Check any that apply before continuing.</div></div>
+        <div class="type-sample"><span class="tag">Data / numeric — IBM Plex Mono 600</span><div class="demo mono">D-dimer &lt;1000 ng/mL</div></div>
+      </div>
+
+      <div class="doc-card">
+        <h3>Radius &amp; elevation</h3>
+        <div class="swatch-row"><div class="swatch" style="background:var(--color-surface-muted);border-radius:26px;"></div><div class="swatch-meta"><span class="name">radius-xl</span><span class="val">26px — outcome cards</span></div></div>
+        <div class="swatch-row"><div class="swatch" style="background:var(--color-surface-muted);border-radius:20px;"></div><div class="swatch-meta"><span class="name">radius-lg</span><span class="val">20px — cards, lists</span></div></div>
+        <div class="swatch-row"><div class="swatch" style="background:var(--color-surface-muted);border-radius:14px;"></div><div class="swatch-meta"><span class="name">radius-md</span><span class="val">14px — inputs, chips</span></div></div>
+        <div class="swatch-row"><div class="swatch" style="background:var(--color-surface-muted);border-radius:100px;"></div><div class="swatch-meta"><span class="name">radius-full</span><span class="val">pill — buttons, badges</span></div></div>
+      </div>
+    </div>
+
+    <div class="table-scroll">
+      <table class="token-table">
+        <thead><tr><th>Token</th><th>Light</th><th>Dark</th><th>Usage</th></tr></thead>
+        <tbody>
+          <tr><td>--color-bg</td><td>#F6F9F7</td><td>#0E1512</td><td>App / page background</td></tr>
+          <tr><td>--color-surface</td><td>#FFFFFF</td><td>#161F1A</td><td>Cards, sheets</td></tr>
+          <tr><td>--color-primary</td><td>#0E7C74</td><td>#39C9BA</td><td>Primary actions, active states</td></tr>
+          <tr><td>--color-on-primary</td><td>#FFFFFF</td><td>#052321</td><td>Text/icon on filled primary</td></tr>
+          <tr><td>--color-ink</td><td>#182420</td><td>#E9F1EC</td><td>Primary text</td></tr>
+          <tr><td>--color-ink-soft</td><td>#48564F</td><td>#AEC0B6</td><td>Secondary text, hints</td></tr>
+          <tr><td>--color-low / -soft</td><td>#177A5A / #E0F3E9</td><td>#57DA9E / #123527</td><td>Low pretest probability, ruled-out</td></tr>
+          <tr><td>--color-moderate / -soft</td><td>#93650F / #FBF0DA</td><td>#EFC066 / #3B2D0E</td><td>Moderate pretest probability</td></tr>
+          <tr><td>--color-high / -soft</td><td>#A93B37 / #FBE7E4</td><td>#F3948C / #3C1815</td><td>High pretest probability, imaging indicated</td></tr>
+          <tr><td>--font-display</td><td colspan="2">Manrope, -apple-system, system-ui, sans-serif</td><td>Headings, nav titles, results</td></tr>
+          <tr><td>--font-body</td><td colspan="2">-apple-system, SF Pro Text, system-ui, sans-serif</td><td>Body copy, list rows, controls</td></tr>
+          <tr><td>--font-mono</td><td colspan="2">IBM Plex Mono, ui-monospace, SF Mono, monospace</td><td>Scores, thresholds, ng/mL values</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="page-foot">
+    <p><strong>Sources</strong> — Wells PS, Ginsberg JS, Anderson DR, et al. "Use of a Clinical Model for Safe Management of Patients with Suspected Pulmonary Embolism." <em>Ann Intern Med.</em> 1998;129(12):997–1005. · Kearon C, de Wit K, Parpia S, et al. "Diagnosis of Pulmonary Embolism with D-Dimer Adjusted to Clinical Probability." <em>N Engl J Med.</em> 2019;381(22):2125–2134.</p>
+    <p style="margin-top:8px;">Design prototype for interaction-design and workflow review. Not a certified medical device; verify against institutional protocol before any clinical use.</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var RESP_ITEMS = [
+    {key:"syncope", label:"Syncope"},
+    {key:"dyspnea", label:"Dyspnea", sub:"New, or worsening of chronic dyspnea"},
+    {key:"pleuritic", label:"Pleuritic CP"},
+    {key:"hemoptysis", label:"Hemoptysis"},
+    {key:"nonpleuritic", label:"Atypical CP", sub:"Nonretrosternal and nonpleuritic"}
+  ];
+
+  var ASSOC_ITEMS = [
+    {key:"ventilated", label:"Requires mechanical ventilation"},
+    {key:"lowFever", label:"Presence of low-grade fever"},
+    {key:"legSymptoms", label:"Signs of DVT", sub:"Deep-vein thrombosis"},
+    {key:"pleuralRub", label:"Pleural Friction Rub"},
+    {key:"jvp", label:"Elevated CVP"},
+    {key:"s1q3t3", label:"EKG with new S1Q3T3"},
+    {key:"rbbb", label:"EKG with new RBBB"},
+    {key:"cxr", label:"Chest radiograph compatible with PE", sub:"Pulmonary infiltrate, Hampton's Hump, Westermark sign, unilateral pleural effusion"}
+  ];
+
+  var RISK_ITEMS = [
+    {key:"surgery", label:"Surgery", sub:"Within the past 12 weeks"},
+    {key:"immobilization", label:"Immobilization", sub:"Bed rest ≥3 days in the past 4 weeks"},
+    {key:"priorVte", label:"Previous DVT or PE", sub:"Objectively diagnosed"},
+    {key:"fracture", label:"Lower-extremity fracture", sub:"With immobilization within 12 weeks"},
+    {key:"familyHx", label:"Strong family history of VTE", sub:"≥2 relatives, or 1 first-degree with thrombophilia"},
+    {key:"cancer", label:"Active cancer", sub:"Treated within 6 months, or palliative"},
+    {key:"postpartum", label:"Postpartum period"},
+    {key:"paralysis", label:"Lower-extremity paralysis"}
+  ];
+
+  var state = {
+    resp:{}, assoc:{}, risk:{},
+    hr:null, sbp:null, raSpo2:null, fio2Correct:null,
+    altDx:null,
+    ddimer:null
+  };
+
+  var history = ["home"];
+
+  function buildChecklist(container, items, bucket){
+    container.innerHTML = "";
+    items.forEach(function(item){
+      var row = document.createElement("label");
+      row.className = "row";
+      row.setAttribute("data-key", item.key);
+      row.innerHTML =
+        '<input type="checkbox" id="chk-'+item.key+'">' +
+        '<span class="checkbox"><svg viewBox="0 0 13 10" fill="none"><path d="M1 5l4 4 7-8" stroke="var(--color-on-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>' +
+        '<span class="label">'+item.label+(item.sub? '<small>'+item.sub+'</small>':'')+'</span>';
+      var input = row.querySelector("input");
+      input.addEventListener("change", function(){
+        state[bucket][item.key] = input.checked;
+        row.classList.toggle("is-checked", input.checked);
+        onFieldChange();
+      });
+      container.appendChild(row);
+    });
+  }
+
+  buildChecklist(document.getElementById("resp-list"), RESP_ITEMS, "resp");
+  buildChecklist(document.getElementById("assoc-list"), ASSOC_ITEMS, "assoc");
+  buildChecklist(document.getElementById("risk-list"), RISK_ITEMS, "risk");
+
+  // Numeric fields
+  ["hr","sbp","raSpo2","fio2Correct","ddimer"].forEach(function(key){
+    var el = document.getElementById("f-"+key);
+    if(!el) return;
+    el.addEventListener("input", function(){
+      state[key] = el.value === "" ? null : Number(el.value);
+      onFieldChange();
+    });
+  });
+
+  // Segmented controls
+  function wireSegment(id, onPick){
+    var seg = document.getElementById(id);
+    if(!seg) return;
+    seg.querySelectorAll("button").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        seg.querySelectorAll("button").forEach(function(b){ b.classList.remove("on"); });
+        btn.classList.add("on");
+        onPick(btn.getAttribute("data-val"));
+        onFieldChange();
+      });
+    });
+  }
+  wireSegment("seg-altdx", function(v){ state.altDx = v; });
+
+  // Toggle chip-style rows reuse same segmented pattern (none currently besides above)
+
+  function onFieldChange(){
+    updateAutoShock();
+    var results = compute();
+    var seeBtn = document.getElementById("btn-see-results");
+    if(seeBtn) seeBtn.disabled = !state.altDx;
+
+    var contBtn = document.getElementById("btn-continue-assoc");
+    if(contBtn){
+      var fio2Needed = state.raSpo2 != null && state.raSpo2 < 92;
+      var fio2Ok = !fio2Needed || state.fio2Correct != null;
+      var baseOk = state.sbp != null && state.hr != null && state.raSpo2 != null;
+      contBtn.disabled = !(baseOk && fio2Ok);
+
+      var mark = document.getElementById("fio2-required-mark");
+      var hint = document.getElementById("fio2-hint");
+      if(mark) mark.style.display = fio2Needed ? "" : "none";
+      if(hint){
+        hint.classList.toggle("is-required", fio2Needed);
+        hint.textContent = fio2Needed
+          ? "Required — room-air pulse ox is below 92%."
+          : "Only required if room-air pulse ox is below 92%.";
+      }
+    }
+  }
+
+  function autoShock(){
+    var hr = state.hr, sbp = state.sbp, fio2Correct = state.fio2Correct, vent = !!state.assoc.ventilated;
+    if(sbp == null || sbp === "" ) return false;
+    if(sbp >= 90) return false;
+    var tachy = hr != null && hr > 100;
+    var highO2 = fio2Correct != null && fio2Correct >= 40;
+    return !!(tachy || vent || highO2);
+  }
+
+  function updateAutoShock(){
+    var met = autoShock();
+    var pill = document.getElementById("autoshock-pill");
+    if(!pill) return;
+    pill.textContent = met ? "MET" : "NOT MET";
+    pill.style.background = met ? "var(--color-high-soft)" : "var(--color-surface)";
+    pill.style.color = met ? "var(--color-high)" : "var(--color-ink-faint)";
+  }
+
+  var RESP_POINT_KEYS = ["dyspnea","pleuritic","hemoptysis","nonpleuritic","pleuralRub","cxr"];
+
+  function compute(){
+    var checkedCount = RESP_POINT_KEYS.reduce(function(n,k){ return n + ((state.resp[k] || state.assoc[k]) ? 1 : 0); }, 0);
+    var hypoxia = state.raSpo2 != null && state.raSpo2 < 92 && state.fio2Correct != null && state.fio2Correct < 40;
+    var respCount = checkedCount + (hypoxia ? 1 : 0);
+    var cxr = !!(state.resp.cxr || state.assoc.cxr);
+    var hr = state.hr;
+    var typicalSecondary = (hr != null && hr > 90) || !!state.assoc.legSymptoms || !!state.assoc.lowFever || cxr;
+    var isTypical = respCount >= 2 && typicalSecondary;
+    var hasSymptoms = respCount >= 1 || (hr != null && hr > 90);
+
+    var shock = autoShock();
+    var severeCriteria = !!state.resp.syncope || shock || (!!state.assoc.jvp && (!!state.assoc.s1q3t3 || !!state.assoc.rbbb));
+
+    var category;
+    if(severeCriteria) category = "severe";
+    else if(isTypical) category = "typical";
+    else if(hasSymptoms) category = "atypical";
+    else category = "atypical"; // conservative fallback, flagged in reasoning
+
+    var riskPresent = RISK_ITEMS.some(function(i){ return !!state.risk[i.key]; });
+    var altDx = state.altDx; // 'lessLikely' | 'asLikely'
+
+    var pretest = null;
+    if(altDx){
+      if(category === "severe"){
+        pretest = altDx === "lessLikely" ? "high" : "moderate";
+      } else if(category === "typical"){
+        if(altDx === "asLikely") pretest = riskPresent ? "moderate" : "low";
+        else pretest = riskPresent ? "high" : "moderate";
+      } else { // atypical
+        if(altDx === "asLikely") pretest = "low";
+        else pretest = riskPresent ? "high" : "moderate";
+      }
+    }
+
+    return {
+      respCount:respCount, isTypical:isTypical, hasSymptoms:hasSymptoms,
+      severeCriteria:severeCriteria, shock:shock, category:category,
+      riskPresent:riskPresent, altDx:altDx, pretest:pretest
+    };
+  }
+
+  var GAUGE_ANGLE = { low:-70, moderate:0, high:70 };
+
+  function renderResults(){
+    var r = compute();
+    var tagText = document.getElementById("result-tag-text");
+    var tag = document.getElementById("result-tag");
+    var prevalence = document.getElementById("result-prevalence");
+    var caption = document.getElementById("result-caption");
+    var needle = document.getElementById("gauge-needle");
+    var dot = tag.querySelector(".dot");
+
+    var labelMap = {low:"Low probability", moderate:"Moderate probability", high:"High probability"};
+    var colorVar = {low:"var(--color-low)", moderate:"var(--color-moderate)", high:"var(--color-high)"};
+    var softVar = {low:"var(--color-low-soft)", moderate:"var(--color-moderate-soft)", high:"var(--color-high-soft)"};
+    var prevalenceMap = {low:"3.4%", moderate:"27.8%", high:"78.4%"};
+
+    var key = r.pretest || "low";
+    tagText.textContent = labelMap[key];
+    tag.style.background = softVar[key];
+    tag.style.color = colorVar[key];
+    dot.style.background = colorVar[key];
+    needle.style.transform = "rotate(" + GAUGE_ANGLE[key] + "deg)";
+    prevalence.innerHTML = r.pretest ? "PE prevalence in this category: <strong>" + prevalenceMap[key] + "</strong> (Wells 1998 cohort)" : "";
+
+    var captions = {
+      low: "A D-dimer below 1000 ng/mL is sufficient to rule out PE without imaging.",
+      moderate: "A D-dimer below 500 ng/mL is sufficient to rule out PE without imaging.",
+      high: "Proceed directly to chest imaging — D-dimer testing is not indicated."
+    };
+    caption.textContent = captions[key];
+
+    var nextBtn = document.getElementById("btn-next-step");
+    nextBtn.textContent = key === "high" ? "Continue to Imaging" : "Continue to D-dimer";
+    nextBtn.setAttribute("data-go", key === "high" ? "final-imaging" : "ddimer");
+
+    var reasoning = [];
+    reasoning.push(r.respCount + " of 7 respiratory points present" + (r.respCount>=2 ? " (meets threshold of ≥2)." : "."));
+    reasoning.push("Presentation classified as " + r.category.charAt(0).toUpperCase()+r.category.slice(1) + (r.severeCriteria ? " — severe hemodynamic or right-heart criteria present." : r.isTypical ? " — ≥2 respiratory points with a supporting typical finding." : " — symptoms present without meeting the typical pattern."));
+    reasoning.push("Alternative diagnosis: " + (r.altDx === "lessLikely" ? "less likely than PE." : r.altDx === "asLikely" ? "as likely or more likely than PE." : "not yet assessed."));
+    reasoning.push((r.riskPresent ? "One or more VTE risk factors present." : "No VTE risk factors checked.") + (r.category === "severe" ? " (Not used when severity criteria are met.)" : ""));
+    reasoning.push("Resulting pretest probability: " + labelMap[key] + ".");
+
+    var list = document.getElementById("reasoning-list");
+    list.innerHTML = "";
+    reasoning.forEach(function(txt){
+      var item = document.createElement("div");
+      item.className = "reasoning-item";
+      item.innerHTML = '<span class="bullet"></span><span>'+txt+'</span>';
+      list.appendChild(item);
+    });
+
+    return r;
+  }
+
+  function renderDdimer(){
+    var r = compute();
+    var pretext = document.getElementById("ddimer-pretext");
+    var val = document.getElementById("ddimer-threshold-value");
+    var cite = document.getElementById("ddimer-cite");
+    if(r.pretest === "low"){
+      pretext.textContent = "LOW PRETEST PROBABILITY";
+      val.innerHTML = "&lt;1000<span> ng/mL</span>";
+      cite.textContent = "Rules out PE — Kearon et al., NEJM 2019 (PEGeD)";
+    } else {
+      pretext.textContent = "MODERATE PRETEST PROBABILITY";
+      val.innerHTML = "&lt;500<span> ng/mL</span>";
+      cite.textContent = "Rules out PE — Kearon et al., NEJM 2019 (PEGeD)";
+    }
+    var ddimerInput = document.getElementById("f-ddimer");
+    var interpretBtn = document.getElementById("btn-interpret");
+    interpretBtn.disabled = ddimerInput.value === "";
+  }
+
+  document.getElementById("f-ddimer").addEventListener("input", function(){
+    document.getElementById("btn-interpret").disabled = this.value === "";
+  });
+
+  function renderFinal(targetKind){
+    var r = compute();
+    var card = document.getElementById("outcome-card");
+    var icon = document.getElementById("outcome-icon");
+    var title = document.getElementById("outcome-title");
+    var body = document.getElementById("outcome-body");
+    var cite = document.getElementById("outcome-cite");
+
+    var ruledOut, threshold;
+    if(targetKind === "imaging"){
+      ruledOut = false;
+    } else {
+      threshold = r.pretest === "low" ? 1000 : 500;
+      ruledOut = state.ddimer != null && state.ddimer < threshold;
+    }
+
+    card.className = "outcome-card " + (ruledOut ? "outcome-low" : "outcome-high");
+    icon.textContent = ruledOut ? "✓" : "⚠";
+    icon.setAttribute("aria-hidden","true");
+
+    if(ruledOut){
+      title.textContent = "PE Ruled Out";
+      body.textContent = "D-dimer " + state.ddimer + " ng/mL is below the " + threshold + " ng/mL threshold for " + r.pretest + " pretest probability. No imaging or anticoagulation indicated on this basis.";
+      cite.innerHTML = "<strong>Basis</strong> — Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134. None of 1,325 patients managed this way had venous thromboembolism at 90-day follow-up.";
+    } else {
+      title.textContent = "Imaging Indicated";
+      if(targetKind === "imaging"){
+        body.textContent = "High pretest probability of PE. Proceed directly to chest imaging (CT pulmonary angiography, or ventilation–perfusion scanning if CTPA is contraindicated). D-dimer testing is not indicated at this probability tier.";
+      } else {
+        body.textContent = "D-dimer " + state.ddimer + " ng/mL is at or above the " + threshold + " ng/mL threshold for " + r.pretest + " pretest probability. Proceed to chest imaging (CT pulmonary angiography) to confirm or exclude PE.";
+      }
+      cite.innerHTML = "<strong>Basis</strong> — Wells PS, Ginsberg JS, Anderson DR, et al. Ann Intern Med 1998;129(12):997–1005; Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134.";
+    }
+  }
+
+  // ---------- Navigation ----------
+  var app = document.getElementById("app");
+
+  function goTo(name, isBack){
+    var real = name === "final-imaging" ? "final" : name;
+    var current = app.querySelector(".screen.active");
+    var next = document.getElementById("scr-" + real);
+    if(!next || next === current) return;
+
+    if(real === "results") renderResults();
+    if(real === "ddimer") renderDdimer();
+    if(real === "final") renderFinal(name === "final-imaging" ? "imaging" : "ddimer");
+
+    if(current){
+      current.classList.remove("active");
+      if(isBack) current.classList.add("leaving-back");
+    }
+    next.classList.remove("leaving-back","entering-back");
+    if(isBack) next.classList.add("entering-back");
+    // force reflow so the entering transform applies before removing it
+    void next.offsetWidth;
+    next.classList.add("active");
+    next.classList.remove("entering-back");
+
+    setTimeout(function(){
+      if(current) current.classList.remove("leaving-back");
+    }, 400);
+
+    if(!isBack) history.push(real);
+    else { history.pop(); }
+
+    var scroll = next.querySelector(".scroll");
+    if(scroll) scroll.scrollTop = 0;
+  }
+
+  app.addEventListener("click", function(e){
+    var goBtn = e.target.closest("[data-go]");
+    if(goBtn){ goTo(goBtn.getAttribute("data-go"), false); return; }
+    var backBtn = e.target.closest("[data-back]");
+    if(backBtn){ goTo(backBtn.getAttribute("data-back"), true); return; }
+  });
+
+  document.getElementById("btn-copy").addEventListener("click", function(){
+    var r = compute();
+    var lines = [
+      "Acute PE Predictor — Assessment Summary",
+      "Pretest probability: " + r.pretest,
+      "Respiratory points: " + r.respCount + "/7",
+      "Presentation category: " + r.category,
+      "Alternative diagnosis: " + (r.altDx === "lessLikely" ? "less likely than PE" : "as likely/more likely than PE"),
+      "VTE risk factor present: " + (r.riskPresent ? "yes" : "no"),
+      state.ddimer != null ? "D-dimer: " + state.ddimer + " ng/mL" : "",
+      "Source: Wells 1998 (Ann Intern Med); PEGeD 2019 (NEJM)"
+    ].filter(Boolean).join("\\n");
+    var toast = document.getElementById("toast");
+    function showToast(msg){
+      toast.textContent = msg;
+      toast.classList.add("show");
+      setTimeout(function(){ toast.classList.remove("show"); }, 1800);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(lines).then(function(){ showToast("Summary copied"); }).catch(function(){ showToast("Copy unavailable"); });
+    } else {
+      showToast("Copy unavailable");
+    }
+  });
+
+  document.getElementById("btn-restart").addEventListener("click", function(){
+    state = {resp:{}, assoc:{}, risk:{}, hr:null, sbp:null, raSpo2:null, fio2Correct:null, altDx:null, ddimer:null};
+    document.querySelectorAll('#app input[type="text"], #app input[type="number"]').forEach(function(i){ i.value=""; });
+    document.querySelectorAll('#app .row.is-checked').forEach(function(r){ r.classList.remove("is-checked"); });
+    document.querySelectorAll('#app input[type="checkbox"]').forEach(function(c){ c.checked=false; });
+    document.querySelectorAll('#app .segmented button.on').forEach(function(b){ b.classList.remove("on"); });
+    document.getElementById("btn-see-results").disabled = true;
+    document.getElementById("btn-continue-assoc").disabled = true;
+    document.getElementById("fio2-required-mark").style.display = "none";
+    var fio2Hint = document.getElementById("fio2-hint");
+    fio2Hint.classList.remove("is-required");
+    fio2Hint.textContent = "Only required if room-air pulse ox is below 92%.";
+    updateAutoShock();
+  });
+
+  // Live clock in status bar
+  function tick(){
+    var d = new Date();
+    var h = d.getHours() % 12 || 12;
+    var m = ("0"+d.getMinutes()).slice(-2);
+    document.getElementById("clock").textContent = h + ":" + m;
+  }
+  tick(); setInterval(tick, 15000);
+
+  updateAutoShock();
+})();
+</script>
