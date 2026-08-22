@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="PE Predictor">
+<meta name="theme-color" content="#0E7C74">
+<meta name="description" content="An iOS clinical decision-support prototype that walks physicians through the Wells pretest-probability algorithm and PEGeD D-dimer thresholds for suspected pulmonary embolism.">
 <title>Acute PE Predictor</title>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap">
@@ -675,9 +686,16 @@
     }
     .device-screen{border-radius:0;}
     .notch{display:none;}
+    /* clear the real notch / Dynamic Island / status bar once the app runs
+       edge-to-edge as a saved home-screen app (viewport-fit=cover) */
+    .statusbar{
+      height:calc(47px + env(safe-area-inset-top,0px));
+      padding-top:env(safe-area-inset-top,0px);
+    }
   }
 </style>
-
+</head>
+<body>
 <div class="page">
 
   <main class="stage">
@@ -1296,3 +1314,5 @@
   updateAutoShock();
 })();
 </script>
+</body>
+</html>
