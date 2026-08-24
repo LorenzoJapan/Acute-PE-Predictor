@@ -36,9 +36,9 @@ Full citations and methodology notes are also shown in-app, under "About this to
 
 No build step. Open `index.html` in a browser, or serve the folder with any static file server.
 
-## ⚠️ Medical disclaimer
+## ⚠️ Medical Disclaimer
 
-This is a **design and interaction prototype**. It has not been validated as a medical device, has not undergone clinical or regulatory review, and should not be used to guide patient care. Verify all logic against your institution's protocol and current literature before any clinical use.
+This application is a clinical decision support tool intended to help licensed healthcare professionals organize and evaluate clinical information. It does not diagnose, treat, cure, or prevent any disease, and its outputs are not a substitute for clinical judgment. All recommendations must be independently reviewed against the underlying data by the treating clinician before any decision is made, and final responsibility for patient care rests with the provider. This tool is intended for use by licensed healthcare professionals only and is not intended for use by patients or caregivers for self-diagnosis or self-treatment, or for emergency or life-threatening situations. It has not been cleared or approved by the FDA.
 
 ## License
 
