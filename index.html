@@ -443,6 +443,16 @@
   #scr-judgment .row .label small{font-size:11px;margin-top:1px;}
   #scr-judgment #seg-altdx{margin:4px 18px 8px !important;}
 
+  /* Step 2b (low pretest probability only): PERC screening. Derived rows are
+     locked read-outs of earlier answers, not new inputs — so they get a
+     non-interactive cursor and no active/hover feedback. */
+  #scr-perc .row{cursor:default;}
+  #scr-perc .row:active{background:none;}
+  #scr-perc .required-mark{color:var(--color-high);font-weight:700;}
+  .perc-score-row{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;}
+  .perc-score-row .tag-label{font-size:13.5px;font-weight:600;color:var(--color-ink-soft);}
+  .perc-pill{font-family:var(--font-mono);font-weight:700;font-size:13px;padding:4px 12px;border-radius:100px;background:var(--color-surface-muted);color:var(--color-ink-faint);white-space:nowrap;}
+
   /* Step 2 has 4 vitals fields plus 8 exam/EKG items — the densest screen,
      so its fields and rows get the tightest sizing of any screen. */
   #scr-assoc .progress-track{margin:0 20px 2px;}
@@ -849,6 +859,37 @@
             </div>
           </section>
 
+          <!-- PERC (low pretest probability only) -->
+          <section class="screen" data-screen="perc" id="scr-perc">
+            <div class="nav">
+              <button class="back" data-back="results" aria-label="Back"><svg viewBox="0 0 11 19" fill="none"><path d="M10 1 1.5 9.5 10 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="nav-title">PERC Rule</span>
+            </div>
+            <div class="scroll">
+              <div class="card">
+                <div class="card-head"><h3>PE rule-out criteria (PERC)</h3><p class="hint">Applies only at low pretest probability. If all 8 criteria are negative, PE is excluded without D-dimer testing.<sup>3</sup></p></div>
+                <div id="perc-derived-list"></div>
+              </div>
+              <div class="card" style="margin-top:10px;">
+                <div class="card-head"><h3>Not yet captured</h3><p class="hint">Finish the PERC rule with these remaining items.</p></div>
+                <div class="field-block">
+                  <label for="f-age">Patient age <span class="required-mark">*</span></label>
+                  <div class="num-field"><input id="f-age" type="number" inputmode="numeric" placeholder="0" min="0" max="120" required aria-required="true"><span class="unit">years</span></div>
+                </div>
+                <div id="perc-new-list" style="border-top:1px solid var(--color-border);"></div>
+              </div>
+              <div class="card" style="margin-top:10px;">
+                <div class="perc-score-row">
+                  <span class="tag-label">PERC score</span>
+                  <span class="perc-pill" id="perc-score-pill">— / 8</span>
+                </div>
+              </div>
+            </div>
+            <div class="cta-bar">
+              <button class="btn btn-primary" id="btn-perc-continue" disabled data-go="ddimer">Continue to D-dimer</button>
+            </div>
+          </section>
+
           <!-- D-DIMER -->
           <section class="screen" data-screen="ddimer" id="scr-ddimer">
             <div class="nav">
@@ -860,6 +901,10 @@
                 <div class="pretext" id="ddimer-pretext">LOW PRETEST PROBABILITY</div>
                 <div class="value" id="ddimer-threshold-value">&lt;1000<span> ng/mL</span></div>
                 <p class="cite" id="ddimer-cite">Rules out PE per PEGeD, Kearon et al. NEJM 2019</p>
+              </div>
+              <div class="card" id="years-card" style="margin-top:10px;display:none;">
+                <div class="card-head"><h3>YEARS criteria</h3><p class="hint">Threshold above is set by which of these are present.<sup>4</sup></p></div>
+                <div id="years-list"></div>
               </div>
               <div class="card" style="margin-top:18px;">
                 <div class="field-block">
@@ -905,8 +950,16 @@
                 <p>Categorizes presentation as typical, atypical, or severe, then layers alternative-diagnosis judgment and VTE risk factors to reach Low, Moderate, or High pretest probability.<sup>1</sup></p>
               </div>
               <div class="about-block">
+                <h4>Low probability — PERC rule-out</h4>
+                <p>When pretest probability is low, the pulmonary embolism rule-out criteria (PERC) are screened next: age &lt;50y, HR &lt;100, SpO₂ ≥95% on room air, no hemoptysis, no unilateral leg swelling, no prior DVT/PE, no exogenous estrogen use, and no surgery or trauma requiring hospitalization/general anesthesia in the past 4 weeks. If all 8 are negative, PE is excluded without D-dimer testing or imaging. Any positive item routes to the standard low-probability D-dimer threshold below.<sup>3</sup></p>
+              </div>
+              <div class="about-block">
+                <h4>Moderate probability — YEARS-adjusted D-dimer threshold</h4>
+                <p>When pretest probability is moderate, the D-dimer threshold is set using the three YEARS items already captured elsewhere in the assessment — clinical signs of DVT, hemoptysis, and PE being the most likely diagnosis. None present: &lt;1000 ng/mL rules out PE. One or more present: &lt;500 ng/mL rules out PE.<sup>4</sup></p>
+              </div>
+              <div class="about-block">
                 <h4>D-dimer thresholds</h4>
-                <p>A D-dimer &lt;1000 ng/mL rules out PE in low pretest probability; &lt;500 ng/mL rules out PE in moderate pretest probability. High pretest probability proceeds directly to chest imaging.<sup>2</sup></p>
+                <p>A D-dimer &lt;1000 ng/mL rules out PE in low pretest probability that is PERC-positive.<sup>2</sup> High pretest probability proceeds directly to chest imaging.</p>
               </div>
               <div class="disclaimer">
                 <h4 style="font-size:13.5px;font-weight:700;margin-bottom:6px;color:var(--color-moderate);">Medical Disclaimer</h4>
@@ -917,6 +970,8 @@
                 <ol class="ref-list">
                   <li>Wells PS, Ginsberg JS, Anderson DR, Kearon C, Turpie AG, Bormanis J, et al. Use of a clinical model for safe management of patients with suspected pulmonary embolism. Ann Intern Med. 1998;129(12):997-1005.</li>
                   <li>Kearon C, de Wit K, Parpia S, Schulman S, Afilalo M, Hirsch A, et al. Diagnosis of pulmonary embolism with D-dimer adjusted to clinical probability. N Engl J Med. 2019;381(22):2125-2134.</li>
+                  <li>Freund Y, Cachanado M, Aubry A, Orsini C, Raynal PA, Féral-Pierssens AL, et al. Effect of the pulmonary embolism rule-out criteria on subsequent thromboembolic events among low-risk emergency department patients: the PROPER randomized clinical trial. JAMA. 2018;319(6):559-566.</li>
+                  <li>van der Hulle T, Cheung WY, Kooij S, Beenen LFM, van Bemmel T, van Es J, et al. Simplified diagnostic management of suspected pulmonary embolism (the YEARS study): a prospective, multicentre, cohort study. Lancet. 2017;390(10091):289-297.</li>
                 </ol>
               </div>
               <p style="margin-top:22px;font-size:12px;color:var(--color-ink-faint);text-align:center;">Developed by MDGadgetz LLC.</p>
@@ -965,9 +1020,28 @@
     {key:"paralysis", label:"Lower-extremity paralysis"}
   ];
 
+  // PERC (pulmonary embolism rule-out criteria) is only screened once pretest
+  // probability comes back Low. Five of its eight items are already captured
+  // earlier in the assessment (Steps 1–3), so they are carried over here as
+  // read-only rows rather than asked twice. Age, estrogen use, and recent
+  // surgery/trauma (a 4-week / general-anesthesia window distinct from the
+  // 12-week Wells surgery item) are the only genuinely new inputs.
+  var PERC_DERIVED_SOURCE = [
+    {key:"hr100", label:"Heart rate ≥100 bpm", sub:"Carried over from Step 2 vitals", get:function(){ return state.hr != null && state.hr >= 100; }},
+    {key:"spo2", label:"SpO₂ <95% on room air", sub:"Carried over from Step 2 vitals", get:function(){ return state.raSpo2 != null && state.raSpo2 < 95; }},
+    {key:"hemoptysis", label:"Hemoptysis", sub:"Carried over from Step 1", get:function(){ return !!state.resp.hemoptysis; }},
+    {key:"leg", label:"Unilateral leg swelling", sub:"Carried over from Step 2 signs of DVT", get:function(){ return !!state.assoc.legSymptoms; }},
+    {key:"priorVte", label:"Prior PE or DVT", sub:"Carried over from Step 3 risk factors", get:function(){ return !!state.risk.priorVte; }}
+  ];
+
+  var PERC_NEW_ITEMS = [
+    {key:"estrogenUse", label:"Exogenous estrogen use", sub:"Oral contraceptives, hormone replacement, or other estrogen therapy"},
+    {key:"recentSurgeryTrauma", label:"Recent surgery or trauma", sub:"Requiring hospitalization or general anesthesia, within the past 4 weeks"}
+  ];
+
   var state = {
-    resp:{}, assoc:{}, risk:{},
-    hr:null, sbp:null, raSpo2:null, fio2Correct:null,
+    resp:{}, assoc:{}, risk:{}, perc:{},
+    hr:null, sbp:null, raSpo2:null, fio2Correct:null, age:null,
     altDx:null,
     ddimer:null
   };
@@ -997,9 +1071,10 @@
   buildChecklist(document.getElementById("resp-list"), RESP_ITEMS, "resp");
   buildChecklist(document.getElementById("assoc-list"), ASSOC_ITEMS, "assoc");
   buildChecklist(document.getElementById("risk-list"), RISK_ITEMS, "risk");
+  buildChecklist(document.getElementById("perc-new-list"), PERC_NEW_ITEMS, "perc");
 
   // Numeric fields
-  ["hr","sbp","raSpo2","fio2Correct","ddimer"].forEach(function(key){
+  ["hr","sbp","raSpo2","fio2Correct","ddimer","age"].forEach(function(key){
     var el = document.getElementById("f-"+key);
     if(!el) return;
     el.addEventListener("input", function(){
@@ -1048,6 +1123,8 @@
           : "Only required if room-air pulse ox is below 92%.";
       }
     }
+
+    if(document.getElementById("perc-score-pill")) updatePercState();
   }
 
   function autoShock(){
@@ -1112,6 +1189,52 @@
     };
   }
 
+  // PERC — screened only when pretest probability is Low. All 8 items
+  // negative (score 0) excludes PE without any D-dimer or imaging.
+  function percResult(){
+    var age = state.age;
+    var ageItem = age != null && age >= 50;
+    var derived = PERC_DERIVED_SOURCE.map(function(d){
+      return {key:d.key, label:d.label, sub:d.sub, positive:d.get()};
+    });
+    var derivedPositives = derived.reduce(function(n,d){ return n + (d.positive ? 1 : 0); }, 0);
+    var newPositives = PERC_NEW_ITEMS.reduce(function(n,i){ return n + (state.perc[i.key] ? 1 : 0); }, 0);
+    var complete = age != null;
+    var score = derivedPositives + newPositives + (ageItem ? 1 : 0);
+    return {
+      age:age, ageItem:ageItem, derived:derived,
+      score:score, complete:complete, negative: complete && score === 0
+    };
+  }
+
+  // YEARS — used only when pretest probability is Moderate, to choose the
+  // D-dimer threshold. All three items are already collected elsewhere in
+  // the assessment (Steps 1–3), so no new inputs are needed.
+  var YEARS_ITEM_META = [
+    {key:"dvt", label:"Clinical signs of DVT", sub:"Carried over from Step 2 signs of DVT"},
+    {key:"hemoptysis", label:"Hemoptysis", sub:"Carried over from Step 1"},
+    {key:"peMostLikely", label:"PE is the most likely diagnosis", sub:"Carried over from Step 3 alternative-diagnosis judgment"}
+  ];
+
+  function yearsResult(){
+    var items = {
+      dvt: !!state.assoc.legSymptoms,
+      hemoptysis: !!state.resp.hemoptysis,
+      peMostLikely: state.altDx === "lessLikely"
+    };
+    var list = YEARS_ITEM_META.map(function(m){
+      return {key:m.key, label:m.label, sub:m.sub, positive:items[m.key]};
+    });
+    var itemCount = (items.dvt?1:0) + (items.hemoptysis?1:0) + (items.peMostLikely?1:0);
+    var present = list.filter(function(i){ return i.positive; }).map(function(i){ return i.label; });
+    return {items:items, itemCount:itemCount, list:list, present:present};
+  }
+
+  function getDdimerThreshold(r){
+    if(r.pretest === "low") return 1000;
+    return yearsResult().itemCount === 0 ? 1000 : 500;
+  }
+
   var GAUGE_ANGLE = { low:-70, moderate:0, high:70 };
 
   function renderResults(){
@@ -1137,21 +1260,35 @@
     prevalence.innerHTML = r.pretest ? "PE prevalence in this category: <strong>" + prevalenceMap[key] + "</strong> (Wells 1998 cohort)" : "";
 
     var captions = {
-      low: "A D-dimer below 1000 ng/mL is sufficient to rule out PE without imaging.",
-      moderate: "A D-dimer below 500 ng/mL is sufficient to rule out PE without imaging.",
+      low: "Low pretest probability — screened next against PERC before any D-dimer is considered.",
+      moderate: "Moderate pretest probability — the D-dimer threshold (500 or 1000 ng/mL) is set using YEARS criteria.",
       high: "Proceed directly to chest imaging — D-dimer testing is not indicated."
     };
     caption.textContent = captions[key];
 
     var nextBtn = document.getElementById("btn-next-step");
-    nextBtn.textContent = key === "high" ? "Continue to Imaging" : "Continue to D-dimer";
-    nextBtn.setAttribute("data-go", key === "high" ? "final-imaging" : "ddimer");
+    if(key === "high"){
+      nextBtn.textContent = "Continue to Imaging";
+      nextBtn.setAttribute("data-go", "final-imaging");
+    } else if(key === "low"){
+      nextBtn.textContent = "Continue to PERC Screening";
+      nextBtn.setAttribute("data-go", "perc");
+    } else {
+      nextBtn.textContent = "Continue to D-dimer";
+      nextBtn.setAttribute("data-go", "ddimer");
+    }
 
     var reasoning = [];
     reasoning.push(r.respCount + " of 7 respiratory points present" + (r.respCount>=2 ? " (meets threshold of ≥2)." : "."));
     reasoning.push("Presentation classified as " + r.category.charAt(0).toUpperCase()+r.category.slice(1) + (r.severeCriteria ? " — severe hemodynamic or right-heart criteria present." : r.isTypical ? " — ≥2 respiratory points with a supporting typical finding." : " — symptoms present without meeting the typical pattern."));
     reasoning.push("Alternative diagnosis: " + (r.altDx === "lessLikely" ? "less likely than PE." : r.altDx === "asLikely" ? "as likely or more likely than PE." : "not yet assessed."));
     reasoning.push((r.riskPresent ? "One or more VTE risk factors present." : "No VTE risk factors checked.") + (r.category === "severe" ? " (Not used when severity criteria are met.)" : ""));
+    if(key === "low"){
+      reasoning.push("Next: PERC screening (8 criteria) — if all negative, PE is excluded without D-dimer.");
+    } else if(key === "moderate"){
+      var yr = yearsResult();
+      reasoning.push("Next: D-dimer threshold set by YEARS criteria — " + yr.itemCount + " of 3 items present (signs of DVT, hemoptysis, PE most likely diagnosis).");
+    }
     reasoning.push("Resulting pretest probability: " + labelMap[key] + ".");
 
     var list = document.getElementById("reasoning-list");
@@ -1166,20 +1303,83 @@
     return r;
   }
 
+  // Shared read-only "criterion row" — used for PERC's carried-over items and
+  // for the YEARS criteria list shown at the D-dimer decision point. Both are
+  // locked read-outs of earlier answers, not new inputs.
+  function renderCriterionRow(d){
+    var row = document.createElement("div");
+    row.className = "row";
+    var onColor = d.positive ? "var(--color-high)" : "var(--color-surface)";
+    var borderColor = d.positive ? "var(--color-high)" : "var(--color-border-strong)";
+    row.innerHTML =
+      '<span class="checkbox" style="background:'+onColor+';border-color:'+borderColor+';">' +
+        (d.positive ? '<svg viewBox="0 0 13 10" fill="none" style="opacity:1;transform:scale(1);"><path d="M1 5l4 4 7-8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' : '') +
+      '</span>' +
+      '<span class="label">'+d.label+'<small>'+d.sub+' — currently '+(d.positive ? 'positive':'negative')+'</small></span>';
+    return row;
+  }
+
+  function renderPerc(){
+    var container = document.getElementById("perc-derived-list");
+    container.innerHTML = "";
+    percResult().derived.forEach(function(d){
+      container.appendChild(renderCriterionRow(d));
+    });
+    var ageInput = document.getElementById("f-age");
+    if(state.age != null) ageInput.value = state.age;
+    updatePercState();
+  }
+
+  function updatePercState(){
+    var res = percResult();
+    var pill = document.getElementById("perc-score-pill");
+    if(pill){
+      pill.textContent = res.complete ? (res.score + " / 8") : "— / 8";
+      pill.style.background = !res.complete ? "var(--color-surface-muted)" : (res.negative ? "var(--color-low-soft)" : "var(--color-high-soft)");
+      pill.style.color = !res.complete ? "var(--color-ink-faint)" : (res.negative ? "var(--color-low)" : "var(--color-high)");
+    }
+    var btn = document.getElementById("btn-perc-continue");
+    if(btn){
+      btn.disabled = !res.complete;
+      if(res.complete && res.negative){
+        btn.textContent = "See Result — PE Excluded";
+        btn.setAttribute("data-go", "final-perc");
+      } else {
+        btn.textContent = "Continue to D-dimer";
+        btn.setAttribute("data-go", "ddimer");
+      }
+    }
+  }
+
   function renderDdimer(){
     var r = compute();
     var pretext = document.getElementById("ddimer-pretext");
     var val = document.getElementById("ddimer-threshold-value");
     var cite = document.getElementById("ddimer-cite");
+    var backBtn = document.querySelector("#scr-ddimer .back");
+    var yearsCard = document.getElementById("years-card");
+    var threshold = getDdimerThreshold(r);
+
     if(r.pretest === "low"){
-      pretext.textContent = "LOW PRETEST PROBABILITY";
-      val.innerHTML = "&lt;1000<span> ng/mL</span>";
+      pretext.textContent = "LOW PRETEST PROBABILITY · PERC-POSITIVE";
       cite.textContent = "Rules out PE — Kearon et al., NEJM 2019 (PEGeD)";
+      if(backBtn) backBtn.setAttribute("data-back", "perc");
+      yearsCard.style.display = "none";
     } else {
-      pretext.textContent = "MODERATE PRETEST PROBABILITY";
-      val.innerHTML = "&lt;500<span> ng/mL</span>";
-      cite.textContent = "Rules out PE — Kearon et al., NEJM 2019 (PEGeD)";
+      var yr = yearsResult();
+      pretext.textContent = "MODERATE PRETEST PROBABILITY · YEARS " + yr.itemCount + "/3";
+      cite.textContent = (yr.itemCount === 0
+        ? "No YEARS items present — "
+        : "YEARS item(s) present: " + yr.present.join("; ") + " — ") + "van der Hulle et al., Lancet 2017 (YEARS)";
+      if(backBtn) backBtn.setAttribute("data-back", "results");
+
+      yearsCard.style.display = "";
+      var yearsList = document.getElementById("years-list");
+      yearsList.innerHTML = "";
+      yr.list.forEach(function(item){ yearsList.appendChild(renderCriterionRow(item)); });
     }
+    val.innerHTML = "&lt;" + threshold + "<span> ng/mL</span>";
+
     var ddimerInput = document.getElementById("f-ddimer");
     var interpretBtn = document.getElementById("btn-interpret");
     interpretBtn.disabled = ddimerInput.value === "";
@@ -1197,11 +1397,14 @@
     var body = document.getElementById("outcome-body");
     var cite = document.getElementById("outcome-cite");
 
-    var ruledOut, threshold;
+    var ruledOut, threshold, perc;
     if(targetKind === "imaging"){
       ruledOut = false;
+    } else if(targetKind === "perc"){
+      perc = percResult();
+      ruledOut = true;
     } else {
-      threshold = r.pretest === "low" ? 1000 : 500;
+      threshold = getDdimerThreshold(r);
       ruledOut = state.ddimer != null && state.ddimer < threshold;
     }
 
@@ -1209,18 +1412,25 @@
     icon.textContent = ruledOut ? "✓" : "⚠";
     icon.setAttribute("aria-hidden","true");
 
-    if(ruledOut){
+    var yearsCite = " Threshold selected per YEARS criteria — van der Hulle T, Cheung WY, Kooij S, et al. Lancet. 2017;390(10091):289–297.";
+
+    if(targetKind === "perc"){
+      title.textContent = "PE Ruled Out — PERC Negative";
+      body.textContent = "PERC score 0/8 in a patient (age " + perc.age + ") with low pretest probability. No further testing — D-dimer or imaging — is required to exclude PE on this basis.";
+      cite.innerHTML = "<strong>Basis</strong> — Freund Y, Cachanado M, Aubry A, et al. JAMA. 2018;319(6):559–566 (PROPER trial). A PERC-based strategy was noninferior to standard workup for thromboembolic events at 3 months in ED patients with low clinical probability of PE.";
+    } else if(ruledOut){
       title.textContent = "PE Ruled Out";
       body.textContent = "D-dimer " + state.ddimer + " ng/mL is below the " + threshold + " ng/mL threshold for " + r.pretest + " pretest probability. No imaging or anticoagulation indicated on this basis.";
-      cite.innerHTML = "<strong>Basis</strong> — Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134. None of 1,325 patients managed this way had venous thromboembolism at 90-day follow-up.";
+      cite.innerHTML = "<strong>Basis</strong> — Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134." + (r.pretest === "moderate" ? yearsCite : " None of 1,325 patients managed this way had venous thromboembolism at 90-day follow-up.");
     } else {
       title.textContent = "Imaging Indicated";
       if(targetKind === "imaging"){
         body.textContent = "High pretest probability of PE. Proceed directly to chest imaging (CT pulmonary angiography, or ventilation–perfusion scanning if CTPA is contraindicated). D-dimer testing is not indicated at this probability tier.";
+        cite.innerHTML = "<strong>Basis</strong> — Wells PS, Ginsberg JS, Anderson DR, et al. Ann Intern Med 1998;129(12):997–1005.";
       } else {
         body.textContent = "D-dimer " + state.ddimer + " ng/mL is at or above the " + threshold + " ng/mL threshold for " + r.pretest + " pretest probability. Proceed to chest imaging (CT pulmonary angiography) to confirm or exclude PE.";
+        cite.innerHTML = "<strong>Basis</strong> — Wells PS, Ginsberg JS, Anderson DR, et al. Ann Intern Med 1998;129(12):997–1005; Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134." + (r.pretest === "moderate" ? yearsCite : "");
       }
-      cite.innerHTML = "<strong>Basis</strong> — Wells PS, Ginsberg JS, Anderson DR, et al. Ann Intern Med 1998;129(12):997–1005; Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134.";
     }
   }
 
@@ -1228,14 +1438,15 @@
   var app = document.getElementById("app");
 
   function goTo(name, isBack){
-    var real = name === "final-imaging" ? "final" : name;
+    var real = (name === "final-imaging" || name === "final-perc") ? "final" : name;
     var current = app.querySelector(".screen.active");
     var next = document.getElementById("scr-" + real);
     if(!next || next === current) return;
 
     if(real === "results") renderResults();
+    if(real === "perc") renderPerc();
     if(real === "ddimer") renderDdimer();
-    if(real === "final") renderFinal(name === "final-imaging" ? "imaging" : "ddimer");
+    if(real === "final") renderFinal(name === "final-imaging" ? "imaging" : name === "final-perc" ? "perc" : "ddimer");
 
     if(current){
       current.classList.remove("active");
@@ -1274,10 +1485,19 @@
       "Respiratory points: " + r.respCount + "/7",
       "Presentation category: " + r.category,
       "Alternative diagnosis: " + (r.altDx === "lessLikely" ? "less likely than PE" : "as likely/more likely than PE"),
-      "VTE risk factor present: " + (r.riskPresent ? "yes" : "no"),
-      state.ddimer != null ? "D-dimer: " + state.ddimer + " ng/mL" : "",
-      "Source: Wells 1998 (Ann Intern Med); PEGeD 2019 (NEJM)"
-    ].filter(Boolean).join("\\n");
+      "VTE risk factor present: " + (r.riskPresent ? "yes" : "no")
+    ];
+    if(r.pretest === "low"){
+      var perc = percResult();
+      lines.push("PERC score: " + (perc.complete ? perc.score + "/8" + (perc.negative ? " (negative — PE excluded)" : " (positive)") : "not completed"));
+    }
+    if(r.pretest === "moderate"){
+      var yr = yearsResult();
+      lines.push("YEARS items: " + yr.itemCount + "/3 (D-dimer threshold " + getDdimerThreshold(r) + " ng/mL)");
+    }
+    if(state.ddimer != null) lines.push("D-dimer: " + state.ddimer + " ng/mL");
+    lines.push("Source: Wells 1998 (Ann Intern Med); PEGeD 2019 (NEJM); PROPER 2018 (JAMA, PERC); YEARS 2017 (Lancet)");
+    lines = lines.filter(Boolean).join("\\n");
     var toast = document.getElementById("toast");
     function showToast(msg){
       toast.textContent = msg;
@@ -1292,7 +1512,7 @@
   });
 
   document.getElementById("btn-restart").addEventListener("click", function(){
-    state = {resp:{}, assoc:{}, risk:{}, hr:null, sbp:null, raSpo2:null, fio2Correct:null, altDx:null, ddimer:null};
+    state = {resp:{}, assoc:{}, risk:{}, perc:{}, hr:null, sbp:null, raSpo2:null, fio2Correct:null, age:null, altDx:null, ddimer:null};
     document.querySelectorAll('#app input[type="text"], #app input[type="number"]').forEach(function(i){ i.value=""; });
     document.querySelectorAll('#app .row.is-checked').forEach(function(r){ r.classList.remove("is-checked"); });
     document.querySelectorAll('#app input[type="checkbox"]').forEach(function(c){ c.checked=false; });
