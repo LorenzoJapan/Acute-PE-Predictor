@@ -177,6 +177,37 @@ function log(label, ok, detail) {
     log('Scenario E: high routes straight to imaging final screen', active === 'final', 'got "' + active + '"');
     const title = await page.textContent('#outcome-title');
     log('Scenario E: imaging indicated title shown', title === 'Imaging Indicated', 'got "' + title + '"');
+    const alertVisible = await page.isVisible('#outcome-alert');
+    log('Scenario E: no TTE alert for a stable high-probability patient', !alertVisible);
+  });
+
+  // ---- Scenario F: High pretest WITH shock (unstable) -> bedside TTE alert
+  await withPage(async (page) => {
+    await goHome(page);
+    await checkRespItems(page, []);
+    // shock: SBP <90 with tachycardia (HR >100)
+    await fillVitals(page, { hr: 130, sbp: 80, raSpo2: 92 });
+    await checkAssocItems(page, []);
+    await checkRiskItems(page, []);
+    await pickAltDx(page, 'lessLikely'); // shock (severe) + lessLikely -> high
+    await seeResults(page);
+    const tag = await page.textContent('#result-tag-text');
+    log('Scenario F: pretest classified High (via shock)', tag === 'High probability', 'got "' + tag + '"');
+
+    await page.click('#btn-next-step');
+    const title = await page.textContent('#outcome-title');
+    log('Scenario F: title flags instability / bedside TTE', title === 'Unstable — Consider Bedside TTE', 'got "' + title + '"');
+
+    const alertVisible = await page.isVisible('#outcome-alert');
+    log('Scenario F: TTE alert box is shown', alertVisible);
+    const alertText = await page.textContent('#outcome-alert');
+    log('Scenario F: alert mentions bedside TTE and reperfusion', /bedside TTE/i.test(alertText) && /reperfusion/i.test(alertText), 'got "' + alertText + '"');
+
+    const body = await page.textContent('#outcome-body');
+    log('Scenario F: body explains shock criteria', /shock criteria met/i.test(body), 'got "' + body + '"');
+
+    const cite = await page.textContent('#outcome-cite');
+    log('Scenario F: cite references 2019 ESC Guidelines (Eur Heart J 2020)', /Eur Heart J\. 2020;41\(4\):543/.test(cite), 'got "' + cite + '"');
   });
 
   console.log(process.exitCode ? '\nSOME TESTS FAILED' : '\nALL TESTS PASSED');

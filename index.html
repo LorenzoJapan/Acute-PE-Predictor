@@ -614,6 +614,20 @@
   }
   .cite-box strong{color:var(--color-ink-soft);}
 
+  /* Critical alert on the Final screen — shown only for high pretest
+     probability with hemodynamic instability (shock criteria met), to
+     surface the bedside-TTE alternative without disturbing the normal
+     "proceed to CTPA" outcome for stable high-probability patients. */
+  .alert-critical{
+    margin-top:14px;padding:14px 16px;
+    background:var(--color-high-soft);
+    border:1px solid var(--color-high);
+    border-radius:var(--radius-md);
+    font-size:12.5px;color:var(--color-ink-soft);line-height:1.6;
+    text-align:left;
+  }
+  .alert-critical strong{color:var(--color-high);}
+
   .toast{
     position:absolute;left:50%;bottom:100px;
     transform:translate(-50%,12px);
@@ -929,6 +943,7 @@
                 <h3 id="outcome-title">Result</h3>
                 <p id="outcome-body">—</p>
               </div>
+              <div class="alert-critical" id="outcome-alert" style="display:none;"></div>
               <div class="cite-box" id="outcome-cite"></div>
             </div>
             <div class="cta-bar">
@@ -961,6 +976,10 @@
                 <h4>D-dimer thresholds</h4>
                 <p>A D-dimer &lt;1000 ng/mL rules out PE in low pretest probability that is PERC-positive.<sup>2</sup> High pretest probability proceeds directly to chest imaging.</p>
               </div>
+              <div class="about-block">
+                <h4>High probability — hemodynamic instability</h4>
+                <p>When pretest probability is high and shock criteria are met (SBP &lt;90 mmHg with tachycardia, mechanical ventilation, or a high oxygen requirement), the recommendation adds bedside transthoracic echocardiography (TTE) as an alternative to CTPA if the patient cannot be safely transported. Right ventricular strain/dysfunction on TTE in this context supports emergency reperfusion therapy without waiting for CTPA confirmation.<sup>5</sup></p>
+              </div>
               <div class="disclaimer">
                 <h4 style="font-size:13.5px;font-weight:700;margin-bottom:6px;color:var(--color-moderate);">Medical Disclaimer</h4>
                 <p>This application is a clinical decision support tool intended to help licensed healthcare professionals organize and evaluate clinical information. It does not diagnose, treat, cure, or prevent any disease, and its outputs are not a substitute for clinical judgment. All recommendations must be independently reviewed against the underlying data by the treating clinician before any decision is made, and final responsibility for patient care rests with the provider. This tool is intended for use by licensed healthcare professionals only and is not intended for use by patients or caregivers for self-diagnosis or self-treatment, or for emergency or life-threatening situations. It has not been cleared or approved by the FDA.</p>
@@ -972,6 +991,8 @@
                   <li>Kearon C, de Wit K, Parpia S, Schulman S, Afilalo M, Hirsch A, et al. Diagnosis of pulmonary embolism with D-dimer adjusted to clinical probability. N Engl J Med. 2019;381(22):2125-2134.</li>
                   <li>Freund Y, Cachanado M, Aubry A, Orsini C, Raynal PA, Féral-Pierssens AL, et al. Effect of the pulmonary embolism rule-out criteria on subsequent thromboembolic events among low-risk emergency department patients: the PROPER randomized clinical trial. JAMA. 2018;319(6):559-566.</li>
                   <li>van der Hulle T, Cheung WY, Kooij S, Beenen LFM, van Bemmel T, van Es J, et al. Simplified diagnostic management of suspected pulmonary embolism (the YEARS study): a prospective, multicentre, cohort study. Lancet. 2017;390(10091):289-297.</li>
+                  <li>Konstantinides SV, Meyer G, Becattini C, Bueno H, Geersing GJ, Harjola VP, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603.</li>
+                  <li>Creager MA, Barnes GD, Giri J, Mukherjee D, Jones WS, Burnett AE, et al. 2026 AHA/ACC/ACCP/ACEP/CHEST/SCAI/SHM/SIR/SVM/SVN guideline for the evaluation and management of acute pulmonary embolism in adults: a report of the American College of Cardiology/American Heart Association Joint Committee on Clinical Practice Guidelines. Circulation. 2026;153:e00-e00.</li>
                 </ol>
               </div>
               <p style="margin-top:22px;font-size:12px;color:var(--color-ink-faint);text-align:center;">Developed by MDGadgetz LLC.</p>
@@ -1396,6 +1417,9 @@
     var title = document.getElementById("outcome-title");
     var body = document.getElementById("outcome-body");
     var cite = document.getElementById("outcome-cite");
+    var alertBox = document.getElementById("outcome-alert");
+    alertBox.style.display = "none";
+    alertBox.innerHTML = "";
 
     var ruledOut, threshold, perc;
     if(targetKind === "imaging"){
@@ -1425,8 +1449,16 @@
     } else {
       title.textContent = "Imaging Indicated";
       if(targetKind === "imaging"){
-        body.textContent = "High pretest probability of PE. Proceed directly to chest imaging (CT pulmonary angiography, or ventilation–perfusion scanning if CTPA is contraindicated). D-dimer testing is not indicated at this probability tier.";
-        cite.innerHTML = "<strong>Basis</strong> — Wells PS, Ginsberg JS, Anderson DR, et al. Ann Intern Med 1998;129(12):997–1005.";
+        if(r.shock){
+          title.textContent = "Unstable — Consider Bedside TTE";
+          body.textContent = "High pretest probability of PE with hemodynamic instability (shock criteria met — SBP <90 mmHg with tachycardia, mechanical ventilation, or a high oxygen requirement). CT pulmonary angiography remains the study of choice, but if the patient cannot be safely transported for CTPA, obtain bedside transthoracic echocardiography (TTE) instead.";
+          alertBox.style.display = "";
+          alertBox.innerHTML = "<strong>Unstable — consider bedside TTE</strong><br>Right ventricular strain/dysfunction on bedside TTE, in a patient too unstable for CTPA, supports emergency reperfusion therapy (e.g., thrombolysis) without waiting for CTPA confirmation. Proceed to CTPA once the patient is stable enough for transport.";
+          cite.innerHTML = "<strong>Basis</strong> — Wells PS, Ginsberg JS, Anderson DR, et al. Ann Intern Med 1998;129(12):997–1005; Konstantinides SV, Meyer G, Becattini C, et al. Eur Heart J. 2020;41(4):543–603 (2019 ESC Guidelines).";
+        } else {
+          body.textContent = "High pretest probability of PE. Proceed directly to chest imaging (CT pulmonary angiography, or ventilation–perfusion scanning if CTPA is contraindicated). D-dimer testing is not indicated at this probability tier.";
+          cite.innerHTML = "<strong>Basis</strong> — Wells PS, Ginsberg JS, Anderson DR, et al. Ann Intern Med 1998;129(12):997–1005.";
+        }
       } else {
         body.textContent = "D-dimer " + state.ddimer + " ng/mL is at or above the " + threshold + " ng/mL threshold for " + r.pretest + " pretest probability. Proceed to chest imaging (CT pulmonary angiography) to confirm or exclude PE.";
         cite.innerHTML = "<strong>Basis</strong> — Wells PS, Ginsberg JS, Anderson DR, et al. Ann Intern Med 1998;129(12):997–1005; Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134." + (r.pretest === "moderate" ? yearsCite : "");
@@ -1495,8 +1527,11 @@
       var yr = yearsResult();
       lines.push("YEARS items: " + yr.itemCount + "/3 (D-dimer threshold " + getDdimerThreshold(r) + " ng/mL)");
     }
+    if(r.pretest === "high"){
+      lines.push("Hemodynamic status: " + (r.shock ? "unstable (shock criteria met) — consider bedside TTE if unfit for CTPA transport" : "stable — proceed to CTPA"));
+    }
     if(state.ddimer != null) lines.push("D-dimer: " + state.ddimer + " ng/mL");
-    lines.push("Source: Wells 1998 (Ann Intern Med); PEGeD 2019 (NEJM); PROPER 2018 (JAMA, PERC); YEARS 2017 (Lancet)");
+    lines.push("Source: Wells 1998 (Ann Intern Med); PEGeD 2019 (NEJM); PROPER 2018 (JAMA, PERC); YEARS 2017 (Lancet)" + (r.pretest === "high" && r.shock ? "; 2019 ESC Guidelines (Eur Heart J 2020)" : ""));
     lines = lines.filter(Boolean).join("\\n");
     var toast = document.getElementById("toast");
     function showToast(msg){
