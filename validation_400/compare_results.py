@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
 """
-Compares the deployed app's actual outputs (app_results.json, produced by
-driving index.html with Playwright) against:
-  (1) the independent Python reference implementation of the app's own
-      documented algorithm (generate_reference.py) — an implementation-
-      correctness / regression check, and
-  (2) the classic published Wells score (Wells 1998) — an external clinical
-      benchmark for how the app's bespoke categorization compares to the
-      traditional weighted rule on the same random inputs.
+Compares the deployed app's actual Wells Expanded Criteria Pathway output
+(app_results.json, produced by driving the real UI with Playwright) against
+an independent from-scratch Python reference implementation of the same
+documented algorithm (patients.json, produced by generate_reference.py).
+
+This measures whether the shipped JavaScript correctly implements its own
+documented decision rules across a large, varied set of synthetic cases --
+i.e. an implementation-correctness / regression check, not a clinical
+accuracy claim. These are randomly generated synthetic patients with no
+real-world diagnosis, so there is no ground-truth PE status to validate
+against; "accuracy" here means agreement with the algorithm as documented.
 
 Writes VALIDATION_REPORT.md and results.csv.
 """
+
 import json
 import csv
 
@@ -22,215 +26,137 @@ with open("app_results.json") as f:
 TIERS = ["low", "moderate", "high"]
 
 rows = []
-errors = []
-mismatches_ref = []
-confusion_ref = {a: {b: 0 for b in TIERS} for a in TIERS}
-confusion_wells = {a: {b: 0 for b in TIERS} for a in TIERS}
-
-perc_checked = 0
-perc_mismatches = []
-years_checked = 0
-years_mismatches = []
-
+errored = []
 for pid, p in patients.items():
-    a = app_results.get(pid)
-    ref = p["reference"]["pretest"]["pretest"]
-    wells = p["reference"]["classicWells"]["tier"]
-
-    if a is None or a.get("error"):
-        errors.append({"id": pid, "error": a.get("error") if a else "no result"})
+    ref = p["reference"]["pretest"]
+    ar = app_results.get(pid)
+    if ar is None:
+        errored.append((pid, "no app result"))
         continue
-
-    app_pretest = a.get("appPretest")
-    confusion_ref[ref][app_pretest] += 1
-    confusion_wells[wells][app_pretest] += 1
-
-    ref_match = (app_pretest == ref)
-    if not ref_match:
-        mismatches_ref.append({
-            "id": pid, "reference": ref, "app": app_pretest,
-            "category": p["reference"]["pretest"]["category"],
-            "respCount": p["reference"]["pretest"]["respCount"],
-            "riskPresent": p["reference"]["pretest"]["riskPresent"],
-            "altDx": p["altDx"],
-        })
-
-    perc_match = None
-    if ref == "low":
-        refperc = p["reference"]["perc"]
-        appperc = a.get("appPerc") or {}
-        perc_checked += 1
-        perc_match = (refperc["score"] == appperc.get("score")) and (refperc["negative"] == appperc.get("negative"))
-        if not perc_match:
-            perc_mismatches.append({"id": pid, "refScore": refperc["score"], "appScore": appperc.get("score"),
-                                     "refNegative": refperc["negative"], "appNegative": appperc.get("negative")})
-
-    years_match = None
-    if ref == "moderate":
-        refyears = p["reference"]["years"]
-        appyears = a.get("appYears") or {}
-        years_checked += 1
-        years_match = (refyears["itemCount"] == appyears.get("itemCount")) and (refyears["threshold"] == appyears.get("threshold"))
-        if not years_match:
-            years_mismatches.append({"id": pid, "refCount": refyears["itemCount"], "appCount": appyears.get("itemCount"),
-                                      "refThreshold": refyears["threshold"], "appThreshold": appyears.get("threshold")})
-
+    if ar.get("error"):
+        errored.append((pid, ar["error"]))
+        continue
+    app_pretest = ar["appPretest"]
+    match = (app_pretest == ref)
     rows.append({
-        "id": pid, "age": p["age"], "altDx": p["altDx"],
-        "reference_pretest": ref, "app_pretest": app_pretest, "pretest_match": ref_match,
-        "classic_wells_points": p["reference"]["classicWells"]["points"],
-        "classic_wells_tier": wells, "wells_agrees_with_app": (wells == app_pretest),
-        "perc_match": perc_match, "years_match": years_match,
+        "id": pid,
+        "age": p["age"],
+        "sex": p["sex"],
+        "category": p["reference"]["category"],
+        "altDx": p["altDx"],
+        "riskPresent": p["reference"]["riskPresent"],
+        "respCount": p["reference"]["respCount"],
+        "severeCriteria": p["reference"]["severeCriteria"],
+        "reference_pretest": ref,
+        "app_pretest": app_pretest,
+        "match": match,
     })
 
-n = len(rows)
-n_ref_match = sum(1 for r in rows if r["pretest_match"])
-n_wells_agree = sum(1 for r in rows if r["wells_agrees_with_app"])
+n_total = len(rows) + len(errored)
+n_scored = len(rows)
+n_match = sum(1 for r in rows if r["match"])
+accuracy = (n_match / n_scored * 100) if n_scored else 0.0
+
+# Confusion matrix
+confusion = {t: {t2: 0 for t2 in TIERS} for t in TIERS}
+for r in rows:
+    confusion[r["reference_pretest"]][r["app_pretest"]] += 1
+
+# Breakdown by category (severe/typical/atypical)
+by_category = {}
+for r in rows:
+    c = r["category"]
+    by_category.setdefault(c, {"n": 0, "match": 0})
+    by_category[c]["n"] += 1
+    by_category[c]["match"] += 1 if r["match"] else 0
+
+mismatches = [r for r in rows if not r["match"]]
 
 with open("results.csv", "w", newline="") as f:
-    writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+    writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()) if rows else [])
     writer.writeheader()
-    writer.writerows(rows)
+    for r in rows:
+        writer.writerow(r)
 
-def fmt_confusion(cm):
-    lines = ["| Reference \\\\ App | Low | Moderate | High |", "|---|---|---|---|"]
-    for a in TIERS:
-        lines.append("| **{}** | {} | {} | {} |".format(a.capitalize(), cm[a]["low"], cm[a]["moderate"], cm[a]["high"]))
-    return "\n".join(lines)
+lines = []
+lines.append("# Wells Expanded Criteria Pathway — 400-Patient Validation Report\n")
+lines.append(
+    "This validates whether the deployed `index.html` app's Wells Expanded "
+    "Criteria Pathway (Steps 1-3: cardiopulmonary symptoms -> vitals/exam/CXR/EKG "
+    "-> clinical judgment) computes the same pretest probability as an "
+    "independent, from-scratch Python re-implementation of the same documented "
+    "algorithm (`generate_reference.py`), for 400 randomly generated synthetic "
+    "adult patients spanning a variety of ages, sexes, symptom combinations, "
+    "exam/EKG findings, VTE risk factors, and clinical-judgment calls.\n"
+)
+lines.append(
+    "**Important scope note:** these are synthetic, randomly generated patients "
+    "with no real-world diagnosis, so there is no ground-truth PE status to "
+    "measure clinical accuracy against. \"Accuracy\" below means *agreement "
+    "between the live app and the documented algorithm it's supposed to "
+    "implement* — i.e., this is a software-correctness/regression check, "
+    "confirming the shipped JavaScript has no bugs relative to its own spec, "
+    "not a claim about diagnostic performance. Age and sex were generated for "
+    "demographic variety but are not used by this pathway's pretest-probability "
+    "logic (they only matter later, at the PERC step, which is outside this "
+    "run's scope).\n"
+)
+lines.append(f"## Result\n")
+lines.append(f"**{n_match} / {n_scored} patients matched ({accuracy:.1f}% agreement)**")
+if errored:
+    lines.append(f", {len(errored)} patient(s) errored during the UI run (see below).")
+lines.append("\n")
 
-report = []
-report.append("# Independent 400-Patient Validation Report")
-report.append("")
-report.append("Generated by `generate_reference.py` + `run_app_validation.js` + `compare_results.py` in `validation_400/`.")
-report.append("")
-report.append("## Methodology")
-report.append("")
-report.append("400 synthetic patients were generated with randomized age (18-95), respiratory symptoms, vitals, "
-               "physical exam / CXR / EKG findings, VTE risk factors, and alternative-diagnosis judgment "
-               "(`generate_reference.py`, fixed seed 20260826 for reproducibility). Each patient was run through "
-               "**the actual deployed app** (`index.html`) in a headless Chromium browser via Playwright "
-               "(`run_app_validation.js`) — the real UI was driven end to end (checkboxes, numeric fields, the "
-               "alternative-diagnosis toggle) and the app's own rendered output was read back, not any internal "
-               "variable.")
-report.append("")
-report.append("Each patient was independently scored by two things the app never sees:")
-report.append("")
-report.append("1. A **from-scratch Python re-implementation** of the app's documented pretest-probability, PERC, "
-               "and YEARS logic — written from the specification, not by copying `index.html`'s JavaScript — used "
-               "to check the deployed app for **implementation bugs / internal inconsistency**.")
-report.append("2. The **classic published Wells score** (Wells PS et al. *Ann Intern Med.* 1998;129(12):997-1005; "
-               "weighted 7-item rule, 3-tier cutoffs <2 / 2-6 / >6) — used as an **external clinical benchmark**, "
-               "since the app's own category model (typical/atypical/severe + alternative diagnosis + risk "
-               "factors) is a bespoke simplification and not a line-for-line implementation of the classic "
-               "weighted score.")
-report.append("")
-report.append("> **Scope note:** this is a software-correctness and clinical-plausibility check on synthetic data, "
-               "not a validation against real patient outcomes. There is no ground-truth \"this patient really had "
-               "a PE\" label here — pretest-probability tools are risk-stratification aids, not diagnoses — so "
-               "\"accuracy\" below means agreement with (1) the app's own specification and (2) the established "
-               "Wells rule, not sensitivity/specificity for a confirmed PE.")
-report.append("")
-report.append("## Headline results")
-report.append("")
-report.append("- **Patients tested:** {}".format(n))
-report.append("- **Errors during app run:** {}".format(len(errors)))
-report.append("- **Agreement with independent reference implementation (pretest probability): {}/{} ({:.1f}%)**".format(
-    n_ref_match, n, 100.0 * n_ref_match / n))
-report.append("- **Agreement with classic Wells 3-tier score: {}/{} ({:.1f}%)**".format(
-    n_wells_agree, n, 100.0 * n_wells_agree / n))
-report.append("- PERC score/verdict agreement (Low-pretest subset, n={}): {}/{} ({:.1f}%)".format(
-    perc_checked, perc_checked - len(perc_mismatches), perc_checked,
-    100.0 * (perc_checked - len(perc_mismatches)) / perc_checked if perc_checked else 0))
-report.append("- YEARS item-count/threshold agreement (Moderate-pretest subset, n={}): {}/{} ({:.1f}%)".format(
-    years_checked, years_checked - len(years_mismatches), years_checked,
-    100.0 * (years_checked - len(years_mismatches)) / years_checked if years_checked else 0))
-report.append("")
-report.append("## Pretest-probability distribution (reference)")
-report.append("")
-dist = {}
-for p in patients.values():
-    t = p["reference"]["pretest"]["pretest"]
-    dist[t] = dist.get(t, 0) + 1
-report.append("Low: {} ({:.0f}%) · Moderate: {} ({:.0f}%) · High: {} ({:.0f}%)".format(
-    dist.get("low",0), 100*dist.get("low",0)/n, dist.get("moderate",0), 100*dist.get("moderate",0)/n,
-    dist.get("high",0), 100*dist.get("high",0)/n))
-report.append("")
-report.append("(Random synthetic coverage of the input space, not a claim about real ED prevalence — the app's own "
-               "in-app prevalence figures, e.g. 3.4% / 27.8% / 78.4%, come from the Wells 1998 derivation cohort, "
-               "cited in-app under About.)")
-report.append("")
-report.append("## Confusion matrix — independent reference vs. app")
-report.append("")
-report.append(fmt_confusion(confusion_ref))
-report.append("")
-report.append("## Confusion matrix — classic Wells 3-tier vs. app")
-report.append("")
-report.append(fmt_confusion(confusion_wells))
-report.append("")
-report.append("The off-diagonal cells here are **expected**, not bugs: the app deliberately layers alternative-"
-               "diagnosis judgment and risk factors on top of a symptom-typicality model rather than summing "
-               "classic Wells points, so it will legitimately diverge from Wells on some inputs (e.g., its severe/"
-               "shock criteria have no classic-Wells equivalent, and vice versa for family history).")
-report.append("")
+lines.append("## Confusion matrix (reference row vs. app column)\n")
+lines.append("| Reference \\ App | Low | Moderate | High |")
+lines.append("|---|---|---|---|")
+for t in TIERS:
+    row = confusion[t]
+    lines.append(f"| **{t.capitalize()}** | {row['low']} | {row['moderate']} | {row['high']} |")
+lines.append("")
 
-if mismatches_ref:
-    report.append("## Reference-implementation mismatches ({})".format(len(mismatches_ref)))
-    report.append("")
-    report.append("| id | reference | app | category | respCount | riskPresent | altDx |")
-    report.append("|---|---|---|---|---|---|---|")
-    for m in mismatches_ref[:50]:
-        report.append("| {id} | {reference} | {app} | {category} | {respCount} | {riskPresent} | {altDx} |".format(**m))
-    if len(mismatches_ref) > 50:
-        report.append("")
-        report.append("...and {} more (see results.csv).".format(len(mismatches_ref) - 50))
-    report.append("")
+lines.append("## Agreement by presentation category\n")
+lines.append("| Category | N | Matched | Agreement |")
+lines.append("|---|---|---|---|")
+for c in ["severe", "typical", "atypical"]:
+    if c in by_category:
+        n = by_category[c]["n"]
+        m = by_category[c]["match"]
+        lines.append(f"| {c.capitalize()} | {n} | {m} | {m/n*100:.1f}% |")
+lines.append("")
+
+lines.append("## Pretest probability distribution (reference)\n")
+dist = {t: sum(1 for r in rows if r["reference_pretest"] == t) for t in TIERS}
+lines.append("| Tier | N |")
+lines.append("|---|---|")
+for t in TIERS:
+    lines.append(f"| {t.capitalize()} | {dist[t]} |")
+lines.append("")
+
+if mismatches:
+    lines.append(f"## Mismatches ({len(mismatches)})\n")
+    lines.append("| ID | Age | Sex | Category | AltDx | Risk present | Reference | App |")
+    lines.append("|---|---|---|---|---|---|---|---|")
+    for r in mismatches:
+        lines.append(f"| {r['id']} | {r['age']} | {r['sex']} | {r['category']} | {r['altDx']} | {r['riskPresent']} | {r['reference_pretest']} | {r['app_pretest']} |")
+    lines.append("")
 else:
-    report.append("## Reference-implementation mismatches")
-    report.append("")
-    report.append("None. The deployed app's pretest-probability output matched the independent reference "
-                   "implementation on all {} synthetic patients.".format(n))
-    report.append("")
+    lines.append("## Mismatches\n\nNone.\n")
 
-if perc_mismatches:
-    report.append("## PERC mismatches ({})".format(len(perc_mismatches)))
-    report.append("")
-    for m in perc_mismatches[:20]:
-        report.append("- id {id}: reference score {refScore}/8 (negative={refNegative}) vs app {appScore}/8 (negative={appNegative})".format(**m))
-    report.append("")
+if errored:
+    lines.append(f"## Errors ({len(errored)})\n")
+    for pid, msg in errored:
+        lines.append(f"- Patient {pid}: {msg}")
+    lines.append("")
 
-if years_mismatches:
-    report.append("## YEARS mismatches ({})".format(len(years_mismatches)))
-    report.append("")
-    for m in years_mismatches[:20]:
-        report.append("- id {id}: reference {refCount}/3 items -> {refThreshold} ng/mL vs app {appCount}/3 items -> {appThreshold} ng/mL".format(**m))
-    report.append("")
-
-if errors:
-    report.append("## Errors ({})".format(len(errors)))
-    report.append("")
-    for e in errors[:20]:
-        report.append("- id {}: {}".format(e["id"], e["error"]))
-    report.append("")
-
-report.append("## Files")
-report.append("")
-report.append("- `generate_reference.py` — patient generator + independent reference implementation. Re-run with "
-               "`python3 generate_reference.py` (deterministic, seed 20260826).")
-report.append("- `patients.json` — the 400 generated patients with reference-computed fields attached.")
-report.append("- `run_app_validation.js` — Playwright driver that runs every patient through the real app. "
-               "Re-run with `node run_app_validation.js` (requires `playwright`; ~2 minutes).")
-report.append("- `app_results.json` — what the deployed app actually returned for each patient.")
-report.append("- `compare_results.py` — produces this report and `results.csv`. Re-run with `python3 compare_results.py`.")
-report.append("- `results.csv` — per-patient comparison, one row per patient.")
-report.append("")
+lines.append("## Files\n")
+lines.append("- `patients.json` — the 400 generated patients plus each one's reference-implementation output.")
+lines.append("- `app_results.json` — what the live app actually returned for each patient.")
+lines.append("- `results.csv` — per-patient comparison, one row each.")
+lines.append("- `generate_reference.py`, `run_app_validation.js`, `compare_results.py` — the scripts that produced this report; rerun in that order to reproduce (seed is fixed, so patients.json is deterministic).")
 
 with open("VALIDATION_REPORT.md", "w") as f:
-    f.write("\n".join(report))
+    f.write("\n".join(lines) + "\n")
 
+print(f"{n_match}/{n_scored} matched ({accuracy:.1f}%), {len(errored)} errored.")
 print("Wrote VALIDATION_REPORT.md and results.csv")
-print(f"Pretest agreement vs reference: {n_ref_match}/{n} ({100.0*n_ref_match/n:.1f}%)")
-print(f"Pretest agreement vs classic Wells: {n_wells_agree}/{n} ({100.0*n_wells_agree/n:.1f}%)")
-if perc_checked:
-    print(f"PERC agreement: {perc_checked - len(perc_mismatches)}/{perc_checked}")
-if years_checked:
-    print(f"YEARS agreement: {years_checked - len(years_mismatches)}/{years_checked}")

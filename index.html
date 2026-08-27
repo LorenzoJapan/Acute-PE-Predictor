@@ -346,40 +346,50 @@
   .btn-ghost{background:var(--color-surface-muted);color:var(--color-ink);}
   .btn-text{background:none;color:var(--color-primary);min-height:44px;font-size:15.5px;}
 
-  /* ---------- Home screen ---------- */
+  /* ---------- Home screen ----------
+     Screen 1 is deliberately budgeted to fit the app's fixed content height
+     (~851px, see .device/.statusbar/.app) with no internal scrolling — every
+     rule below is sized against that budget, not just for looks. */
+  .home-main{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;}
   .home-hero{
-    padding:28px 24px 8px;
+    padding:14px 24px 2px;
     text-align:center;
   }
   .home-mark{
-    width:84px;height:84px;
-    margin:6px auto 20px;
-    border-radius:24px;
+    width:76px;height:76px;
+    margin:0 auto 14px;
+    border-radius:22px;
     background:linear-gradient(160deg,var(--color-primary),var(--color-primary-strong));
     display:flex;align-items:center;justify-content:center;
-    font-size:42px;
-    box-shadow:0 10px 26px -8px rgba(14,124,116,0.45);
+    font-size:40px;
+    box-shadow:0 12px 26px -10px rgba(14,124,116,0.45);
   }
-  .home-hero h2{font-size:25px;font-weight:800;letter-spacing:-0.02em;margin-bottom:8px;}
-  .home-hero .sub{color:var(--color-ink-soft);font-size:15px;line-height:1.5;padding:0 8px;}
-  .home-actions{padding:20px 20px 8px;display:flex;flex-direction:column;gap:12px;margin-top:auto;}
+  .home-hero h2{font-size:25px;font-weight:800;letter-spacing:-0.02em;margin-bottom:7px;}
+  .home-hero .sub{color:var(--color-ink-soft);font-size:14px;line-height:1.48;padding:0 10px;}
+  .home-actions{padding:26px 20px 2px;display:flex;flex-direction:column;gap:14px;}
+  #scr-home .choice-card{padding:20px 18px;}
+  #scr-home .choice-icon{width:56px;height:56px;border-radius:16px;font-size:27px;}
+  #scr-home .choice-title{font-size:17px;}
+  #scr-home .choice-sub{font-size:13px;margin-top:4px;}
+  #scr-home .chev-r{width:9px;}
+  .home-footer-actions{padding:6px 20px calc(10px + env(safe-area-inset-bottom,0px));text-align:center;}
   .home-flow{
-    margin:8px 20px 0;
+    margin:6px 20px 0;
     background:var(--color-surface);
     border:1px solid var(--color-border);
     border-radius:var(--radius-lg);
-    padding:16px 18px;
+    padding:8px 16px;
     box-shadow:var(--shadow-card);
   }
-  .flow-step{display:flex;gap:12px;align-items:flex-start;padding:9px 0;}
+  .flow-step{display:flex;gap:10px;align-items:flex-start;padding:6px 0;}
   .flow-step + .flow-step{border-top:1px solid var(--color-border);}
   .flow-num{
-    flex:0 0 auto;width:22px;height:22px;border-radius:50%;
+    flex:0 0 auto;width:19px;height:19px;border-radius:50%;
     background:var(--color-primary-soft);color:var(--color-primary-strong);
-    font-family:var(--font-mono);font-size:11.5px;font-weight:700;
+    font-family:var(--font-mono);font-size:10.5px;font-weight:700;
     display:flex;align-items:center;justify-content:center;
   }
-  .flow-step p{font-size:13.5px;color:var(--color-ink-soft);line-height:1.4;}
+  .flow-step p{font-size:12px;color:var(--color-ink-soft);line-height:1.32;}
   .flow-step strong{color:var(--color-ink);font-weight:600;}
 
   /* ---------- Cards / list rows ---------- */
@@ -656,6 +666,59 @@
   .ref-list{margin:0;padding-left:19px;display:flex;flex-direction:column;gap:10px;}
   .ref-list li{font-size:12px;color:var(--color-ink-soft);line-height:1.6;font-family:var(--font-mono);}
 
+  /* ---------- Gestalt / Wells pathway (parallel to the stepwise flow) ---------- */
+  .pathway-divider{
+    display:flex;align-items:center;gap:10px;
+    margin:14px 20px 2px;
+  }
+  .pathway-divider .line{flex:1 1 auto;height:1px;background:var(--color-border);}
+  .pathway-divider span{
+    font-family:var(--font-mono);font-size:10.5px;font-weight:600;
+    letter-spacing:0.09em;text-transform:uppercase;color:var(--color-ink-faint);
+    white-space:nowrap;
+  }
+
+  .choice-card{
+    display:flex;align-items:center;gap:14px;
+    padding:16px 18px;border-radius:var(--radius-lg);
+    background:var(--color-surface);border:1.4px solid var(--color-border);
+    box-shadow:var(--shadow-card);cursor:pointer;text-align:left;
+    width:100%;-webkit-tap-highlight-color:transparent;
+  }
+  .choice-card + .choice-card{margin-top:12px;}
+  .choice-card:active{background:var(--color-surface-muted);transform:scale(0.985);}
+  .choice-card .choice-icon{
+    width:42px;height:42px;border-radius:12px;flex:0 0 auto;
+    background:var(--color-primary-soft);color:var(--color-primary-strong);
+    display:flex;align-items:center;justify-content:center;font-size:19px;
+  }
+  .choice-card .choice-title{font-family:var(--font-display);font-weight:700;font-size:15.5px;color:var(--color-ink);}
+  .choice-card .choice-sub{font-size:12.5px;color:var(--color-ink-soft);margin-top:3px;line-height:1.42;}
+  .choice-card .chev-r{flex:0 0 auto;color:var(--color-ink-faint);}
+
+  .tier-card{
+    display:flex;align-items:center;gap:14px;justify-content:space-between;
+    padding:18px;border-radius:var(--radius-lg);
+    background:var(--color-surface);border:1.4px solid var(--color-border);
+    box-shadow:var(--shadow-card);cursor:pointer;width:100%;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .tier-card + .tier-card{margin-top:12px;}
+  .tier-card:active{background:var(--color-surface-muted);transform:scale(0.985);}
+  .tier-card .tier-main{display:flex;align-items:center;gap:12px;}
+  .tier-card .tier-dot{width:13px;height:13px;border-radius:50%;flex:0 0 auto;}
+  .tier-card.tier-low .tier-dot{background:var(--color-low);}
+  .tier-card.tier-intermediate .tier-dot{background:var(--color-moderate);}
+  .tier-card.tier-high .tier-dot{background:var(--color-high);}
+  .tier-card .tier-name{font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--color-ink);}
+  .tier-card .tier-range{font-family:var(--font-mono);font-size:12px;color:var(--color-ink-faint);margin-top:2px;}
+
+  .pt-badge{
+    font-family:var(--font-mono);font-size:11px;font-weight:700;
+    color:var(--color-primary-strong);background:var(--color-primary-soft);
+    padding:3px 9px;border-radius:100px;flex:0 0 auto;white-space:nowrap;
+  }
+
   /* ============ Design-system documentation (below phone) ============ */
   .tokens-doc{margin-top:24px;}
   .tokens-doc h2{font-size:26px;font-weight:800;letter-spacing:-0.02em;margin-bottom:6px;}
@@ -740,19 +803,36 @@
           <!-- HOME -->
           <section class="screen active" data-screen="home" id="scr-home">
             <div class="scroll" style="display:flex;flex-direction:column;">
-              <div class="home-hero">
-                <div class="home-mark">🫁</div>
-                <h2>Acute&nbsp;PE Predictor</h2>
-                <p class="sub">Develop a pre-test probability of acute pulmonary embolism by the expanded Wells criteria, then use D-dimer or imaging pathway to evaluate for an acute pulmonary embolus.</p>
+              <div class="home-main">
+                <div class="home-hero">
+                  <div class="home-mark">🫁</div>
+                  <h2>Acute&nbsp;PE Predictor</h2>
+                  <p class="sub">Choose to assess suspected acute pulmonary embolism by expanded Wells criteria or clinical gestalt.</p>
+                </div>
+
+                <div class="home-actions">
+                  <div class="choice-card" data-go="resp">
+                    <div class="choice-icon">📋</div>
+                    <div style="flex:1 1 auto;">
+                      <div class="choice-title">Wells Expanded Criteria Pathway</div>
+                      <div class="choice-sub">Structured, stepwise clinical assessment</div>
+                    </div>
+                    <svg class="chev-r" width="9" height="14" viewBox="0 0 7 12" fill="none"><path d="M1 1l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <div class="choice-card" data-go="gw-gestalt">
+                    <div class="choice-icon">🧠</div>
+                    <div style="flex:1 1 auto;">
+                      <div class="choice-title">Clinical Gestalt Pathway</div>
+                      <div class="choice-sub">Direct Low / Intermediate / High pick</div>
+                    </div>
+                    <svg class="chev-r" width="9" height="14" viewBox="0 0 7 12" fill="none"><path d="M1 1l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                </div>
               </div>
-              <div class="home-flow">
-                <div class="flow-step"><div class="flow-num">1</div><p><strong>Cardiopulmonary symptoms</strong></p></div>
-                <div class="flow-step"><div class="flow-num">2</div><p><strong>Vitals, P/E, CXR &amp; EKG findings</strong></p></div>
-                <div class="flow-step"><div class="flow-num">3</div><p><strong>Clinical judgment</strong></p></div>
-              </div>
-              <div class="home-actions">
-                <button class="btn btn-primary" data-go="resp">Begin Assessment</button>
+
+              <div class="home-footer-actions">
                 <button class="btn btn-text" data-go="about">About this tool &amp; sources</button>
+                <p style="margin-top:6px;font-size:12px;color:var(--color-ink-faint);">Developed by MDGadgetz LLC.</p>
               </div>
             </div>
           </section>
@@ -953,6 +1033,174 @@
             <div class="toast" id="toast">Summary copied</div>
           </section>
 
+          <!-- GESTALT/WELLS: CLINICAL GESTALT -->
+          <section class="screen" data-screen="gw-gestalt" id="scr-gw-gestalt">
+            <div class="nav">
+              <button class="back" data-back="home" aria-label="Back"><svg viewBox="0 0 11 19" fill="none"><path d="M10 1 1.5 9.5 10 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="nav-title">Clinical Gestalt</span>
+            </div>
+            <div class="scroll">
+              <div class="card-head" style="padding:14px 4px 12px;">
+                <h3 style="font-size:17px;">Overall clinical impression</h3>
+                <p class="hint" style="font-size:13px;margin-top:6px;">Select the pretest probability that best reflects your unstructured clinical judgment that your patient might have had an acute pulmonary embolus.</p>
+              </div>
+              <div class="tier-card tier-low" data-tier="low">
+                <div class="tier-main"><span class="tier-dot"></span><div><div class="tier-name">Low</div><div class="tier-range">&lt; 15% probability</div></div></div>
+              </div>
+              <div class="tier-card tier-intermediate" data-tier="intermediate">
+                <div class="tier-main"><span class="tier-dot"></span><div><div class="tier-name">Intermediate</div><div class="tier-range">15 – 50% probability</div></div></div>
+              </div>
+              <div class="tier-card tier-high" data-tier="high">
+                <div class="tier-main"><span class="tier-dot"></span><div><div class="tier-name">High</div><div class="tier-range">&gt; 50% probability</div></div></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- GESTALT/WELLS: RESULT -->
+          <section class="screen" data-screen="gw-result" id="scr-gw-result">
+            <div class="nav">
+              <button class="back" data-back="gw-gestalt" aria-label="Back" id="gw-result-back"><svg viewBox="0 0 11 19" fill="none"><path d="M10 1 1.5 9.5 10 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="nav-title">Result</span>
+            </div>
+            <div class="scroll">
+              <div class="result-hero">
+                <div class="gauge-wrap">
+                  <svg viewBox="0 0 220 130" width="220" height="130">
+                    <path d="M14,120 A96,96 0 0,1 79,26" fill="none" stroke="var(--color-low)" stroke-width="14" stroke-linecap="round" opacity="0.35"/>
+                    <path d="M83,22 A96,96 0 0,1 137,22" fill="none" stroke="var(--color-moderate)" stroke-width="14" stroke-linecap="round" opacity="0.35"/>
+                    <path d="M141,26 A96,96 0 0,1 206,120" fill="none" stroke="var(--color-high)" stroke-width="14" stroke-linecap="round" opacity="0.35"/>
+                    <g id="gw-gauge-needle" style="transform-origin:110px 120px;transition:transform .7s var(--ease-spring);">
+                      <line x1="110" y1="120" x2="110" y2="34" stroke="var(--color-ink)" stroke-width="3" stroke-linecap="round"/>
+                      <circle cx="110" cy="120" r="7" fill="var(--color-ink)"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="result-tag" id="gw-result-tag"><span class="dot"></span><span id="gw-result-tag-text">—</span></div>
+                <p class="result-prevalence" id="gw-result-prevalence"></p>
+                <p class="result-caption" id="gw-result-caption"></p>
+              </div>
+              <details class="reasoning" open>
+                <summary>Show reasoning<svg class="chev" width="7" height="12" viewBox="0 0 7 12" fill="none"><path d="M1 1l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+                <div class="reasoning-list" id="gw-reasoning-list"></div>
+              </details>
+            </div>
+            <div class="cta-bar">
+              <button class="btn btn-primary" id="gw-btn-next-step">Continue</button>
+            </div>
+          </section>
+
+          <!-- GESTALT/WELLS: PERC -->
+          <section class="screen" data-screen="gw-perc" id="scr-gw-perc">
+            <div class="nav">
+              <button class="back" data-back="gw-result" aria-label="Back"><svg viewBox="0 0 11 19" fill="none"><path d="M10 1 1.5 9.5 10 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="nav-title">PERC Rule</span>
+            </div>
+            <div class="scroll">
+              <div class="card">
+                <div class="card-head"><h3>PE rule-out criteria (PERC)</h3><p class="hint">Applies only at low pretest probability. If all 8 criteria are negative, PE is excluded without D-dimer testing.<sup>3</sup></p></div>
+                <div class="field-block">
+                  <label for="f-gw-age">Patient age <span class="required-mark">*</span></label>
+                  <div class="num-field"><input id="f-gw-age" type="number" inputmode="numeric" placeholder="0" min="0" max="120" required aria-required="true"><span class="unit">years</span></div>
+                </div>
+                <div id="gw-perc-fresh-list" style="border-top:1px solid var(--color-border);"></div>
+              </div>
+              <div class="card" style="margin-top:10px;">
+                <div class="perc-score-row">
+                  <span class="tag-label">PERC score</span>
+                  <span class="perc-pill" id="gw-perc-score-pill">— / 8</span>
+                </div>
+              </div>
+            </div>
+            <div class="cta-bar">
+              <button class="btn btn-primary" id="gw-btn-perc-continue" disabled data-go="gw-ddimer">Continue to D-dimer</button>
+            </div>
+          </section>
+
+          <!-- GESTALT/WELLS: D-DIMER -->
+          <section class="screen" data-screen="gw-ddimer" id="scr-gw-ddimer">
+            <div class="nav">
+              <button class="back" data-back="gw-result" aria-label="Back" id="gw-ddimer-back"><svg viewBox="0 0 11 19" fill="none"><path d="M10 1 1.5 9.5 10 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="nav-title">D-dimer</span>
+            </div>
+            <div class="scroll">
+              <div class="threshold-card">
+                <div class="pretext" id="gw-ddimer-pretext">LOW PRETEST PROBABILITY</div>
+                <div class="value" id="gw-ddimer-threshold-value">&lt;1000<span> ng/mL</span></div>
+                <p class="cite" id="gw-ddimer-cite">Rules out PE per PEGeD, Kearon et al. NEJM 2019</p>
+              </div>
+              <div class="card" id="gw-years-card" style="margin-top:10px;display:none;">
+                <div class="card-head"><h3>YEARS criteria</h3><p class="hint" id="gw-years-hint">Threshold above is set by which of these are present.<sup>4</sup></p></div>
+                <div id="gw-years-list"></div>
+              </div>
+              <div class="card" style="margin-top:18px;">
+                <div class="field-block">
+                  <label for="f-gw-ddimer">Measured D-dimer</label>
+                  <div class="num-field"><input id="f-gw-ddimer" type="number" inputmode="numeric" placeholder="0"><span class="unit">ng/mL</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="cta-bar">
+              <button class="btn btn-primary" id="gw-btn-interpret" disabled data-go="gw-final">Interpret Result</button>
+            </div>
+          </section>
+
+          <!-- GESTALT/WELLS: HIGH PRETEST — HEMODYNAMIC STATUS -->
+          <section class="screen" data-screen="gw-instability" id="scr-gw-instability">
+            <div class="nav">
+              <button class="back" data-back="gw-result" aria-label="Back"><svg viewBox="0 0 11 19" fill="none"><path d="M10 1 1.5 9.5 10 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="nav-title">Hemodynamic Status</span>
+            </div>
+            <div class="scroll">
+              <div class="card">
+                <div class="card-head"><h3>Shock assessment</h3><p class="hint">High pretest probability proceeds directly to imaging. These vitals determine whether bedside TTE should be offered as an alternative for a patient too unstable to transport for CTPA.</p></div>
+                <div class="field-block">
+                  <label for="f-gw-sbp">SBP at presentation <span class="required-mark">*</span></label>
+                  <div class="num-field"><input id="f-gw-sbp" type="number" inputmode="numeric" placeholder="0" min="0" max="260" required aria-required="true"><span class="unit">mmHg</span></div>
+                </div>
+                <div class="field-block" style="border-top:1px solid var(--color-border);">
+                  <label for="f-gw-hr">HR at presentation <span class="required-mark">*</span></label>
+                  <div class="num-field"><input id="f-gw-hr" type="number" inputmode="numeric" placeholder="0" min="0" max="260" required aria-required="true"><span class="unit">bpm</span></div>
+                </div>
+                <div class="field-block" style="border-top:1px solid var(--color-border);">
+                  <label for="f-gw-fio2Correct">FiO₂ to correct to &gt;92% SpO₂</label>
+                  <div class="num-field"><input id="f-gw-fio2Correct" type="number" inputmode="numeric" placeholder="0" min="0" max="100"><span class="unit">% FiO₂</span></div>
+                  <p class="field-hint">Leave blank if not applicable.</p>
+                </div>
+                <div id="gw-instability-vent-list" style="border-top:1px solid var(--color-border);"></div>
+              </div>
+              <div class="card" style="margin-top:10px;">
+                <div class="perc-score-row">
+                  <span class="tag-label">Shock criteria</span>
+                  <span class="perc-pill" id="gw-shock-pill">NOT MET</span>
+                </div>
+              </div>
+            </div>
+            <div class="cta-bar">
+              <button class="btn btn-primary" id="gw-btn-instability-continue" disabled data-go="gw-final-imaging">Continue to Recommendation</button>
+            </div>
+          </section>
+
+          <!-- GESTALT/WELLS: FINAL -->
+          <section class="screen" data-screen="gw-final" id="scr-gw-final">
+            <div class="nav">
+              <span class="nav-title">Recommendation</span>
+            </div>
+            <div class="scroll">
+              <div class="outcome-card" id="gw-outcome-card">
+                <div class="icon-badge" id="gw-outcome-icon">✓</div>
+                <h3 id="gw-outcome-title">Result</h3>
+                <p id="gw-outcome-body">—</p>
+              </div>
+              <div class="alert-critical" id="gw-outcome-alert" style="display:none;"></div>
+              <div class="cite-box" id="gw-outcome-cite"></div>
+            </div>
+            <div class="cta-bar">
+              <button class="btn btn-ghost" id="gw-btn-copy">Copy Summary</button>
+              <button class="btn btn-primary" data-go="home" id="gw-btn-restart">New Assessment</button>
+            </div>
+            <div class="toast" id="gw-toast">Summary copied</div>
+          </section>
+
           <!-- ABOUT -->
           <section class="screen" data-screen="about" id="scr-about">
             <div class="nav">
@@ -961,20 +1209,24 @@
             </div>
             <div class="scroll">
               <div class="about-block">
-                <h4>Pretest probability model</h4>
-                <p>Categorizes presentation as typical, atypical, or severe, then layers alternative-diagnosis judgment and VTE risk factors to reach Low, Moderate, or High pretest probability.<sup>1</sup></p>
+                <h4>Two pathways to pretest probability</h4>
+                <p>The home screen offers two independent methods for reaching pretest probability. Whichever is used, probability then routes through the same PERC / D-dimer / imaging strategy described below, following Figure 1 of the 2026 AHA/ACC acute PE guideline.<sup>1,6</sup></p>
+              </div>
+              <div class="about-block">
+                <h4>Wells Expanded Criteria Pathway</h4>
+                <p>A three-step structured assessment — cardiopulmonary symptoms, vitals/exam/CXR/EKG findings, and a clinical judgment of whether an alternative diagnosis is more, equally, or less likely than PE — classifies the presentation as typical, atypical, or severe, then combines that with VTE risk factors (prior DVT/PE, recent immobilization or surgery, malignancy, estrogen use) to reach a Low, Moderate, or High pretest probability. It draws on the same elements as the classic Wells criteria — signs of DVT, heart rate, immobilization/surgery, prior VTE, hemoptysis, malignancy, and whether an alternative diagnosis is less likely — expanded into a stepwise exam rather than a single point score.<sup>1</sup></p>
+              </div>
+              <div class="about-block">
+                <h4>Clinical Gestalt Pathway</h4>
+                <p>Skips the structured steps entirely — select Low (&lt;15%), Intermediate (15–50%), or High (&gt;50%) directly, based on overall clinical impression.</p>
               </div>
               <div class="about-block">
                 <h4>Low probability — PERC rule-out</h4>
-                <p>When pretest probability is low, the pulmonary embolism rule-out criteria (PERC) are screened next: age &lt;50y, HR &lt;100, SpO₂ ≥95% on room air, no hemoptysis, no unilateral leg swelling, no prior DVT/PE, no exogenous estrogen use, and no surgery or trauma requiring hospitalization/general anesthesia in the past 4 weeks. If all 8 are negative, PE is excluded without D-dimer testing or imaging. Any positive item routes to the standard low-probability D-dimer threshold below.<sup>3</sup></p>
+                <p>When pretest probability is low, the pulmonary embolism rule-out criteria (PERC) are screened next: age &lt;50y, HR &lt;100, SpO₂ ≥95% on room air, no hemoptysis, no unilateral leg swelling, no prior DVT/PE, no exogenous estrogen use, and no surgery or trauma requiring hospitalization/general anesthesia in the past 4 weeks. If all 8 are negative, PE is excluded without D-dimer testing or imaging. Any positive item routes to the same YEARS-adjusted D-dimer step used at intermediate pretest probability, described below.<sup>3</sup> On the Wells Expanded Criteria Pathway, items already captured during the symptoms/vitals/exam steps are carried over rather than asked twice; on the Clinical Gestalt Pathway all eight are asked fresh, since nothing is captured up front.</p>
               </div>
               <div class="about-block">
-                <h4>Moderate probability — YEARS-adjusted D-dimer threshold</h4>
-                <p>When pretest probability is moderate, the D-dimer threshold is set using the three YEARS items already captured elsewhere in the assessment — clinical signs of DVT, hemoptysis, and PE being the most likely diagnosis. None present: &lt;1000 ng/mL rules out PE. One or more present: &lt;500 ng/mL rules out PE.<sup>4</sup></p>
-              </div>
-              <div class="about-block">
-                <h4>D-dimer thresholds</h4>
-                <p>A D-dimer &lt;1000 ng/mL rules out PE in low pretest probability that is PERC-positive.<sup>2</sup> High pretest probability proceeds directly to chest imaging.</p>
+                <h4>YEARS-adjusted D-dimer threshold</h4>
+                <p>Low pretest probability that is PERC-positive, and intermediate pretest probability, both route to the same D-dimer step,<sup>2,6</sup> with the threshold set using three YEARS items — clinical signs of DVT, hemoptysis, and PE being the most likely diagnosis. None present: &lt;1000 ng/mL rules out PE. One or more present: &lt;500 ng/mL rules out PE.<sup>4</sup> On the Wells Expanded Criteria Pathway these are read directly from the earlier steps; on the Clinical Gestalt Pathway they're asked fresh at the D-dimer step.</p>
               </div>
               <div class="about-block">
                 <h4>High probability — hemodynamic instability</h4>
@@ -1228,9 +1480,11 @@
     };
   }
 
-  // YEARS — used only when pretest probability is Moderate, to choose the
-  // D-dimer threshold. All three items are already collected elsewhere in
-  // the assessment (Steps 1–3), so no new inputs are needed.
+  // YEARS — used at the D-dimer step for both Low (PERC-positive) and
+  // Moderate pretest probability, per Figure 1 of the 2026 AHA/ACC PE
+  // guideline (both feed the same D-dimer + YEARS assessment box). All
+  // three items are already collected elsewhere in the assessment
+  // (Steps 1–3), so no new inputs are needed.
   var YEARS_ITEM_META = [
     {key:"dvt", label:"Clinical signs of DVT", sub:"Carried over from Step 2 signs of DVT"},
     {key:"hemoptysis", label:"Hemoptysis", sub:"Carried over from Step 1"},
@@ -1252,7 +1506,6 @@
   }
 
   function getDdimerThreshold(r){
-    if(r.pretest === "low") return 1000;
     return yearsResult().itemCount === 0 ? 1000 : 500;
   }
 
@@ -1380,25 +1633,24 @@
     var backBtn = document.querySelector("#scr-ddimer .back");
     var yearsCard = document.getElementById("years-card");
     var threshold = getDdimerThreshold(r);
+    var yr = yearsResult();
 
     if(r.pretest === "low"){
-      pretext.textContent = "LOW PRETEST PROBABILITY · PERC-POSITIVE";
-      cite.textContent = "Rules out PE — Kearon et al., NEJM 2019 (PEGeD)";
+      pretext.textContent = "LOW PRETEST PROBABILITY · PERC-POSITIVE · YEARS " + yr.itemCount + "/3";
       if(backBtn) backBtn.setAttribute("data-back", "perc");
-      yearsCard.style.display = "none";
     } else {
-      var yr = yearsResult();
       pretext.textContent = "MODERATE PRETEST PROBABILITY · YEARS " + yr.itemCount + "/3";
-      cite.textContent = (yr.itemCount === 0
-        ? "No YEARS items present — "
-        : "YEARS item(s) present: " + yr.present.join("; ") + " — ") + "van der Hulle et al., Lancet 2017 (YEARS)";
       if(backBtn) backBtn.setAttribute("data-back", "results");
-
-      yearsCard.style.display = "";
-      var yearsList = document.getElementById("years-list");
-      yearsList.innerHTML = "";
-      yr.list.forEach(function(item){ yearsList.appendChild(renderCriterionRow(item)); });
     }
+    cite.textContent = (yr.itemCount === 0
+      ? "No YEARS items present — "
+      : "YEARS item(s) present: " + yr.present.join("; ") + " — ") + "van der Hulle et al., Lancet 2017 (YEARS)";
+
+    yearsCard.style.display = "";
+    var yearsList = document.getElementById("years-list");
+    yearsList.innerHTML = "";
+    yr.list.forEach(function(item){ yearsList.appendChild(renderCriterionRow(item)); });
+
     val.innerHTML = "&lt;" + threshold + "<span> ng/mL</span>";
 
     var ddimerInput = document.getElementById("f-ddimer");
@@ -1445,7 +1697,7 @@
     } else if(ruledOut){
       title.textContent = "PE Ruled Out";
       body.textContent = "D-dimer " + state.ddimer + " ng/mL is below the " + threshold + " ng/mL threshold for " + r.pretest + " pretest probability. No imaging or anticoagulation indicated on this basis.";
-      cite.innerHTML = "<strong>Basis</strong> — Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134." + (r.pretest === "moderate" ? yearsCite : " None of 1,325 patients managed this way had venous thromboembolism at 90-day follow-up.");
+      cite.innerHTML = "<strong>Basis</strong> — Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134." + yearsCite;
     } else {
       title.textContent = "Imaging Indicated";
       if(targetKind === "imaging"){
@@ -1461,7 +1713,7 @@
         }
       } else {
         body.textContent = "D-dimer " + state.ddimer + " ng/mL is at or above the " + threshold + " ng/mL threshold for " + r.pretest + " pretest probability. Proceed to chest imaging (CT pulmonary angiography) to confirm or exclude PE.";
-        cite.innerHTML = "<strong>Basis</strong> — Wells PS, Ginsberg JS, Anderson DR, et al. Ann Intern Med 1998;129(12):997–1005; Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134." + (r.pretest === "moderate" ? yearsCite : "");
+        cite.innerHTML = "<strong>Basis</strong> — Wells PS, Ginsberg JS, Anderson DR, et al. Ann Intern Med 1998;129(12):997–1005; Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134." + yearsCite;
       }
     }
   }
@@ -1470,7 +1722,9 @@
   var app = document.getElementById("app");
 
   function goTo(name, isBack){
-    var real = (name === "final-imaging" || name === "final-perc") ? "final" : name;
+    var real = name;
+    if(name === "final-imaging" || name === "final-perc") real = "final";
+    else if(name === "gw-final-imaging" || name === "gw-final-perc") real = "gw-final";
     var current = app.querySelector(".screen.active");
     var next = document.getElementById("scr-" + real);
     if(!next || next === current) return;
@@ -1479,6 +1733,12 @@
     if(real === "perc") renderPerc();
     if(real === "ddimer") renderDdimer();
     if(real === "final") renderFinal(name === "final-imaging" ? "imaging" : name === "final-perc" ? "perc" : "ddimer");
+
+    if(real === "gw-result") gwRenderResult();
+    if(real === "gw-perc") gwRenderPerc();
+    if(real === "gw-ddimer") gwRenderDdimer();
+    if(real === "gw-instability") gwRenderInstability();
+    if(real === "gw-final") gwRenderFinal(name === "gw-final-imaging" ? "imaging" : name === "gw-final-perc" ? "perc" : "ddimer");
 
     if(current){
       current.classList.remove("active");
@@ -1523,7 +1783,7 @@
       var perc = percResult();
       lines.push("PERC score: " + (perc.complete ? perc.score + "/8" + (perc.negative ? " (negative — PE excluded)" : " (positive)") : "not completed"));
     }
-    if(r.pretest === "moderate"){
+    if(r.pretest === "moderate" || (r.pretest === "low" && state.ddimer != null)){
       var yr = yearsResult();
       lines.push("YEARS items: " + yr.itemCount + "/3 (D-dimer threshold " + getDdimerThreshold(r) + " ng/mL)");
     }
@@ -1559,6 +1819,394 @@
     fio2Hint.classList.remove("is-required");
     fio2Hint.textContent = "Only required if room-air pulse ox is below 92%.";
     updateAutoShock();
+  });
+
+  // ============================================================
+  // Gestalt / Wells pathway — a parallel route to pretest
+  // probability (clinical gestalt or the expanded, three-tier
+  // Wells score) that feeds into the same PERC / D-dimer /
+  // imaging strategy used by the assessment above. Kept fully
+  // independent of `state`/`compute()` so the primary, validated
+  // flow above is untouched by any of this.
+  // ============================================================
+
+  var GW_PERC_ITEM_META = {
+    hr100: {label:"Heart rate ≥100 bpm"},
+    spo2Low: {label:"SpO₂ <95% on room air"},
+    hemoptysis: {label:"Hemoptysis"},
+    legSwelling: {label:"Unilateral leg swelling"},
+    priorVte: {label:"Prior PE or DVT"},
+    estrogenUse: {label:"Exogenous estrogen use", sub:"Oral contraceptives, hormone replacement, or other estrogen therapy"},
+    surgeryTrauma: {label:"Recent surgery or trauma", sub:"Requiring hospitalization or general anesthesia, within the past 4 weeks"}
+  };
+
+  // Nothing is carried over on this pathway (unlike the Wells Expanded
+  // Pathway's YEARS_ITEM_META, whose subs reference earlier steps), so
+  // these items use plain labels with no "carried over" sub-text.
+  var GW_YEARS_ITEM_META = [
+    {key:"dvt", label:"Clinical signs of DVT"},
+    {key:"hemoptysis", label:"Hemoptysis"},
+    {key:"peMostLikely", label:"PE is the most likely diagnosis"}
+  ];
+  // Nothing is captured before this pathway's PERC screen, so all seven
+  // items (plus age) are always asked fresh here.
+  var GW_PERC_ITEM_ORDER = ["hr100","spo2Low","hemoptysis","legSwelling","priorVte","estrogenUse","surgeryTrauma"];
+
+  var gwState = {
+    gestaltPick: null,       // 'low' | 'intermediate' | 'high'
+    pretest: null,           // 'low' | 'intermediate' | 'high'
+    years: {},               // fresh YEARS entries
+    perc: {},                // PERC entries (age + fresh checkboxes)
+    ddimer: null,
+    instability: {sbp:null, hr:null, fio2Correct:null, vent:false}
+  };
+
+  function gwOnFieldChange(){
+    if(document.getElementById("gw-perc-score-pill")) gwUpdatePercState();
+    if(document.getElementById("gw-btn-interpret")) gwUpdateDdimerState();
+    if(document.getElementById("gw-btn-instability-continue")) gwUpdateInstabilityState();
+  }
+
+  // Generic dynamic checklist renderer for the gw pathway — rebuilt on every
+  // screen visit, since which items are "fresh" vs "carried over" depends on
+  // which method (gestalt or Wells) was used.
+  function gwRenderChecklist(container, items, bucket){
+    container.innerHTML = "";
+    items.forEach(function(item){
+      var checked = !!gwState[bucket][item.key];
+      var row = document.createElement("label");
+      row.className = "row" + (checked ? " is-checked" : "");
+      row.setAttribute("data-key", item.key);
+      row.innerHTML =
+        '<input type="checkbox" id="gw-chk-'+bucket+'-'+item.key+'"'+(checked?' checked':'')+'>' +
+        '<span class="checkbox"><svg viewBox="0 0 13 10" fill="none"><path d="M1 5l4 4 7-8" stroke="var(--color-on-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>' +
+        '<span class="label">'+item.label+(item.sub? '<small>'+item.sub+'</small>':'')+'</span>';
+      var input = row.querySelector("input");
+      input.addEventListener("change", function(){
+        gwState[bucket][item.key] = input.checked;
+        row.classList.toggle("is-checked", input.checked);
+        gwOnFieldChange();
+      });
+      container.appendChild(row);
+    });
+  }
+
+
+  // ---------- YEARS — used at the D-dimer step for Low (PERC-positive) and Intermediate ----------
+  function gwYearsResult(){
+    var items = {dvt: !!gwState.years.dvt, hemoptysis: !!gwState.years.hemoptysis, peMostLikely: !!gwState.years.peMostLikely};
+    var list = GW_YEARS_ITEM_META.map(function(m){ return {key:m.key, label:m.label, sub:m.sub, positive:items[m.key]}; });
+    var itemCount = (items.dvt?1:0) + (items.hemoptysis?1:0) + (items.peMostLikely?1:0);
+    var present = list.filter(function(i){ return i.positive; }).map(function(i){ return i.label; });
+    return {items:items, itemCount:itemCount, list:list, present:present};
+  }
+
+  function gwGetDdimerThreshold(){
+    return gwYearsResult().itemCount === 0 ? 1000 : 500;
+  }
+
+  // ---------- PERC — screened only when pretest probability is Low ----------
+  // Nothing is captured earlier in this pathway, so every item is fresh.
+  function gwPercItems(){
+    return GW_PERC_ITEM_ORDER.map(function(k){
+      return {key:k, label:GW_PERC_ITEM_META[k].label, sub:GW_PERC_ITEM_META[k].sub};
+    });
+  }
+
+  function gwPercResult(){
+    var age = gwState.perc.age;
+    var ageItem = age != null && age >= 50;
+    var items = gwPercItems();
+    var positives = items.reduce(function(n,i){ return n + (gwState.perc[i.key] ? 1 : 0); }, 0);
+    var complete = age != null;
+    var score = positives + (ageItem ? 1 : 0);
+    return {age:age, ageItem:ageItem, score:score, complete:complete, negative: complete && score === 0};
+  }
+
+  function gwRenderPerc(){
+    gwRenderChecklist(document.getElementById("gw-perc-fresh-list"), gwPercItems(), "perc");
+    var ageInput = document.getElementById("f-gw-age");
+    ageInput.value = gwState.perc.age != null ? gwState.perc.age : "";
+    gwUpdatePercState();
+  }
+
+  function gwUpdatePercState(){
+    var res = gwPercResult();
+    var pill = document.getElementById("gw-perc-score-pill");
+    if(pill){
+      pill.textContent = res.complete ? (res.score + " / 8") : "— / 8";
+      pill.style.background = !res.complete ? "var(--color-surface-muted)" : (res.negative ? "var(--color-low-soft)" : "var(--color-high-soft)");
+      pill.style.color = !res.complete ? "var(--color-ink-faint)" : (res.negative ? "var(--color-low)" : "var(--color-high)");
+    }
+    var btn = document.getElementById("gw-btn-perc-continue");
+    if(btn){
+      btn.disabled = !res.complete;
+      if(res.complete && res.negative){
+        btn.textContent = "See Result — PE Excluded";
+        btn.setAttribute("data-go", "gw-final-perc");
+      } else {
+        btn.textContent = "Continue to D-dimer";
+        btn.setAttribute("data-go", "gw-ddimer");
+      }
+    }
+  }
+
+  // ---------- Result screen ----------
+  function gwRenderResult(){
+    var labelMap = {low:"Low probability", intermediate:"Intermediate probability", high:"High probability"};
+    var colorVar = {low:"var(--color-low)", intermediate:"var(--color-moderate)", high:"var(--color-high)"};
+    var softVar = {low:"var(--color-low-soft)", intermediate:"var(--color-moderate-soft)", high:"var(--color-high-soft)"};
+    var angleMap = {low:-70, intermediate:0, high:70};
+
+    var tagText = document.getElementById("gw-result-tag-text");
+    var tag = document.getElementById("gw-result-tag");
+    var prevalence = document.getElementById("gw-result-prevalence");
+    var caption = document.getElementById("gw-result-caption");
+    var needle = document.getElementById("gw-gauge-needle");
+    var dot = tag.querySelector(".dot");
+
+    var key = gwState.pretest || "low";
+    tagText.textContent = labelMap[key];
+    tag.style.background = softVar[key];
+    tag.style.color = colorVar[key];
+    dot.style.background = colorVar[key];
+    needle.style.transform = "rotate(" + angleMap[key] + "deg)";
+
+    var rangeMap = {low:"&lt; 15%", intermediate:"15 – 50%", high:"&gt; 50%"};
+    prevalence.innerHTML = "Gestalt-defined range: <strong>" + rangeMap[key] + "</strong>";
+
+    var captions = {
+      low: "Low pretest probability — screened next against PERC before any D-dimer is considered.",
+      intermediate: "Intermediate pretest probability — the D-dimer threshold (500 or 1000 ng/mL) is set using YEARS criteria.",
+      high: "High pretest probability — proceed to chest imaging (or bedside TTE if unstable). D-dimer testing is not indicated."
+    };
+    caption.textContent = captions[key];
+
+    var nextBtn = document.getElementById("gw-btn-next-step");
+    nextBtn.onclick = function(){
+      if(key === "high") goTo("gw-instability", false);
+      else if(key === "low") goTo("gw-perc", false);
+      else goTo("gw-ddimer", false);
+    };
+    nextBtn.textContent = key === "high" ? "Continue to Hemodynamic Status" : key === "low" ? "Continue to PERC Screening" : "Continue to D-dimer";
+
+    var reasoning = [];
+    reasoning.push("Method: clinical gestalt — " + labelMap[key].toLowerCase() + " selected directly.");
+    if(key === "low") reasoning.push("Next: PERC screening (8 criteria) — if all negative, PE is excluded without D-dimer.");
+    else if(key === "intermediate") reasoning.push("Next: D-dimer threshold set by YEARS criteria (signs of DVT, hemoptysis, PE most likely diagnosis).");
+    else reasoning.push("Next: proceed directly to chest imaging; bedside TTE is offered instead if the patient is hemodynamically unstable.");
+    reasoning.push("Resulting pretest probability: " + labelMap[key] + ".");
+
+    var list = document.getElementById("gw-reasoning-list");
+    list.innerHTML = "";
+    reasoning.forEach(function(txt){
+      var item = document.createElement("div");
+      item.className = "reasoning-item";
+      item.innerHTML = '<span class="bullet"></span><span>'+txt+'</span>';
+      list.appendChild(item);
+    });
+  }
+
+  // ---------- D-dimer ----------
+  function gwRenderDdimer(){
+    var pretext = document.getElementById("gw-ddimer-pretext");
+    var val = document.getElementById("gw-ddimer-threshold-value");
+    var cite = document.getElementById("gw-ddimer-cite");
+    var backBtn = document.getElementById("gw-ddimer-back");
+    var yearsCard = document.getElementById("gw-years-card");
+    var yearsHint = document.getElementById("gw-years-hint");
+    var threshold = gwGetDdimerThreshold();
+    var yr = gwYearsResult();
+
+    if(gwState.pretest === "low"){
+      pretext.textContent = "LOW PRETEST PROBABILITY · PERC-POSITIVE · YEARS " + yr.itemCount + "/3";
+      backBtn.setAttribute("data-back", "gw-perc");
+    } else {
+      pretext.textContent = "INTERMEDIATE PRETEST PROBABILITY · YEARS " + yr.itemCount + "/3";
+      backBtn.setAttribute("data-back", "gw-result");
+    }
+    cite.textContent = (yr.itemCount === 0 ? "No YEARS items present — " : "YEARS item(s) present: " + yr.present.join("; ") + " — ") + "van der Hulle et al., Lancet 2017 (YEARS)";
+
+    yearsCard.style.display = "";
+    var yearsList = document.getElementById("gw-years-list");
+    yearsList.innerHTML = "";
+    yearsHint.innerHTML = "Check any that apply — sets the threshold above.<sup>4</sup>";
+    gwRenderChecklist(yearsList, GW_YEARS_ITEM_META, "years");
+
+    val.innerHTML = "&lt;" + threshold + "<span> ng/mL</span>";
+    gwUpdateDdimerState();
+  }
+
+  function gwUpdateDdimerState(){
+    var input = document.getElementById("f-gw-ddimer");
+    var btn = document.getElementById("gw-btn-interpret");
+    if(input && btn) btn.disabled = input.value === "";
+    // Live-update the threshold and pretext if a YEARS checkbox changes while
+    // this screen is open (the checklist is interactive on this pathway).
+    var val = document.getElementById("gw-ddimer-threshold-value");
+    var pretext = document.getElementById("gw-ddimer-pretext");
+    if(val && pretext){
+      var yr = gwYearsResult();
+      var threshold = gwGetDdimerThreshold();
+      val.innerHTML = "&lt;" + threshold + "<span> ng/mL</span>";
+      if(gwState.pretest === "low"){
+        pretext.textContent = "LOW PRETEST PROBABILITY · PERC-POSITIVE · YEARS " + yr.itemCount + "/3";
+      } else {
+        pretext.textContent = "INTERMEDIATE PRETEST PROBABILITY · YEARS " + yr.itemCount + "/3";
+      }
+      var cite = document.getElementById("gw-ddimer-cite");
+      if(cite) cite.textContent = (yr.itemCount === 0 ? "No YEARS items present — " : "YEARS item(s) present: " + yr.present.join("; ") + " — ") + "van der Hulle et al., Lancet 2017 (YEARS)";
+    }
+  }
+
+  // ---------- Hemodynamic status / shock — High pretest probability only ----------
+  var GW_INSTABILITY_VENT_ITEM = [{key:"vent", label:"Requires mechanical ventilation"}];
+
+  function gwAutoShock(){
+    var hr = gwState.instability.hr, sbp = gwState.instability.sbp, fio2Correct = gwState.instability.fio2Correct, vent = !!gwState.instability.vent;
+    if(sbp == null) return false;
+    if(sbp >= 90) return false;
+    var tachy = hr != null && hr > 100;
+    var highO2 = fio2Correct != null && fio2Correct >= 40;
+    return !!(tachy || vent || highO2);
+  }
+
+  function gwRenderInstability(){
+    document.getElementById("f-gw-sbp").value = gwState.instability.sbp != null ? gwState.instability.sbp : "";
+    document.getElementById("f-gw-hr").value = gwState.instability.hr != null ? gwState.instability.hr : "";
+    document.getElementById("f-gw-fio2Correct").value = gwState.instability.fio2Correct != null ? gwState.instability.fio2Correct : "";
+    gwRenderChecklist(document.getElementById("gw-instability-vent-list"), GW_INSTABILITY_VENT_ITEM, "instability");
+    gwUpdateInstabilityState();
+  }
+
+  function gwUpdateInstabilityState(){
+    var met = gwAutoShock();
+    var pill = document.getElementById("gw-shock-pill");
+    if(pill){
+      pill.textContent = met ? "MET" : "NOT MET";
+      pill.style.background = met ? "var(--color-high-soft)" : "var(--color-surface-muted)";
+      pill.style.color = met ? "var(--color-high)" : "var(--color-ink-faint)";
+    }
+    var btn = document.getElementById("gw-btn-instability-continue");
+    if(btn) btn.disabled = gwState.instability.sbp == null || gwState.instability.hr == null;
+  }
+
+  // ---------- Final ----------
+  function gwRenderFinal(targetKind){
+    var card = document.getElementById("gw-outcome-card");
+    var icon = document.getElementById("gw-outcome-icon");
+    var title = document.getElementById("gw-outcome-title");
+    var body = document.getElementById("gw-outcome-body");
+    var cite = document.getElementById("gw-outcome-cite");
+    var alertBox = document.getElementById("gw-outcome-alert");
+    alertBox.style.display = "none";
+    alertBox.innerHTML = "";
+
+    var ruledOut, threshold, perc, shock;
+    var methodCite = "Konstantinides SV, Meyer G, Becattini C, et al. Eur Heart J. 2020;41(4):543–603 (2019 ESC Guidelines — clinical gestalt is a validated alternative to a structured prediction rule).";
+
+    if(targetKind === "imaging"){
+      ruledOut = false;
+      shock = gwAutoShock();
+    } else if(targetKind === "perc"){
+      perc = gwPercResult();
+      ruledOut = true;
+    } else {
+      threshold = gwGetDdimerThreshold();
+      ruledOut = gwState.ddimer != null && gwState.ddimer < threshold;
+    }
+
+    card.className = "outcome-card " + (ruledOut ? "outcome-low" : "outcome-high");
+    icon.textContent = ruledOut ? "✓" : "⚠";
+    icon.setAttribute("aria-hidden", "true");
+
+    var yearsCite = " Threshold selected per YEARS criteria — van der Hulle T, Cheung WY, Kooij S, et al. Lancet. 2017;390(10091):289–297.";
+
+    if(targetKind === "perc"){
+      title.textContent = "PE Ruled Out — PERC Negative";
+      body.textContent = "PERC score 0/8 in a patient (age " + perc.age + ") with low pretest probability. No further testing — D-dimer or imaging — is required to exclude PE on this basis.";
+      cite.innerHTML = "<strong>Basis</strong> — Freund Y, Cachanado M, Aubry A, et al. JAMA. 2018;319(6):559–566 (PROPER trial). A PERC-based strategy was noninferior to standard workup for thromboembolic events at 3 months in ED patients with low clinical probability of PE.";
+    } else if(ruledOut){
+      title.textContent = "PE Ruled Out";
+      body.textContent = "D-dimer " + gwState.ddimer + " ng/mL is below the " + threshold + " ng/mL threshold for " + gwState.pretest + " pretest probability. No imaging or anticoagulation indicated on this basis.";
+      cite.innerHTML = "<strong>Basis</strong> — Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134." + yearsCite;
+    } else if(targetKind === "imaging"){
+      if(shock){
+        title.textContent = "Unstable — Consider Bedside TTE";
+        body.textContent = "High pretest probability of PE with hemodynamic instability (shock criteria met — SBP <90 mmHg with tachycardia, mechanical ventilation, or a high oxygen requirement). CT pulmonary angiography remains the study of choice, but if the patient cannot be safely transported for CTPA, obtain bedside transthoracic echocardiography (TTE) instead.";
+        alertBox.style.display = "";
+        alertBox.innerHTML = "<strong>Unstable — consider bedside TTE</strong><br>Right ventricular strain/dysfunction on bedside TTE, in a patient too unstable for CTPA, supports emergency reperfusion therapy (e.g., thrombolysis) without waiting for CTPA confirmation. Proceed to CTPA once the patient is stable enough for transport.";
+        cite.innerHTML = "<strong>Basis</strong> — " + methodCite + " Konstantinides SV, Meyer G, Becattini C, et al. Eur Heart J. 2020;41(4):543–603 (2019 ESC Guidelines).";
+      } else {
+        title.textContent = "Imaging Indicated";
+        body.textContent = "High pretest probability of PE. Proceed directly to chest imaging (CT pulmonary angiography, or ventilation–perfusion scanning if CTPA is contraindicated). D-dimer testing is not indicated at this probability tier.";
+        cite.innerHTML = "<strong>Basis</strong> — " + methodCite;
+      }
+    } else {
+      title.textContent = "Imaging Indicated";
+      body.textContent = "D-dimer " + gwState.ddimer + " ng/mL is at or above the " + threshold + " ng/mL threshold for " + gwState.pretest + " pretest probability. Proceed to chest imaging (CT pulmonary angiography) to confirm or exclude PE.";
+      cite.innerHTML = "<strong>Basis</strong> — " + methodCite + " Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134." + yearsCite;
+    }
+  }
+
+  // ---------- Navigation & input wiring specific to the gw pathway ----------
+  document.querySelectorAll("#scr-gw-gestalt .tier-card").forEach(function(card){
+    card.addEventListener("click", function(){
+      gwState.gestaltPick = card.getAttribute("data-tier");
+      gwState.pretest = gwState.gestaltPick;
+      goTo("gw-result", false);
+    });
+  });
+
+  [["f-gw-age","perc","age"], ["f-gw-ddimer",null,"ddimer"], ["f-gw-sbp","instability","sbp"], ["f-gw-hr","instability","hr"], ["f-gw-fio2Correct","instability","fio2Correct"]].forEach(function(spec){
+    var id = spec[0], bucket = spec[1], key = spec[2];
+    var el = document.getElementById(id);
+    if(!el) return;
+    el.addEventListener("input", function(){
+      var v = el.value === "" ? null : Number(el.value);
+      if(bucket) gwState[bucket][key] = v; else gwState[key] = v;
+      gwOnFieldChange();
+    });
+  });
+
+  document.getElementById("gw-btn-copy").addEventListener("click", function(){
+    var lines = [
+      "Acute PE Predictor — Clinical Gestalt Pathway Summary",
+      "Method: Clinical gestalt",
+      "Pretest probability: " + gwState.pretest
+    ];
+    if(gwState.pretest === "low"){
+      var perc = gwPercResult();
+      lines.push("PERC score: " + (perc.complete ? perc.score + "/8" + (perc.negative ? " (negative — PE excluded)" : " (positive)") : "not completed"));
+    }
+    if(gwState.pretest === "intermediate" || (gwState.pretest === "low" && gwState.ddimer != null)){
+      var yr = gwYearsResult();
+      lines.push("YEARS items: " + yr.itemCount + "/3 (D-dimer threshold " + gwGetDdimerThreshold() + " ng/mL)");
+    }
+    if(gwState.pretest === "high"){
+      lines.push("Hemodynamic status: " + (gwAutoShock() ? "unstable (shock criteria met) — consider bedside TTE if unfit for CTPA transport" : "stable — proceed to CTPA"));
+    }
+    if(gwState.ddimer != null) lines.push("D-dimer: " + gwState.ddimer + " ng/mL");
+    lines.push("Source: 2019 ESC Guidelines (Eur Heart J 2020); PEGeD 2019 (NEJM); PROPER 2018 (JAMA, PERC); YEARS 2017 (Lancet)");
+    lines = lines.filter(Boolean).join("\\n");
+    var toast = document.getElementById("gw-toast");
+    function showToast(msg){
+      toast.textContent = msg;
+      toast.classList.add("show");
+      setTimeout(function(){ toast.classList.remove("show"); }, 1800);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(lines).then(function(){ showToast("Summary copied"); }).catch(function(){ showToast("Copy unavailable"); });
+    } else {
+      showToast("Copy unavailable");
+    }
+  });
+
+  document.getElementById("gw-btn-restart").addEventListener("click", function(){
+    gwState = {gestaltPick:null, pretest:null, years:{}, perc:{}, ddimer:null, instability:{sbp:null, hr:null, fio2Correct:null, vent:false}};
+    document.querySelectorAll('#scr-gw-perc input[type="number"], #scr-gw-ddimer input[type="number"], #scr-gw-instability input[type="number"]').forEach(function(i){ i.value = ""; });
+    document.querySelectorAll('#scr-gw-perc .row.is-checked, #scr-gw-instability .row.is-checked, #scr-gw-ddimer .row.is-checked').forEach(function(r){ r.classList.remove("is-checked"); });
+    document.querySelectorAll('#scr-gw-perc input[type="checkbox"], #scr-gw-instability input[type="checkbox"], #scr-gw-ddimer input[type="checkbox"]').forEach(function(c){ c.checked = false; });
   });
 
   // Live clock in status bar
