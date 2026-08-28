@@ -414,6 +414,18 @@
     cursor:pointer;
     -webkit-tap-highlight-color:transparent;
   }
+  /* Carried-over criteria (PERC-derived / YEARS on the Wells Expanded
+     Criteria Pathway) are read-only: their value is computed from an
+     earlier step's answer, not independently checkable here. This
+     removes the pointer cursor and tap feedback so they don't look
+     editable, and shows a lock glyph in place of the checkbox. */
+  .row.row-locked{cursor:default;}
+  .row.row-locked:active{background:none;}
+  .row-locked .lock-icon{
+    flex:0 0 auto;width:23px;height:23px;border-radius:7px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--color-ink-faint);font-size:12px;
+  }
   .row + .row{border-top:1px solid var(--color-border);}
   .row:active{background:var(--color-surface-muted);}
   .row .label{flex:1 1 auto;font-size:14.5px;color:var(--color-ink);line-height:1.35;}
@@ -997,7 +1009,7 @@
                 <p class="cite" id="ddimer-cite">Rules out PE per PEGeD, Kearon et al. NEJM 2019</p>
               </div>
               <div class="card" id="years-card" style="margin-top:10px;display:none;">
-                <div class="card-head"><h3>YEARS criteria</h3><p class="hint">Threshold above is set by which of these are present.<sup>4</sup></p></div>
+                <div class="card-head"><h3>YEARS criteria</h3><p class="hint">Threshold above is set by which of these are present. Carried over from earlier steps and locked here — go back to change an answer.<sup>4</sup></p></div>
                 <div id="years-list"></div>
               </div>
               <div class="card" style="margin-top:18px;">
@@ -1582,14 +1594,15 @@
   // locked read-outs of earlier answers, not new inputs.
   function renderCriterionRow(d){
     var row = document.createElement("div");
-    row.className = "row";
+    row.className = "row row-locked";
     var onColor = d.positive ? "var(--color-high)" : "var(--color-surface)";
     var borderColor = d.positive ? "var(--color-high)" : "var(--color-border-strong)";
     row.innerHTML =
       '<span class="checkbox" style="background:'+onColor+';border-color:'+borderColor+';">' +
         (d.positive ? '<svg viewBox="0 0 13 10" fill="none" style="opacity:1;transform:scale(1);"><path d="M1 5l4 4 7-8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' : '') +
       '</span>' +
-      '<span class="label">'+d.label+'<small>'+d.sub+' — currently '+(d.positive ? 'positive':'negative')+'</small></span>';
+      '<span class="label">'+d.label+'<small>'+d.sub+' — currently '+(d.positive ? 'positive':'negative')+'</small></span>' +
+      '<span class="lock-icon" aria-label="Locked — change the original answer to update this" title="Locked — change the original answer to update this">🔒</span>';
     return row;
   }
 
