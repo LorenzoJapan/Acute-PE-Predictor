@@ -1339,11 +1339,11 @@
   // surgery/trauma (a 4-week / general-anesthesia window distinct from the
   // 12-week Wells surgery item) are the only genuinely new inputs.
   var PERC_DERIVED_SOURCE = [
-    {key:"hr100", label:"Heart rate ≥100 bpm", sub:"Carried over from Step 2 vitals", get:function(){ return state.hr != null && state.hr >= 100; }},
-    {key:"spo2", label:"SpO₂ <95% on room air", sub:"Carried over from Step 2 vitals", get:function(){ return state.raSpo2 != null && state.raSpo2 < 95; }},
-    {key:"hemoptysis", label:"Hemoptysis", sub:"Carried over from Step 1", get:function(){ return !!state.resp.hemoptysis; }},
-    {key:"leg", label:"Unilateral leg swelling", sub:"Carried over from Step 2 signs of DVT", get:function(){ return !!state.assoc.legSymptoms; }},
-    {key:"priorVte", label:"Prior PE or DVT", sub:"Carried over from Step 3 risk factors", get:function(){ return !!state.risk.priorVte; }}
+    {key:"hr100", label:"Heart rate ≥100 bpm", sub:"Step 2 vitals", get:function(){ return state.hr != null && state.hr >= 100; }},
+    {key:"spo2", label:"SpO₂ <95% on room air", sub:"Step 2 vitals", get:function(){ return state.raSpo2 != null && state.raSpo2 < 95; }},
+    {key:"hemoptysis", label:"Hemoptysis", sub:"Step 1", get:function(){ return !!state.resp.hemoptysis; }},
+    {key:"leg", label:"Unilateral leg swelling", sub:"Step 2 signs of DVT", get:function(){ return !!state.assoc.legSymptoms; }},
+    {key:"priorVte", label:"Prior PE or DVT", sub:"Step 3 risk factors", get:function(){ return !!state.risk.priorVte; }}
   ];
 
   var PERC_NEW_ITEMS = [
@@ -1552,9 +1552,9 @@
   // three items are already collected elsewhere in the assessment
   // (Steps 1–3), so no new inputs are needed.
   var YEARS_ITEM_META = [
-    {key:"dvt", label:"Clinical signs of DVT", sub:"Carried over from Step 2 signs of DVT"},
-    {key:"hemoptysis", label:"Hemoptysis", sub:"Carried over from Step 1"},
-    {key:"peMostLikely", label:"PE is the most likely diagnosis", sub:"Carried over from Step 3 alternative-diagnosis judgment"}
+    {key:"dvt", label:"Clinical signs of DVT", sub:"Step 2 signs of DVT"},
+    {key:"hemoptysis", label:"Hemoptysis", sub:"Step 1"},
+    {key:"peMostLikely", label:"PE is the most likely diagnosis", sub:"Step 3 judgment"}
   ];
 
   function yearsResult(){
@@ -1655,7 +1655,7 @@
       '<span class="checkbox" style="background:'+onColor+';border-color:'+borderColor+';">' +
         (d.positive ? '<svg viewBox="0 0 13 10" fill="none" style="opacity:1;transform:scale(1);"><path d="M1 5l4 4 7-8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' : '') +
       '</span>' +
-      '<span class="label">'+d.label+'<small>'+d.sub+' — currently '+(d.positive ? 'positive':'negative')+'</small></span>' +
+      '<span class="label">'+d.label+'<small>'+d.sub+' · '+(d.positive ? 'Positive':'Negative')+'</small></span>' +
       '<span class="lock-icon" aria-label="Locked — change the original answer to update this" title="Locked — change the original answer to update this">🔒</span>';
     return row;
   }
@@ -2203,7 +2203,7 @@
         body.textContent = "High pretest probability of PE with hemodynamic instability (shock criteria met — SBP <90 mmHg with tachycardia, mechanical ventilation, or a high oxygen requirement). CT pulmonary angiography remains the study of choice, but if the patient cannot be safely transported for CTPA, obtain bedside transthoracic echocardiography (TTE) instead.";
         alertBox.style.display = "";
         alertBox.innerHTML = "<strong>Unstable — consider bedside TTE</strong><br>Right ventricular strain/dysfunction on bedside TTE, in a patient too unstable for CTPA, supports emergency reperfusion therapy (e.g., thrombolysis) without waiting for CTPA confirmation. Proceed to CTPA once the patient is stable enough for transport.";
-        cite.innerHTML = "<strong>Basis</strong> — " + methodCite + " Konstantinides SV, Meyer G, Becattini C, et al. Eur Heart J. 2020;41(4):543–603 (2019 ESC Guidelines).";
+        cite.innerHTML = "<strong>Basis</strong> — " + methodCite;
       } else {
         title.textContent = "Imaging Indicated";
         body.textContent = "High pretest probability of PE. Proceed directly to chest imaging (CT pulmonary angiography, or ventilation–perfusion scanning if CTPA is contraindicated). D-dimer testing is not indicated at this probability tier.";
