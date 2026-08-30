@@ -372,7 +372,12 @@
   #scr-home .choice-title{font-size:17px;}
   #scr-home .choice-sub{font-size:13px;margin-top:4px;}
   #scr-home .chev-r{width:9px;}
+  /* Quiet trust strip filling the gap below the pathway cards with a
+     credibility signal instead of empty space. */
+  .home-trust{display:flex;align-items:center;justify-content:center;gap:8px;margin:26px 20px 0;padding-top:18px;border-top:1px solid var(--color-border);font-size:11px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--color-ink-faint);}
+  .home-trust .dot{color:var(--color-border-strong);font-weight:400;}
   .home-footer-actions{padding:6px 20px calc(10px + env(safe-area-inset-bottom,0px));text-align:center;}
+  .version-badge{display:inline-block;margin-top:8px;padding:3px 11px;border-radius:100px;background:var(--color-surface-muted);color:var(--color-ink-soft);font-size:10.5px;font-weight:700;letter-spacing:0.03em;}
   .home-flow{
     margin:6px 20px 0;
     background:var(--color-surface);
@@ -404,6 +409,9 @@
   .card-head{padding:9px 18px 4px;}
   .card-head h3{font-size:14.5px;font-weight:700;}
   .card-head .hint{font-size:12px;color:var(--color-ink-faint);margin-top:2px;line-height:1.3;}
+  .hint.is-clamped{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;}
+  .hint-toggle{display:block;margin-top:3px;font-size:11.5px;font-weight:700;color:var(--color-primary);background:none;border:none;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+  #scr-resp .hint-toggle{font-size:13px;margin-top:4px;}
 
   .row{
     display:flex;
@@ -442,6 +450,15 @@
   input[type="checkbox"]:checked + .row-inner .checkbox,
   .row.is-checked .checkbox{background:var(--color-primary);border-color:var(--color-primary);}
   .row.is-checked .checkbox svg{opacity:1;transform:scale(1);}
+  @keyframes checkboxPop{0%{transform:scale(1);}45%{transform:scale(1.22);}100%{transform:scale(1);}}
+  .checkbox.pop{animation:checkboxPop .32s var(--ease-spring);}
+
+  /* Small duotone icon chip shown ahead of a checklist row's checkbox, for
+     rows whose item data supplies one (currently Step 1 only — its rows are
+     roomy enough to take the extra element; the denser steps stay as-is so
+     their tight vertical budget still fits without scrolling). */
+  .row-icon{flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:var(--color-primary-soft);color:var(--color-primary-strong);display:flex;align-items:center;justify-content:center;font-size:16px;}
+  #scr-resp .row-icon{width:40px;height:40px;border-radius:12px;font-size:19px;}
 
   /* Step 1 has far fewer items than steps 2–3, so it gets roomier rows
      instead of the compact sizing used where content needs to fit tightly. */
@@ -449,7 +466,7 @@
   #scr-resp .card-head{padding:24px 22px 14px;}
   #scr-resp .card-head h3{font-size:19px;}
   #scr-resp .card-head .hint{font-size:14px;line-height:1.55;margin-top:7px;color:var(--color-ink-soft);}
-  #scr-resp .row{min-height:68px;padding:19px 22px;gap:16px;}
+  #scr-resp .row{min-height:88px;padding:30px 22px;gap:16px;}
   #scr-resp .row .label{font-size:16.5px;}
   #scr-resp .row .label small{font-size:13.5px;margin-top:4px;}
   #scr-resp .checkbox{width:27px;height:27px;border-radius:8px;border-width:1.8px;}
@@ -460,9 +477,10 @@
   #scr-judgment .card + .card{margin-top:8px;}
   #scr-judgment .card-head{padding:7px 18px 3px;}
   #scr-judgment .card-head .hint{line-height:1.25;margin-top:1px;}
-  #scr-judgment .row{padding:7px 18px;min-height:44px;}
+  #scr-judgment .row{padding:7px 18px;min-height:44px;gap:10px;}
   #scr-judgment .row .label{font-size:14px;line-height:1.25;}
   #scr-judgment .row .label small{font-size:11px;margin-top:1px;}
+  #scr-judgment .row-icon{width:22px;height:22px;border-radius:6px;font-size:12px;}
   #scr-judgment #seg-altdx{margin:4px 18px 8px !important;}
 
   /* Step 2b (low pretest probability only): PERC screening. Derived rows are
@@ -486,10 +504,11 @@
   #scr-assoc .num-field{padding:1px 4px 1px 12px;}
   #scr-assoc .num-field input{padding:4px 4px;font-size:14px;}
   #scr-assoc .num-field .unit{font-size:10px;padding:0 8px;}
-  #scr-assoc .row{padding:6px 18px;min-height:44px;gap:10px;}
+  #scr-assoc .row{padding:6px 18px;min-height:44px;gap:8px;}
   #scr-assoc .checkbox{width:21px;height:21px;}
   #scr-assoc .row .label{font-size:13.5px;line-height:1.2;}
   #scr-assoc .row .label small{font-size:9.5px;margin-top:1px;line-height:1.15;}
+  #scr-assoc .row-icon{width:20px;height:20px;border-radius:6px;font-size:11px;}
   #scr-assoc .cta-bar{padding:6px 20px 10px;}
   #scr-assoc .cta-bar .btn{min-height:46px;}
   #scr-assoc .required-mark{color:var(--color-high);font-weight:700;}
@@ -694,9 +713,14 @@
     display:flex;align-items:center;gap:14px;
     padding:16px 18px;border-radius:var(--radius-lg);
     background:var(--color-surface);border:1.4px solid var(--color-border);
+    border-left-width:3px;border-left-color:var(--color-border-strong);
     box-shadow:var(--shadow-card);cursor:pointer;text-align:left;
     width:100%;-webkit-tap-highlight-color:transparent;
   }
+  /* Accent each pathway card with its own hue so the two options sort at a
+     glance, before the title is even read. */
+  .choice-card[data-go="resp"]{border-left-color:var(--color-primary);}
+  .choice-card[data-go="gw-gestalt"]{border-left-color:#C97B4A;}
   .choice-card + .choice-card{margin-top:12px;}
   .choice-card:active{background:var(--color-surface-muted);transform:scale(0.985);}
   .choice-card .choice-icon{
@@ -840,11 +864,14 @@
                     <svg class="chev-r" width="9" height="14" viewBox="0 0 7 12" fill="none"><path d="M1 1l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </div>
                 </div>
+
+                <div class="home-trust"><span>AHA/ACC 2026</span><span class="dot">·</span><span>PERC</span><span class="dot">·</span><span>YEARS</span></div>
               </div>
 
               <div class="home-footer-actions">
                 <button class="btn btn-text" data-go="about">About this tool &amp; sources</button>
-                <p style="margin-top:6px;font-size:12px;color:var(--color-ink-faint);">Developed by MDGadgetz LLC.</p>
+                <div class="version-badge">Guideline-based · v1.0</div>
+                <p style="margin-top:4px;font-size:12px;color:var(--color-ink-faint);">Developed by MDGadgetz LLC.</p>
               </div>
             </div>
           </section>
@@ -1276,33 +1303,33 @@
   "use strict";
 
   var RESP_ITEMS = [
-    {key:"syncope", label:"Syncope"},
-    {key:"dyspnea", label:"Dyspnea", sub:"New, or worsening of chronic dyspnea"},
-    {key:"pleuritic", label:"Pleuritic CP"},
-    {key:"hemoptysis", label:"Hemoptysis"},
-    {key:"nonpleuritic", label:"Atypical CP", sub:"Nonretrosternal and nonpleuritic"}
+    {key:"syncope", label:"Syncope", icon:"💫"},
+    {key:"dyspnea", label:"Dyspnea", sub:"New, or worsening of chronic dyspnea", icon:"🫁"},
+    {key:"pleuritic", label:"Pleuritic CP", icon:"⚡"},
+    {key:"hemoptysis", label:"Hemoptysis", icon:"🩸"},
+    {key:"nonpleuritic", label:"Atypical CP", sub:"Nonretrosternal and nonpleuritic", icon:"❔"}
   ];
 
   var ASSOC_ITEMS = [
-    {key:"ventilated", label:"Requires mechanical ventilation"},
-    {key:"lowFever", label:"Presence of low-grade fever"},
-    {key:"legSymptoms", label:"Signs of DVT", sub:"Deep-vein thrombosis"},
-    {key:"pleuralRub", label:"Pleural Friction Rub"},
-    {key:"jvp", label:"Elevated CVP"},
-    {key:"s1q3t3", label:"EKG with new S1Q3T3"},
-    {key:"rbbb", label:"EKG with new RBBB"},
-    {key:"cxr", label:"Chest radiograph compatible with PE", sub:"Pulmonary infiltrate, Hampton's Hump, Westermark sign, unilateral pleural effusion"}
+    {key:"ventilated", label:"Requires mechanical ventilation", icon:"💨"},
+    {key:"lowFever", label:"Presence of low-grade fever", icon:"🌡️"},
+    {key:"legSymptoms", label:"Signs of DVT", sub:"Deep-vein thrombosis", icon:"🦵"},
+    {key:"pleuralRub", label:"Pleural Friction Rub", icon:"🩺"},
+    {key:"jvp", label:"Elevated CVP", icon:"📈"},
+    {key:"s1q3t3", label:"EKG with new S1Q3T3", icon:"〰️"},
+    {key:"rbbb", label:"EKG with new RBBB", icon:"〰️"},
+    {key:"cxr", label:"Chest radiograph compatible with PE", sub:"Pulmonary infiltrate, Hampton's Hump, Westermark sign, unilateral pleural effusion", icon:"🩻"}
   ];
 
   var RISK_ITEMS = [
-    {key:"surgery", label:"Surgery", sub:"Within the past 12 weeks"},
-    {key:"immobilization", label:"Immobilization", sub:"Bed rest ≥3 days in the past 4 weeks"},
-    {key:"priorVte", label:"Previous DVT or PE", sub:"Objectively diagnosed"},
-    {key:"fracture", label:"Lower-extremity fracture", sub:"With immobilization within 12 weeks"},
-    {key:"familyHx", label:"Strong family history of VTE", sub:"≥2 relatives, or 1 first-degree with thrombophilia"},
-    {key:"cancer", label:"Active cancer", sub:"Treated within 6 months, or palliative"},
-    {key:"postpartum", label:"Postpartum period"},
-    {key:"paralysis", label:"Lower-extremity paralysis"}
+    {key:"surgery", label:"Surgery", sub:"Within the past 12 weeks", icon:"🔪"},
+    {key:"immobilization", label:"Immobilization", sub:"Bed rest ≥3 days in the past 4 weeks", icon:"🛏️"},
+    {key:"priorVte", label:"Previous DVT or PE", sub:"Objectively diagnosed", icon:"🔁"},
+    {key:"fracture", label:"Lower-extremity fracture", sub:"With immobilization within 12 weeks", icon:"🦴"},
+    {key:"familyHx", label:"Strong family history of VTE", sub:"≥2 relatives, or 1 first-degree with thrombophilia", icon:"🧬"},
+    {key:"cancer", label:"Active cancer", sub:"Treated within 6 months, or palliative", icon:"🎗️"},
+    {key:"postpartum", label:"Postpartum period", icon:"🤱"},
+    {key:"paralysis", label:"Lower-extremity paralysis", icon:"♿"}
   ];
 
   // PERC (pulmonary embolism rule-out criteria) is only screened once pretest
@@ -1340,6 +1367,7 @@
       row.className = "row";
       row.setAttribute("data-key", item.key);
       row.innerHTML =
+        (item.icon ? '<span class="row-icon">'+item.icon+'</span>' : '') +
         '<input type="checkbox" id="chk-'+item.key+'">' +
         '<span class="checkbox"><svg viewBox="0 0 13 10" fill="none"><path d="M1 5l4 4 7-8" stroke="var(--color-on-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>' +
         '<span class="label">'+item.label+(item.sub? '<small>'+item.sub+'</small>':'')+'</span>';
@@ -1347,6 +1375,12 @@
       input.addEventListener("change", function(){
         state[bucket][item.key] = input.checked;
         row.classList.toggle("is-checked", input.checked);
+        if(input.checked){
+          var cb = row.querySelector(".checkbox");
+          cb.classList.remove("pop");
+          void cb.offsetWidth;
+          cb.classList.add("pop");
+        }
         onFieldChange();
       });
       container.appendChild(row);
@@ -1357,6 +1391,26 @@
   buildChecklist(document.getElementById("assoc-list"), ASSOC_ITEMS, "assoc");
   buildChecklist(document.getElementById("risk-list"), RISK_ITEMS, "risk");
   buildChecklist(document.getElementById("perc-new-list"), PERC_NEW_ITEMS, "perc");
+
+  // Step 1's explanatory paragraph is read every time the screen opens, even
+  // though it only matters the first time. Collapse it to one line with a
+  // "Show more" toggle so the checklist itself is the immediate visual
+  // anchor. Scoped to this one screen, which has the vertical room to spare;
+  // the denser steps keep their hints uncollapsed.
+  (function(){
+    var respHint = document.querySelector("#scr-resp .card-head .hint");
+    if(!respHint) return;
+    respHint.classList.add("is-clamped");
+    var toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "hint-toggle";
+    toggle.textContent = "Show more";
+    toggle.addEventListener("click", function(){
+      var stillClamped = respHint.classList.toggle("is-clamped");
+      toggle.textContent = stillClamped ? "Show more" : "Show less";
+    });
+    respHint.insertAdjacentElement("afterend", toggle);
+  })();
 
   // Numeric fields
   ["hr","sbp","raSpo2","fio2Correct","ddimer","age"].forEach(function(key){
