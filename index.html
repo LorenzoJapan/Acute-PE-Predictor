@@ -816,6 +816,69 @@
       padding-top:env(safe-area-inset-top,0px);
     }
   }
+
+  /* Real mobile Safari rarely shows the full 100dvh this was budgeted
+     against — the address bar and bottom toolbar routinely eat 100-250px
+     of it, especially on first load before either auto-hides. Every screen
+     above was tuned to fit with zero slack against a full 926px-tall
+     device, which only holds up once Safari's chrome happens to be
+     collapsed. This pass compacts chrome and spacing (never a tap target
+     below iOS's 44pt minimum) so every screen still fits comfortably even
+     when only ~700px of vertical space is actually available. */
+  @media (max-width:500px) and (max-height:850px){
+    .statusbar{height:calc(38px + env(safe-area-inset-top,0px));}
+    .nav{padding:2px 16px 4px;min-height:36px;}
+    .progress-track{margin:0 20px 2px;}
+    .step-label{padding:1px 24px 4px;}
+    .scroll{padding:2px 20px 6px;}
+    .cta-bar{padding:6px 20px calc(8px + env(safe-area-inset-bottom,0px));}
+    .card-head{padding:5px 18px 2px;}
+    .card-head h3{font-size:13.5px;}
+    .card-head .hint{font-size:11.5px;line-height:1.22;}
+    .row{padding:5px 18px;min-height:44px;}
+    .row .label{font-size:13.5px;line-height:1.25;}
+    .row .label small{font-size:11.5px;}
+    .card + .card, .card + .field-block{margin-top:5px;}
+    .field-block{padding:4px 18px;}
+
+    .home-mark{width:60px;height:60px;margin:0 auto 10px;font-size:32px;}
+    .home-hero{padding:6px 24px 2px;}
+    .home-hero h2{font-size:22px;margin-bottom:5px;}
+    .home-actions{padding:16px 20px 2px;gap:11px;}
+    #scr-home .choice-card{padding:15px 18px;}
+    #scr-home .choice-icon{width:46px;height:46px;font-size:22px;}
+    .home-trust{margin:16px 20px 0;padding-top:12px;}
+    .home-footer-actions{padding:4px 20px calc(8px + env(safe-area-inset-bottom,0px));}
+
+    #scr-resp .card{margin-top:2px;}
+    #scr-resp .card-head{padding:12px 22px 6px;}
+    #scr-resp .card-head h3{font-size:17px;}
+    #scr-resp .card-head .hint{font-size:13.5px;margin-top:4px;}
+    #scr-resp .row{min-height:64px;padding:12px 22px;gap:13px;}
+    #scr-resp .row-icon{width:32px;height:32px;font-size:15px;}
+    #scr-resp .row .label{font-size:15.5px;}
+    #scr-resp .row .label small{font-size:12.5px;margin-top:2px;}
+
+    #scr-assoc .field-block{padding:1px 18px;}
+    #scr-assoc .field-block label{margin-bottom:1px;}
+    #scr-assoc .num-field{padding:0 4px 0 12px;}
+    #scr-assoc .num-field input{padding:1px 4px;}
+    #scr-assoc .row{padding:3px 18px;min-height:44px;}
+    #scr-assoc .row .label small{font-size:9px;}
+    #scr-assoc .cta-bar{padding:4px 20px calc(6px + env(safe-area-inset-bottom,0px));}
+    #scr-assoc .cta-bar .btn{min-height:44px;}
+    #scr-judgment .card-head{padding:4px 18px 2px;}
+    #scr-judgment .row{padding:4px 18px;}
+
+    #scr-perc .card + .card, #scr-ddimer .card + .card{margin-top:4px;}
+    .perc-score-row{padding:5px 18px;}
+    .outcome-card{padding-top:16px;padding-bottom:12px;}
+    .outcome-card .icon-badge{width:48px;height:48px;margin:0 auto 6px;font-size:22px;}
+    .outcome-card h3{font-size:18px;margin-bottom:4px;}
+    .outcome-card p{font-size:13px;line-height:1.45;}
+    .alert-critical{padding:9px 13px;margin-top:7px;line-height:1.5;}
+    .cite-box{padding:7px 13px;margin-top:7px;line-height:1.5;}
+  }
 </style>
 </head>
 <body>
