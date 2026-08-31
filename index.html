@@ -458,30 +458,32 @@
      roomy enough to take the extra element; the denser steps stay as-is so
      their tight vertical budget still fits without scrolling). */
   .row-icon{flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:var(--color-primary-soft);color:var(--color-primary-strong);display:flex;align-items:center;justify-content:center;font-size:16px;}
-  #scr-resp .row-icon{width:40px;height:40px;border-radius:12px;font-size:19px;}
 
   /* Step 1 has far fewer items than steps 2–3, so it gets roomier rows
      instead of the compact sizing used where content needs to fit tightly. */
   #scr-resp .card{margin-top:4px;}
-  #scr-resp .card-head{padding:24px 22px 14px;}
-  #scr-resp .card-head h3{font-size:19px;}
-  #scr-resp .card-head .hint{font-size:14px;line-height:1.55;margin-top:7px;color:var(--color-ink-soft);}
-  #scr-resp .row{min-height:88px;padding:30px 22px;gap:16px;}
-  #scr-resp .row .label{font-size:16.5px;}
-  #scr-resp .row .label small{font-size:13.5px;margin-top:4px;}
-  #scr-resp .checkbox{width:27px;height:27px;border-radius:8px;border-width:1.8px;}
-  #scr-resp .checkbox svg{width:15px;height:12px;}
+  #scr-resp .card-head{padding:18px 22px 10px;}
+  #scr-resp .card-head h3{font-size:18px;}
+  #scr-resp .card-head .hint{font-size:13.5px;line-height:1.5;margin-top:5px;color:var(--color-ink-soft);}
+  #scr-resp .row{min-height:64px;padding:16px 22px;gap:14px;}
+  #scr-resp .row .label{font-size:16px;}
+  #scr-resp .row .label small{font-size:13px;margin-top:3px;}
+  #scr-resp .row-icon{width:36px;height:36px;border-radius:11px;font-size:17px;}
+  #scr-resp .checkbox{width:26px;height:26px;border-radius:8px;border-width:1.8px;}
+  #scr-resp .checkbox svg{width:14px;height:11px;}
 
   /* Step 3 has the most items (8 risk factors + alt-diagnosis), so it gets
      the tightest sizing of any screen — still ≥44pt tall per row. */
-  #scr-judgment .card + .card{margin-top:8px;}
+  #scr-judgment .card + .card{margin-top:6px;}
   #scr-judgment .card-head{padding:7px 18px 3px;}
-  #scr-judgment .card-head .hint{line-height:1.25;margin-top:1px;}
+  #scr-judgment .card-head .hint{line-height:1.18;margin-top:0;}
   #scr-judgment .row{padding:7px 18px;min-height:44px;gap:10px;}
   #scr-judgment .row .label{font-size:14px;line-height:1.25;}
   #scr-judgment .row .label small{font-size:11px;margin-top:1px;}
   #scr-judgment .row-icon{width:22px;height:22px;border-radius:6px;font-size:12px;}
-  #scr-judgment #seg-altdx{margin:4px 18px 8px !important;}
+  /* Alternative-diagnosis checklist is a two-item, single-select group (radio
+     behavior) styled with the same .row/.checkbox markup as the risk-factor
+     list above, so the two sections read as one consistent checkbox pattern. */
 
   /* Step 2b (low pretest probability only): PERC screening. Derived rows are
      locked read-outs of earlier answers, not new inputs — so they get a
@@ -557,19 +559,6 @@
   }
   .num-field .stepper button:active{background:var(--color-primary-soft);}
   .num-field:focus-within{border-color:var(--color-primary);}
-
-  .segmented{
-    display:flex;background:var(--color-surface-muted);
-    border-radius:var(--radius-md);padding:4px;gap:4px;
-  }
-  .segmented button{
-    flex:1;border:none;background:none;
-    padding:9px 6px;border-radius:10px;
-    font-size:12.5px;font-weight:600;color:var(--color-ink-soft);
-    cursor:pointer;line-height:1.25;
-    transition:background .2s var(--ease-standard), color .2s, box-shadow .2s;
-  }
-  .segmented button.on{background:var(--color-surface);color:var(--color-primary-strong);box-shadow:var(--shadow-card);}
 
   .section-title{
     font-family:var(--font-mono);
@@ -867,8 +856,11 @@
     #scr-assoc .row .label small{font-size:9px;}
     #scr-assoc .cta-bar{padding:4px 20px calc(6px + env(safe-area-inset-bottom,0px));}
     #scr-assoc .cta-bar .btn{min-height:44px;}
-    #scr-judgment .card-head{padding:4px 18px 2px;}
+    #scr-judgment .card + .card{margin-top:4px;}
+    #scr-judgment .card-head{padding:3px 18px 1px;}
     #scr-judgment .row{padding:4px 18px;}
+    #scr-judgment .cta-bar{padding:4px 20px calc(6px + env(safe-area-inset-bottom,0px));}
+    #scr-judgment .cta-bar .btn{min-height:44px;}
 
     #scr-perc .card + .card, #scr-ddimer .card + .card{margin-top:4px;}
     .perc-score-row{padding:5px 18px;}
@@ -928,7 +920,7 @@
                   </div>
                 </div>
 
-                <div class="home-trust"><span>AHA/ACC 2026</span><span class="dot">·</span><span>PERC</span><span class="dot">·</span><span>YEARS</span></div>
+                <div class="home-trust"><span>AHA/ACC 2026</span><span class="dot">·</span><span>Wells</span><span class="dot">·</span><span>PERC</span><span class="dot">·</span><span>YEARS</span></div>
               </div>
 
               <div class="home-footer-actions">
@@ -1002,18 +994,15 @@
               <span class="nav-title">Clinical Judgement</span>
             </div>
             <div class="progress-track"><div class="progress-fill" style="width:100%"></div></div>
-            <div class="step-label">Step 3 of 3 · VTE Risk Factors and Alternative Diagnosis</div>
+            <div class="step-label">Step 3 of 3 · Risk factors &amp; alt. diagnosis</div>
             <div class="scroll">
               <div class="card">
                 <div class="card-head"><h3>Risk factors for VTE</h3><p class="hint">Check any that apply.</p></div>
                 <div id="risk-list"></div>
               </div>
               <div class="card">
-                <div class="card-head"><h3>Alternative diagnosis</h3><p class="hint">Is another diagnosis at least as likely as an acute PE, based on history, exam, and routine tests?</p></div>
-                <div class="segmented" id="seg-altdx" style="margin:4px 18px 10px;">
-                  <button type="button" data-val="lessLikely">Less likely than PE</button>
-                  <button type="button" data-val="asLikely">As likely / more likely</button>
-                </div>
+                <div class="card-head"><h3>Alternative diagnosis</h3><p class="hint">Is another diagnosis at least as likely as PE?</p></div>
+                <div id="altdx-list"></div>
               </div>
             </div>
             <div class="cta-bar">
@@ -1095,7 +1084,7 @@
             <div class="scroll">
               <div class="threshold-card">
                 <div class="pretext" id="ddimer-pretext">LOW PRETEST PROBABILITY</div>
-                <div class="value" id="ddimer-threshold-value">&lt;1000<span> ng/mL</span></div>
+                <div class="value" id="ddimer-threshold-value">&lt;1000<span> ng/mL FEU</span></div>
                 <p class="cite" id="ddimer-cite">Rules out PE per PEGeD, Kearon et al. NEJM 2019</p>
               </div>
               <div class="card" id="years-card" style="margin-top:10px;display:none;">
@@ -1105,7 +1094,7 @@
               <div class="card" style="margin-top:18px;">
                 <div class="field-block">
                   <label for="f-ddimer">Measured D-dimer</label>
-                  <div class="num-field"><input id="f-ddimer" type="number" inputmode="numeric" placeholder="0"><span class="unit">ng/mL</span></div>
+                  <div class="num-field"><input id="f-ddimer" type="number" inputmode="numeric" placeholder="0"><span class="unit">ng/mL FEU</span></div>
                 </div>
               </div>
             </div>
@@ -1227,7 +1216,7 @@
             <div class="scroll">
               <div class="threshold-card">
                 <div class="pretext" id="gw-ddimer-pretext">LOW PRETEST PROBABILITY</div>
-                <div class="value" id="gw-ddimer-threshold-value">&lt;1000<span> ng/mL</span></div>
+                <div class="value" id="gw-ddimer-threshold-value">&lt;1000<span> ng/mL FEU</span></div>
                 <p class="cite" id="gw-ddimer-cite">Rules out PE per PEGeD, Kearon et al. NEJM 2019</p>
               </div>
               <div class="card" id="gw-years-card" style="margin-top:10px;display:none;">
@@ -1237,7 +1226,7 @@
               <div class="card" style="margin-top:18px;">
                 <div class="field-block">
                   <label for="f-gw-ddimer">Measured D-dimer</label>
-                  <div class="num-field"><input id="f-gw-ddimer" type="number" inputmode="numeric" placeholder="0"><span class="unit">ng/mL</span></div>
+                  <div class="num-field"><input id="f-gw-ddimer" type="number" inputmode="numeric" placeholder="0"><span class="unit">ng/mL FEU</span></div>
                 </div>
               </div>
             </div>
@@ -1328,11 +1317,15 @@
               </div>
               <div class="about-block">
                 <h4>YEARS-adjusted D-dimer threshold</h4>
-                <p>Low pretest probability that is PERC-positive, and intermediate pretest probability, both route to the same D-dimer step,<sup>2,6</sup> with the threshold set using three YEARS items — clinical signs of DVT, hemoptysis, and PE being the most likely diagnosis. None present: &lt;1000 ng/mL rules out PE. One or more present: &lt;500 ng/mL rules out PE.<sup>4</sup> On the Wells Expanded Criteria Pathway these are read directly from the earlier steps; on the Clinical Gestalt Pathway they're asked fresh at the D-dimer step.</p>
+                <p>Low pretest probability that is PERC-positive, and intermediate pretest probability, both route to the same D-dimer step,<sup>2,6</sup> with the threshold set using three YEARS items — clinical signs of DVT, hemoptysis, and PE being the most likely diagnosis. None present: &lt;1000 ng/mL FEU rules out PE. One or more present: &lt;500 ng/mL FEU rules out PE.<sup>4</sup> All D-dimer values in this tool are expressed in ng/mL FEU (Fibrinogen Equivalent Units) — confirm the reporting units of the assay used at your institution before applying these thresholds, as some labs report in D-dimer units (DDU) instead, which are not numerically interchangeable. On the Wells Expanded Criteria Pathway these are read directly from the earlier steps; on the Clinical Gestalt Pathway they're asked fresh at the D-dimer step.</p>
               </div>
               <div class="about-block">
                 <h4>High probability — hemodynamic instability</h4>
                 <p>When pretest probability is high and shock criteria are met (SBP &lt;90 mmHg with tachycardia, mechanical ventilation, or a high oxygen requirement), the recommendation adds bedside transthoracic echocardiography (TTE) as an alternative to CTPA if the patient cannot be safely transported. Right ventricular strain/dysfunction on TTE in this context supports emergency reperfusion therapy without waiting for CTPA confirmation.<sup>5</sup></p>
+              </div>
+              <div class="about-block">
+                <h4>Study populations differ</h4>
+                <p>The PERC study cohort was strictly developed for ED patients.<sup>3</sup> The YEARS study cohort was recruited across hospital settings, including inpatients.<sup>4</sup> The Wells expanded cohort included a mix of ED, outpatient, and hospitalized patients.<sup>1</sup> Keep this in mind when applying these rules outside the ED.</p>
               </div>
               <div class="disclaimer">
                 <h4 style="font-size:13.5px;font-weight:700;margin-bottom:6px;color:var(--color-moderate);">Medical Disclaimer</h4>
@@ -1370,8 +1363,15 @@
     {key:"dyspnea", label:"Dyspnea", sub:"New, or worsening of chronic dyspnea", icon:"🫁"},
     {key:"pleuritic", label:"Pleuritic CP", icon:"⚡"},
     {key:"hemoptysis", label:"Hemoptysis", icon:"🩸"},
-    {key:"nonpleuritic", label:"Atypical CP", sub:"Nonretrosternal and nonpleuritic", icon:"❔"}
+    {key:"nonpleuritic", label:"Atypical CP", sub:"Nonretrosternal and nonpleuritic", icon:"❔"},
+    {key:"none", label:"None of the above", icon:"🚫"}
   ];
+
+  // Step 1's "None of the above" is mutually exclusive with every other
+  // symptom in the list: picking it clears any symptoms already checked, and
+  // picking any symptom clears it. It is excluded from RESP_POINT_KEYS below,
+  // so it never contributes to the respiratory point count itself.
+  var RESP_NONE_KEY = "none";
 
   var ASSOC_ITEMS = [
     {key:"ventilated", label:"Requires mechanical ventilation", icon:"💨"},
@@ -1393,6 +1393,13 @@
     {key:"cancer", label:"Active cancer", sub:"Treated within 6 months, or palliative", icon:"🎗️"},
     {key:"postpartum", label:"Postpartum period", icon:"🤱"},
     {key:"paralysis", label:"Lower-extremity paralysis", icon:"♿"}
+  ];
+
+  // Single-select, checkbox-styled equivalent of the old segmented toggle —
+  // see buildExclusiveChecklist below.
+  var ALTDX_ITEMS = [
+    {key:"lessLikely", label:"Less likely than PE", icon:"⬇️"},
+    {key:"asLikely", label:"As likely / more likely", icon:"⚖️"}
   ];
 
   // PERC (pulmonary embolism rule-out criteria) is only screened once pretest
@@ -1450,10 +1457,77 @@
     });
   }
 
+  // Single-select variant of buildChecklist: same .row/.checkbox markup as
+  // the risk-factor list, but the items behave like a radio group instead of
+  // independent checkboxes — checking one clears the other, and unchecking
+  // the only checked item is not allowed (an answer is required to proceed).
+  function buildExclusiveChecklist(container, items, onPick){
+    container.innerHTML = "";
+    items.forEach(function(item){
+      var row = document.createElement("label");
+      row.className = "row";
+      row.setAttribute("data-key", item.key);
+      row.innerHTML =
+        (item.icon ? '<span class="row-icon">'+item.icon+'</span>' : '') +
+        '<input type="checkbox" id="chk-altdx-'+item.key+'">' +
+        '<span class="checkbox"><svg viewBox="0 0 13 10" fill="none"><path d="M1 5l4 4 7-8" stroke="var(--color-on-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>' +
+        '<span class="label">'+item.label+(item.sub? '<small>'+item.sub+'</small>':'')+'</span>';
+      var input = row.querySelector("input");
+      input.addEventListener("change", function(){
+        if(!input.checked){
+          // Block deselecting the only checked option — one answer is required.
+          input.checked = true;
+          return;
+        }
+        container.querySelectorAll(".row").forEach(function(r){
+          if(r === row) return;
+          var otherInput = r.querySelector("input");
+          otherInput.checked = false;
+          r.classList.remove("is-checked");
+        });
+        row.classList.add("is-checked");
+        var cb = row.querySelector(".checkbox");
+        cb.classList.remove("pop");
+        void cb.offsetWidth;
+        cb.classList.add("pop");
+        onPick(item.key);
+        onFieldChange();
+      });
+      container.appendChild(row);
+    });
+  }
+
   buildChecklist(document.getElementById("resp-list"), RESP_ITEMS, "resp");
   buildChecklist(document.getElementById("assoc-list"), ASSOC_ITEMS, "assoc");
   buildChecklist(document.getElementById("risk-list"), RISK_ITEMS, "risk");
   buildChecklist(document.getElementById("perc-new-list"), PERC_NEW_ITEMS, "perc");
+
+  // "None of the above" exclusivity for Step 1: wire this after the checklist
+  // above is built so it layers on top of buildChecklist's own change handler
+  // rather than replacing it (state/animation still work as normal).
+  (function(){
+    var respList = document.getElementById("resp-list");
+    var rows = respList.querySelectorAll(".row");
+    rows.forEach(function(row){
+      var key = row.getAttribute("data-key");
+      var input = row.querySelector("input");
+      input.addEventListener("change", function(){
+        if(!input.checked) return;
+        var clearKeys = key === RESP_NONE_KEY
+          ? RESP_ITEMS.filter(function(i){ return i.key !== RESP_NONE_KEY; }).map(function(i){ return i.key; })
+          : [RESP_NONE_KEY];
+        clearKeys.forEach(function(k){
+          var other = respList.querySelector('.row[data-key="'+k+'"]');
+          if(!other) return;
+          var otherInput = other.querySelector("input");
+          if(otherInput.checked){
+            otherInput.checked = false;
+            otherInput.dispatchEvent(new Event("change"));
+          }
+        });
+      });
+    });
+  })();
 
   // Step 1's explanatory paragraph is read every time the screen opens, even
   // though it only matters the first time. Collapse it to one line with a
@@ -1485,22 +1559,7 @@
     });
   });
 
-  // Segmented controls
-  function wireSegment(id, onPick){
-    var seg = document.getElementById(id);
-    if(!seg) return;
-    seg.querySelectorAll("button").forEach(function(btn){
-      btn.addEventListener("click", function(){
-        seg.querySelectorAll("button").forEach(function(b){ b.classList.remove("on"); });
-        btn.classList.add("on");
-        onPick(btn.getAttribute("data-val"));
-        onFieldChange();
-      });
-    });
-  }
-  wireSegment("seg-altdx", function(v){ state.altDx = v; });
-
-  // Toggle chip-style rows reuse same segmented pattern (none currently besides above)
+  buildExclusiveChecklist(document.getElementById("altdx-list"), ALTDX_ITEMS, function(v){ state.altDx = v; });
 
   function onFieldChange(){
     updateAutoShock();
@@ -1664,7 +1723,7 @@
 
     var captions = {
       low: "Low pretest probability — screened next against PERC before any D-dimer is considered.",
-      moderate: "Moderate pretest probability — the D-dimer threshold (500 or 1000 ng/mL) is set using YEARS criteria.",
+      moderate: "Moderate pretest probability — the D-dimer threshold (500 or 1000 ng/mL FEU) is set using YEARS criteria.",
       high: "Proceed directly to chest imaging — D-dimer testing is not indicated."
     };
     caption.textContent = captions[key];
@@ -1781,7 +1840,7 @@
     yearsList.innerHTML = "";
     yr.list.forEach(function(item){ yearsList.appendChild(renderCriterionRow(item)); });
 
-    val.innerHTML = "&lt;" + threshold + "<span> ng/mL</span>";
+    val.innerHTML = "&lt;" + threshold + "<span> ng/mL FEU</span>";
 
     var ddimerInput = document.getElementById("f-ddimer");
     var interpretBtn = document.getElementById("btn-interpret");
@@ -1826,7 +1885,7 @@
       cite.innerHTML = "<strong>Basis</strong> — Freund Y, Cachanado M, Aubry A, et al. JAMA. 2018;319(6):559–566 (PROPER trial). A PERC-based strategy was noninferior to standard workup for thromboembolic events at 3 months in ED patients with low clinical probability of PE.";
     } else if(ruledOut){
       title.textContent = "PE Ruled Out";
-      body.textContent = "D-dimer " + state.ddimer + " ng/mL is below the " + threshold + " ng/mL threshold for " + r.pretest + " pretest probability. No imaging or anticoagulation indicated on this basis.";
+      body.textContent = "D-dimer " + state.ddimer + " ng/mL FEU is below the " + threshold + " ng/mL FEU threshold for " + r.pretest + " pretest probability. No imaging or anticoagulation indicated on this basis.";
       cite.innerHTML = "<strong>Basis</strong> — Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134." + yearsCite;
     } else {
       title.textContent = "Imaging Indicated";
@@ -1842,7 +1901,7 @@
           cite.innerHTML = "<strong>Basis</strong> — Wells PS, Ginsberg JS, Anderson DR, et al. Ann Intern Med 1998;129(12):997–1005.";
         }
       } else {
-        body.textContent = "D-dimer " + state.ddimer + " ng/mL is at or above the " + threshold + " ng/mL threshold for " + r.pretest + " pretest probability. Proceed to chest imaging (CT pulmonary angiography) to confirm or exclude PE.";
+        body.textContent = "D-dimer " + state.ddimer + " ng/mL FEU is at or above the " + threshold + " ng/mL FEU threshold for " + r.pretest + " pretest probability. Proceed to chest imaging (CT pulmonary angiography) to confirm or exclude PE.";
         cite.innerHTML = "<strong>Basis</strong> — Wells PS, Ginsberg JS, Anderson DR, et al. Ann Intern Med 1998;129(12):997–1005; Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134." + yearsCite;
       }
     }
@@ -1915,12 +1974,12 @@
     }
     if(r.pretest === "moderate" || (r.pretest === "low" && state.ddimer != null)){
       var yr = yearsResult();
-      lines.push("YEARS items: " + yr.itemCount + "/3 (D-dimer threshold " + getDdimerThreshold(r) + " ng/mL)");
+      lines.push("YEARS items: " + yr.itemCount + "/3 (D-dimer threshold " + getDdimerThreshold(r) + " ng/mL FEU)");
     }
     if(r.pretest === "high"){
       lines.push("Hemodynamic status: " + (r.shock ? "unstable (shock criteria met) — consider bedside TTE if unfit for CTPA transport" : "stable — proceed to CTPA"));
     }
-    if(state.ddimer != null) lines.push("D-dimer: " + state.ddimer + " ng/mL");
+    if(state.ddimer != null) lines.push("D-dimer: " + state.ddimer + " ng/mL FEU");
     lines.push("Source: Wells 1998 (Ann Intern Med); PEGeD 2019 (NEJM); PROPER 2018 (JAMA, PERC); YEARS 2017 (Lancet)" + (r.pretest === "high" && r.shock ? "; 2019 ESC Guidelines (Eur Heart J 2020)" : ""));
     lines = lines.filter(Boolean).join("\\n");
     var toast = document.getElementById("toast");
@@ -1941,7 +2000,6 @@
     document.querySelectorAll('#app input[type="text"], #app input[type="number"]').forEach(function(i){ i.value=""; });
     document.querySelectorAll('#app .row.is-checked').forEach(function(r){ r.classList.remove("is-checked"); });
     document.querySelectorAll('#app input[type="checkbox"]').forEach(function(c){ c.checked=false; });
-    document.querySelectorAll('#app .segmented button.on').forEach(function(b){ b.classList.remove("on"); });
     document.getElementById("btn-see-results").disabled = true;
     document.getElementById("btn-continue-assoc").disabled = true;
     document.getElementById("fio2-required-mark").style.display = "none";
@@ -2107,7 +2165,7 @@
 
     var captions = {
       low: "Low pretest probability — screened next against PERC before any D-dimer is considered.",
-      intermediate: "Intermediate pretest probability — the D-dimer threshold (500 or 1000 ng/mL) is set using YEARS criteria.",
+      intermediate: "Intermediate pretest probability — the D-dimer threshold (500 or 1000 ng/mL FEU) is set using YEARS criteria.",
       high: "High pretest probability — proceed to chest imaging (or bedside TTE if unstable). D-dimer testing is not indicated."
     };
     caption.textContent = captions[key];
@@ -2163,7 +2221,7 @@
     yearsHint.innerHTML = "Check any that apply — sets the threshold above.<sup>4</sup>";
     gwRenderChecklist(yearsList, GW_YEARS_ITEM_META, "years");
 
-    val.innerHTML = "&lt;" + threshold + "<span> ng/mL</span>";
+    val.innerHTML = "&lt;" + threshold + "<span> ng/mL FEU</span>";
     gwUpdateDdimerState();
   }
 
@@ -2178,7 +2236,7 @@
     if(val && pretext){
       var yr = gwYearsResult();
       var threshold = gwGetDdimerThreshold();
-      val.innerHTML = "&lt;" + threshold + "<span> ng/mL</span>";
+      val.innerHTML = "&lt;" + threshold + "<span> ng/mL FEU</span>";
       if(gwState.pretest === "low"){
         pretext.textContent = "LOW PRETEST PROBABILITY · PERC-POSITIVE · YEARS " + yr.itemCount + "/3";
       } else {
@@ -2258,7 +2316,7 @@
       cite.innerHTML = "<strong>Basis</strong> — Freund Y, Cachanado M, Aubry A, et al. JAMA. 2018;319(6):559–566 (PROPER trial). A PERC-based strategy was noninferior to standard workup for thromboembolic events at 3 months in ED patients with low clinical probability of PE.";
     } else if(ruledOut){
       title.textContent = "PE Ruled Out";
-      body.textContent = "D-dimer " + gwState.ddimer + " ng/mL is below the " + threshold + " ng/mL threshold for " + gwState.pretest + " pretest probability. No imaging or anticoagulation indicated on this basis.";
+      body.textContent = "D-dimer " + gwState.ddimer + " ng/mL FEU is below the " + threshold + " ng/mL FEU threshold for " + gwState.pretest + " pretest probability. No imaging or anticoagulation indicated on this basis.";
       cite.innerHTML = "<strong>Basis</strong> — Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134." + yearsCite;
     } else if(targetKind === "imaging"){
       if(shock){
@@ -2274,7 +2332,7 @@
       }
     } else {
       title.textContent = "Imaging Indicated";
-      body.textContent = "D-dimer " + gwState.ddimer + " ng/mL is at or above the " + threshold + " ng/mL threshold for " + gwState.pretest + " pretest probability. Proceed to chest imaging (CT pulmonary angiography) to confirm or exclude PE.";
+      body.textContent = "D-dimer " + gwState.ddimer + " ng/mL FEU is at or above the " + threshold + " ng/mL FEU threshold for " + gwState.pretest + " pretest probability. Proceed to chest imaging (CT pulmonary angiography) to confirm or exclude PE.";
       cite.innerHTML = "<strong>Basis</strong> — " + methodCite + " Kearon C, de Wit K, Parpia S, et al. NEJM 2019;381(22):2125–2134." + yearsCite;
     }
   }
@@ -2311,12 +2369,12 @@
     }
     if(gwState.pretest === "intermediate" || (gwState.pretest === "low" && gwState.ddimer != null)){
       var yr = gwYearsResult();
-      lines.push("YEARS items: " + yr.itemCount + "/3 (D-dimer threshold " + gwGetDdimerThreshold() + " ng/mL)");
+      lines.push("YEARS items: " + yr.itemCount + "/3 (D-dimer threshold " + gwGetDdimerThreshold() + " ng/mL FEU)");
     }
     if(gwState.pretest === "high"){
       lines.push("Hemodynamic status: " + (gwAutoShock() ? "unstable (shock criteria met) — consider bedside TTE if unfit for CTPA transport" : "stable — proceed to CTPA"));
     }
-    if(gwState.ddimer != null) lines.push("D-dimer: " + gwState.ddimer + " ng/mL");
+    if(gwState.ddimer != null) lines.push("D-dimer: " + gwState.ddimer + " ng/mL FEU");
     lines.push("Source: 2019 ESC Guidelines (Eur Heart J 2020); PEGeD 2019 (NEJM); PROPER 2018 (JAMA, PERC); YEARS 2017 (Lancet)");
     lines = lines.filter(Boolean).join("\\n");
     var toast = document.getElementById("gw-toast");
