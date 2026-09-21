@@ -1,0 +1,9002 @@
+[
+  {
+    "id": 1,
+    "pathway": "wells",
+    "age": 58,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": true,
+      "rbbb": true,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 115,
+    "hr": 153,
+    "raSpo2": 88,
+    "fio2Correct": 69,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 1228,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 2,
+    "pathway": "wells",
+    "age": 36,
+    "sex": "M",
+    "resp": {
+      "syncope": true,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 76,
+    "hr": 140,
+    "raSpo2": 99,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 500,
+    "reference": {
+      "respCount": 0,
+      "category": "severe",
+      "riskPresent": true,
+      "shock": true,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 3,
+    "pathway": "wells",
+    "age": 76,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 158,
+    "hr": 112,
+    "raSpo2": 88,
+    "fio2Correct": 80,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1238,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 3,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 4,
+    "pathway": "wells",
+    "age": 76,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 95,
+    "hr": 81,
+    "raSpo2": 95,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1513,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 5,
+    "pathway": "wells",
+    "age": 18,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": true,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 118,
+    "hr": 51,
+    "raSpo2": 89,
+    "fio2Correct": 34,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 1497,
+    "reference": {
+      "respCount": 2,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 2,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 6,
+    "pathway": "wells",
+    "age": 21,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": true,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": true,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 166,
+    "hr": 132,
+    "raSpo2": 85,
+    "fio2Correct": 45,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1000,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 7,
+    "pathway": "wells",
+    "age": 84,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": true,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": true,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 81,
+    "hr": 108,
+    "raSpo2": 91,
+    "fio2Correct": 63,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 797,
+    "reference": {
+      "respCount": 0,
+      "category": "severe",
+      "riskPresent": true,
+      "shock": true,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 8,
+    "pathway": "wells",
+    "age": 63,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": true,
+      "fracture": true,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 110,
+    "hr": 85,
+    "raSpo2": 85,
+    "fio2Correct": 96,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 307,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 9,
+    "pathway": "wells",
+    "age": 70,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": true,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 157,
+    "hr": 82,
+    "raSpo2": 85,
+    "fio2Correct": 70,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1838,
+    "reference": {
+      "respCount": 4,
+      "category": "atypical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 3,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 10,
+    "pathway": "wells",
+    "age": 54,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": true,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": true,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 119,
+    "hr": 98,
+    "raSpo2": 85,
+    "fio2Correct": 51,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 499,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 3,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 11,
+    "pathway": "wells",
+    "age": 50,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": true,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": true,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": true
+    },
+    "sbp": 98,
+    "hr": 136,
+    "raSpo2": 97,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1524,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 12,
+    "pathway": "wells",
+    "age": 89,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 87,
+    "hr": 141,
+    "raSpo2": 92,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 1001,
+    "reference": {
+      "respCount": 1,
+      "category": "severe",
+      "riskPresent": true,
+      "shock": true,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 13,
+    "pathway": "wells",
+    "age": 91,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": true,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 71,
+    "hr": 158,
+    "raSpo2": 94,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 2251,
+    "reference": {
+      "respCount": 0,
+      "category": "severe",
+      "riskPresent": false,
+      "shock": true,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 14,
+    "pathway": "wells",
+    "age": 84,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 114,
+    "hr": 110,
+    "raSpo2": 90,
+    "fio2Correct": 84,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1917,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 15,
+    "pathway": "wells",
+    "age": 28,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 118,
+    "hr": 77,
+    "raSpo2": 96,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1816,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 16,
+    "pathway": "wells",
+    "age": 60,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": true,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": true,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 155,
+    "hr": 147,
+    "raSpo2": 93,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 999,
+    "reference": {
+      "respCount": 3,
+      "category": "typical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 17,
+    "pathway": "wells",
+    "age": 19,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": true,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 138,
+    "hr": 148,
+    "raSpo2": 90,
+    "fio2Correct": 22,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 895,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 18,
+    "pathway": "wells",
+    "age": 57,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": true,
+      "paralysis": false
+    },
+    "sbp": 72,
+    "hr": 111,
+    "raSpo2": 90,
+    "fio2Correct": 67,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 2148,
+    "reference": {
+      "respCount": 1,
+      "category": "severe",
+      "riskPresent": true,
+      "shock": true,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 19,
+    "pathway": "wells",
+    "age": 56,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": true,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 137,
+    "hr": 116,
+    "raSpo2": 97,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 168,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 2,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 20,
+    "pathway": "wells",
+    "age": 48,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 143,
+    "hr": 57,
+    "raSpo2": 99,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 620,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 21,
+    "pathway": "wells",
+    "age": 87,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 178,
+    "hr": 140,
+    "raSpo2": 93,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 418,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 4,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 22,
+    "pathway": "wells",
+    "age": 73,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 161,
+    "hr": 136,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": true,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1802,
+    "reference": {
+      "respCount": 3,
+      "category": "typical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 23,
+    "pathway": "wells",
+    "age": 88,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": true,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 157,
+    "hr": 60,
+    "raSpo2": 85,
+    "fio2Correct": 80,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 2222,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 2,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 24,
+    "pathway": "wells",
+    "age": 53,
+    "sex": "M",
+    "resp": {
+      "syncope": true,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": true,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 85,
+    "hr": 143,
+    "raSpo2": 88,
+    "fio2Correct": 63,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1969,
+    "reference": {
+      "respCount": 2,
+      "category": "severe",
+      "riskPresent": true,
+      "shock": true,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 25,
+    "pathway": "wells",
+    "age": 69,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": true,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": true,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 73,
+    "hr": 95,
+    "raSpo2": 92,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 938,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 26,
+    "pathway": "wells",
+    "age": 88,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 115,
+    "hr": 138,
+    "raSpo2": 87,
+    "fio2Correct": 80,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 2022,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 27,
+    "pathway": "wells",
+    "age": 55,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": true,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 126,
+    "hr": 136,
+    "raSpo2": 86,
+    "fio2Correct": 100,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 501,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 28,
+    "pathway": "wells",
+    "age": 53,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 115,
+    "hr": 60,
+    "raSpo2": 97,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1052,
+    "reference": {
+      "respCount": 3,
+      "category": "typical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 29,
+    "pathway": "wells",
+    "age": 94,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 89,
+    "hr": 98,
+    "raSpo2": 94,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 501,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 30,
+    "pathway": "wells",
+    "age": 26,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": true,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 99,
+    "hr": 99,
+    "raSpo2": 99,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 2299,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 31,
+    "pathway": "wells",
+    "age": 87,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": true,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": true,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 158,
+    "hr": 130,
+    "raSpo2": 94,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1484,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 4,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 32,
+    "pathway": "wells",
+    "age": 67,
+    "sex": "F",
+    "resp": {
+      "syncope": true,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": true,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 84,
+    "hr": 77,
+    "raSpo2": 96,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 453,
+    "reference": {
+      "respCount": 0,
+      "category": "severe",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 33,
+    "pathway": "wells",
+    "age": 48,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 124,
+    "hr": 146,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": true,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 306,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 34,
+    "pathway": "wells",
+    "age": 81,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": true,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": true,
+      "s1q3t3": false,
+      "rbbb": true,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 151,
+    "hr": 60,
+    "raSpo2": 99,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1322,
+    "reference": {
+      "respCount": 4,
+      "category": "severe",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 35,
+    "pathway": "wells",
+    "age": 95,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": true,
+      "fracture": false,
+      "familyHx": true,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 163,
+    "hr": 131,
+    "raSpo2": 92,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1941,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 36,
+    "pathway": "wells",
+    "age": 31,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": true,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 119,
+    "hr": 88,
+    "raSpo2": 97,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": true,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 500,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 1,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 37,
+    "pathway": "wells",
+    "age": 64,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": true,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": true,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 117,
+    "hr": 121,
+    "raSpo2": 86,
+    "fio2Correct": 77,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1001,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 38,
+    "pathway": "wells",
+    "age": 95,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": true,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 119,
+    "hr": 59,
+    "raSpo2": 90,
+    "fio2Correct": 67,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1000,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 3,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 39,
+    "pathway": "wells",
+    "age": 53,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": true,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 151,
+    "hr": 126,
+    "raSpo2": 87,
+    "fio2Correct": 38,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1000,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 40,
+    "pathway": "wells",
+    "age": 46,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": true,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 95,
+    "hr": 133,
+    "raSpo2": 96,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 877,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 41,
+    "pathway": "wells",
+    "age": 58,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 167,
+    "hr": 60,
+    "raSpo2": 85,
+    "fio2Correct": 23,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 211,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 2,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 42,
+    "pathway": "wells",
+    "age": 36,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": true,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 92,
+    "hr": 89,
+    "raSpo2": 100,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 873,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 0,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "none_perc_negative"
+    }
+  },
+  {
+    "id": 43,
+    "pathway": "wells",
+    "age": 68,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 149,
+    "hr": 102,
+    "raSpo2": 87,
+    "fio2Correct": 80,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": true,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1238,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 4,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 44,
+    "pathway": "wells",
+    "age": 23,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": true,
+      "s1q3t3": false,
+      "rbbb": true,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 156,
+    "hr": 86,
+    "raSpo2": 87,
+    "fio2Correct": 42,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 354,
+    "reference": {
+      "respCount": 1,
+      "category": "severe",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 45,
+    "pathway": "wells",
+    "age": 52,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": false,
+      "pleuralRub": true,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": true,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": true,
+      "priorVte": true,
+      "fracture": true,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 146,
+    "hr": 69,
+    "raSpo2": 89,
+    "fio2Correct": 84,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 866,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 46,
+    "pathway": "wells",
+    "age": 57,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": true,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": true,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 166,
+    "hr": 106,
+    "raSpo2": 86,
+    "fio2Correct": 32,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 2473,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 4,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 47,
+    "pathway": "wells",
+    "age": 23,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 86,
+    "hr": 112,
+    "raSpo2": 92,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 541,
+    "reference": {
+      "respCount": 3,
+      "category": "severe",
+      "riskPresent": false,
+      "shock": true,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 48,
+    "pathway": "wells",
+    "age": 92,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": true,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 81,
+    "hr": 67,
+    "raSpo2": 89,
+    "fio2Correct": 55,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 709,
+    "reference": {
+      "respCount": 2,
+      "category": "severe",
+      "riskPresent": false,
+      "shock": true,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 49,
+    "pathway": "wells",
+    "age": 51,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": true,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 129,
+    "hr": 138,
+    "raSpo2": 97,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1544,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 50,
+    "pathway": "wells",
+    "age": 66,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 137,
+    "hr": 155,
+    "raSpo2": 86,
+    "fio2Correct": 38,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 441,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 4,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 51,
+    "pathway": "wells",
+    "age": 31,
+    "sex": "F",
+    "resp": {
+      "syncope": true,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": true,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 85,
+    "hr": 56,
+    "raSpo2": 97,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 340,
+    "reference": {
+      "respCount": 2,
+      "category": "severe",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 52,
+    "pathway": "wells",
+    "age": 27,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": true,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": true,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": true
+    },
+    "sbp": 83,
+    "hr": 95,
+    "raSpo2": 100,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": true,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 501,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 53,
+    "pathway": "wells",
+    "age": 94,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": true,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": true,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 118,
+    "hr": 76,
+    "raSpo2": 89,
+    "fio2Correct": 83,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 1522,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 5,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 54,
+    "pathway": "wells",
+    "age": 39,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": true,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": true,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 98,
+    "hr": 128,
+    "raSpo2": 94,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 136,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 55,
+    "pathway": "wells",
+    "age": 91,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": true,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 174,
+    "hr": 55,
+    "raSpo2": 94,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 1050,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 56,
+    "pathway": "wells",
+    "age": 71,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": true,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": true,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 162,
+    "hr": 141,
+    "raSpo2": 89,
+    "fio2Correct": 99,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": true,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 2170,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 5,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 57,
+    "pathway": "wells",
+    "age": 70,
+    "sex": "F",
+    "resp": {
+      "syncope": true,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": true,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 78,
+    "hr": 158,
+    "raSpo2": 100,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1626,
+    "reference": {
+      "respCount": 1,
+      "category": "severe",
+      "riskPresent": true,
+      "shock": true,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 58,
+    "pathway": "wells",
+    "age": 44,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 143,
+    "hr": 54,
+    "raSpo2": 93,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 1672,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 59,
+    "pathway": "wells",
+    "age": 93,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": true,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 111,
+    "hr": 113,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1265,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 60,
+    "pathway": "wells",
+    "age": 37,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 136,
+    "hr": 91,
+    "raSpo2": 95,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 506,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 61,
+    "pathway": "wells",
+    "age": 48,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": true,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": true,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 106,
+    "hr": 83,
+    "raSpo2": 91,
+    "fio2Correct": 60,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": true,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 2049,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 62,
+    "pathway": "wells",
+    "age": 49,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": true,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": true,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 99,
+    "hr": 77,
+    "raSpo2": 96,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 443,
+    "reference": {
+      "respCount": 2,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 0,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "none_perc_negative"
+    }
+  },
+  {
+    "id": 63,
+    "pathway": "wells",
+    "age": 85,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": true,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 136,
+    "hr": 152,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1684,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 2,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 64,
+    "pathway": "wells",
+    "age": 45,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": true,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": true,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": true,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 170,
+    "hr": 121,
+    "raSpo2": 87,
+    "fio2Correct": 87,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 1001,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 65,
+    "pathway": "wells",
+    "age": 27,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": true,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 167,
+    "hr": 94,
+    "raSpo2": 93,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 1194,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 2,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 66,
+    "pathway": "wells",
+    "age": 69,
+    "sex": "M",
+    "resp": {
+      "syncope": true,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 135,
+    "hr": 82,
+    "raSpo2": 97,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 2265,
+    "reference": {
+      "respCount": 1,
+      "category": "severe",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 67,
+    "pathway": "wells",
+    "age": 58,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 136,
+    "hr": 108,
+    "raSpo2": 96,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 866,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 68,
+    "pathway": "wells",
+    "age": 53,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": true,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": true,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 119,
+    "hr": 124,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 2224,
+    "reference": {
+      "respCount": 4,
+      "category": "typical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 69,
+    "pathway": "wells",
+    "age": 35,
+    "sex": "M",
+    "resp": {
+      "syncope": true,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": true,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 81,
+    "hr": 71,
+    "raSpo2": 91,
+    "fio2Correct": 55,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 2304,
+    "reference": {
+      "respCount": 3,
+      "category": "severe",
+      "riskPresent": false,
+      "shock": true,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 70,
+    "pathway": "wells",
+    "age": 79,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 96,
+    "hr": 115,
+    "raSpo2": 100,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1993,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 71,
+    "pathway": "wells",
+    "age": 55,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": true,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 113,
+    "hr": 119,
+    "raSpo2": 94,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 292,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 72,
+    "pathway": "wells",
+    "age": 78,
+    "sex": "F",
+    "resp": {
+      "syncope": true,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": true,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 159,
+    "hr": 71,
+    "raSpo2": 90,
+    "fio2Correct": 47,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 500,
+    "reference": {
+      "respCount": 2,
+      "category": "severe",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 73,
+    "pathway": "wells",
+    "age": 69,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": true,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 171,
+    "hr": 83,
+    "raSpo2": 89,
+    "fio2Correct": 57,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1000,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 4,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 74,
+    "pathway": "wells",
+    "age": 64,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": true,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": true
+    },
+    "sbp": 163,
+    "hr": 146,
+    "raSpo2": 95,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1988,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 75,
+    "pathway": "wells",
+    "age": 32,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": true,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 98,
+    "hr": 103,
+    "raSpo2": 97,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 469,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 76,
+    "pathway": "wells",
+    "age": 38,
+    "sex": "M",
+    "resp": {
+      "syncope": true,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 114,
+    "hr": 119,
+    "raSpo2": 100,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 169,
+    "reference": {
+      "respCount": 1,
+      "category": "severe",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 77,
+    "pathway": "wells",
+    "age": 78,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 128,
+    "hr": 140,
+    "raSpo2": 99,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 563,
+    "reference": {
+      "respCount": 3,
+      "category": "typical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 3,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 78,
+    "pathway": "wells",
+    "age": 67,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": true,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 175,
+    "hr": 74,
+    "raSpo2": 91,
+    "fio2Correct": 22,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 543,
+    "reference": {
+      "respCount": 2,
+      "category": "atypical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 3,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 79,
+    "pathway": "wells",
+    "age": 45,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": true,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 166,
+    "hr": 111,
+    "raSpo2": 92,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": true,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 2083,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 4,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 80,
+    "pathway": "wells",
+    "age": 65,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": false,
+      "pleuralRub": true,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 79,
+    "hr": 98,
+    "raSpo2": 90,
+    "fio2Correct": 96,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 2374,
+    "reference": {
+      "respCount": 2,
+      "category": "severe",
+      "riskPresent": false,
+      "shock": true,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 81,
+    "pathway": "wells",
+    "age": 90,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": true,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 140,
+    "hr": 53,
+    "raSpo2": 88,
+    "fio2Correct": 84,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1518,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 82,
+    "pathway": "wells",
+    "age": 56,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": true,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 175,
+    "hr": 61,
+    "raSpo2": 86,
+    "fio2Correct": 51,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 2405,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 3,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 83,
+    "pathway": "wells",
+    "age": 93,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 111,
+    "hr": 66,
+    "raSpo2": 100,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1102,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 84,
+    "pathway": "wells",
+    "age": 59,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": true,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": true,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 84,
+    "hr": 57,
+    "raSpo2": 92,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 2152,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 85,
+    "pathway": "wells",
+    "age": 64,
+    "sex": "F",
+    "resp": {
+      "syncope": true,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": true,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 125,
+    "hr": 97,
+    "raSpo2": 99,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 383,
+    "reference": {
+      "respCount": 2,
+      "category": "severe",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 86,
+    "pathway": "wells",
+    "age": 48,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 74,
+    "hr": 61,
+    "raSpo2": 89,
+    "fio2Correct": 41,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1620,
+    "reference": {
+      "respCount": 2,
+      "category": "severe",
+      "riskPresent": true,
+      "shock": true,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 87,
+    "pathway": "wells",
+    "age": 32,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 95,
+    "hr": 135,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 758,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 88,
+    "pathway": "wells",
+    "age": 44,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 105,
+    "hr": 81,
+    "raSpo2": 86,
+    "fio2Correct": 36,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 475,
+    "reference": {
+      "respCount": 2,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 89,
+    "pathway": "wells",
+    "age": 88,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 151,
+    "hr": 91,
+    "raSpo2": 85,
+    "fio2Correct": 54,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": true,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 801,
+    "reference": {
+      "respCount": 0,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 90,
+    "pathway": "wells",
+    "age": 72,
+    "sex": "F",
+    "resp": {
+      "syncope": true,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 108,
+    "hr": 78,
+    "raSpo2": 88,
+    "fio2Correct": 96,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 468,
+    "reference": {
+      "respCount": 3,
+      "category": "severe",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 91,
+    "pathway": "wells",
+    "age": 80,
+    "sex": "F",
+    "resp": {
+      "syncope": true,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": true,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": true,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 110,
+    "hr": 68,
+    "raSpo2": 85,
+    "fio2Correct": 28,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 684,
+    "reference": {
+      "respCount": 3,
+      "category": "severe",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 92,
+    "pathway": "wells",
+    "age": 43,
+    "sex": "M",
+    "resp": {
+      "syncope": true,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": true,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": true
+    },
+    "sbp": 158,
+    "hr": 150,
+    "raSpo2": 85,
+    "fio2Correct": 22,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 450,
+    "reference": {
+      "respCount": 2,
+      "category": "severe",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 93,
+    "pathway": "wells",
+    "age": 30,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": true,
+      "fracture": false,
+      "familyHx": true,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 163,
+    "hr": 84,
+    "raSpo2": 85,
+    "fio2Correct": 25,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1664,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 94,
+    "pathway": "wells",
+    "age": 66,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 86,
+    "hr": 139,
+    "raSpo2": 86,
+    "fio2Correct": 61,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 289,
+    "reference": {
+      "respCount": 2,
+      "category": "severe",
+      "riskPresent": true,
+      "shock": true,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 95,
+    "pathway": "wells",
+    "age": 88,
+    "sex": "F",
+    "resp": {
+      "syncope": true,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": true,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 74,
+    "hr": 74,
+    "raSpo2": 86,
+    "fio2Correct": 55,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 1000,
+    "reference": {
+      "respCount": 2,
+      "category": "severe",
+      "riskPresent": true,
+      "shock": true,
+      "pretest": "high",
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 96,
+    "pathway": "wells",
+    "age": 85,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": true,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 84,
+    "hr": 102,
+    "raSpo2": 85,
+    "fio2Correct": 79,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 1720,
+    "reference": {
+      "respCount": 1,
+      "category": "severe",
+      "riskPresent": true,
+      "shock": true,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 97,
+    "pathway": "wells",
+    "age": 29,
+    "sex": "M",
+    "resp": {
+      "syncope": true,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 96,
+    "hr": 148,
+    "raSpo2": 95,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 702,
+    "reference": {
+      "respCount": 1,
+      "category": "severe",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 98,
+    "pathway": "wells",
+    "age": 80,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 137,
+    "hr": 92,
+    "raSpo2": 91,
+    "fio2Correct": 45,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 787,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 2,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 99,
+    "pathway": "wells",
+    "age": 66,
+    "sex": "F",
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": true,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": true,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 157,
+    "hr": 154,
+    "raSpo2": 89,
+    "fio2Correct": 99,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1767,
+    "reference": {
+      "respCount": 2,
+      "category": "typical",
+      "riskPresent": true,
+      "shock": false,
+      "pretest": "moderate",
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 100,
+    "pathway": "wells",
+    "age": 22,
+    "sex": "M",
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 168,
+    "hr": 59,
+    "raSpo2": 89,
+    "fio2Correct": 47,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1066,
+    "reference": {
+      "respCount": 1,
+      "category": "atypical",
+      "riskPresent": false,
+      "shock": false,
+      "pretest": "low",
+      "percScore": 2,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 101,
+    "pathway": "gestalt",
+    "age": 67,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": true,
+      "estrogenUse": false,
+      "surgeryTrauma": true
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1520,
+    "instability": {
+      "sbp": 88,
+      "hr": 99,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 3,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 102,
+    "pathway": "gestalt",
+    "age": 88,
+    "sex": "F",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": true,
+      "estrogenUse": false,
+      "surgeryTrauma": true
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 226,
+    "instability": {
+      "sbp": 129,
+      "hr": 91,
+      "fio2Correct": 36,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 4,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 103,
+    "pathway": "gestalt",
+    "age": 37,
+    "sex": "F",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": true,
+      "priorVte": true,
+      "estrogenUse": true,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 129,
+    "instability": {
+      "sbp": 132,
+      "hr": 60,
+      "fio2Correct": 95,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 3,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 104,
+    "pathway": "gestalt",
+    "age": 76,
+    "sex": "F",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": true
+    },
+    "ddimer": 397,
+    "instability": {
+      "sbp": 171,
+      "hr": 62,
+      "fio2Correct": 81,
+      "vent": true
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 3,
+      "threshold": 500,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 105,
+    "pathway": "gestalt",
+    "age": 58,
+    "sex": "M",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": true,
+      "legSwelling": false,
+      "priorVte": true,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 499,
+    "instability": {
+      "sbp": 157,
+      "hr": 156,
+      "fio2Correct": 64,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 106,
+    "pathway": "gestalt",
+    "age": 86,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1111,
+    "instability": {
+      "sbp": 81,
+      "hr": 131,
+      "fio2Correct": 75,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": true,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 107,
+    "pathway": "gestalt",
+    "age": 92,
+    "sex": "F",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": true
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 2321,
+    "instability": {
+      "sbp": 173,
+      "hr": 101,
+      "fio2Correct": 63,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 3,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 108,
+    "pathway": "gestalt",
+    "age": 68,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": true,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1156,
+    "instability": {
+      "sbp": 128,
+      "hr": 101,
+      "fio2Correct": 100,
+      "vent": true
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 109,
+    "pathway": "gestalt",
+    "age": 25,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": true,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1000,
+    "instability": {
+      "sbp": 160,
+      "hr": 136,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 110,
+    "pathway": "gestalt",
+    "age": 81,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1119,
+    "instability": {
+      "sbp": 170,
+      "hr": 79,
+      "fio2Correct": 42,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 111,
+    "pathway": "gestalt",
+    "age": 85,
+    "sex": "M",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": true
+    },
+    "ddimer": 1435,
+    "instability": {
+      "sbp": 70,
+      "hr": 113,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": true,
+      "percScore": null,
+      "yearsCount": 3,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 112,
+    "pathway": "gestalt",
+    "age": 36,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": true,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 475,
+    "instability": {
+      "sbp": 143,
+      "hr": 103,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 113,
+    "pathway": "gestalt",
+    "age": 93,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1000,
+    "instability": {
+      "sbp": 91,
+      "hr": 118,
+      "fio2Correct": 58,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 114,
+    "pathway": "gestalt",
+    "age": 39,
+    "sex": "F",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": true,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1562,
+    "instability": {
+      "sbp": 83,
+      "hr": 71,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 115,
+    "pathway": "gestalt",
+    "age": 80,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": true,
+      "priorVte": false,
+      "estrogenUse": true,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 1806,
+    "instability": {
+      "sbp": 73,
+      "hr": 143,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": true,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 116,
+    "pathway": "gestalt",
+    "age": 37,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": true
+    },
+    "ddimer": 500,
+    "instability": {
+      "sbp": 82,
+      "hr": 147,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": true,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 117,
+    "pathway": "gestalt",
+    "age": 56,
+    "sex": "F",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 895,
+    "instability": {
+      "sbp": 150,
+      "hr": 144,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 118,
+    "pathway": "gestalt",
+    "age": 56,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 1374,
+    "instability": {
+      "sbp": 90,
+      "hr": 79,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 119,
+    "pathway": "gestalt",
+    "age": 61,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": true,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 501,
+    "instability": {
+      "sbp": 82,
+      "hr": 105,
+      "fio2Correct": 60,
+      "vent": true
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": true,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 120,
+    "pathway": "gestalt",
+    "age": 45,
+    "sex": "F",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": true,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 206,
+    "instability": {
+      "sbp": 171,
+      "hr": 84,
+      "fio2Correct": 31,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 121,
+    "pathway": "gestalt",
+    "age": 70,
+    "sex": "M",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 501,
+    "instability": {
+      "sbp": 76,
+      "hr": 132,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": true,
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 122,
+    "pathway": "gestalt",
+    "age": 46,
+    "sex": "F",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1874,
+    "instability": {
+      "sbp": 96,
+      "hr": 78,
+      "fio2Correct": 22,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 123,
+    "pathway": "gestalt",
+    "age": 50,
+    "sex": "F",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": true
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 50,
+    "instability": {
+      "sbp": 82,
+      "hr": 76,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 2,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 124,
+    "pathway": "gestalt",
+    "age": 34,
+    "sex": "F",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": true,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 500,
+    "instability": {
+      "sbp": 160,
+      "hr": 150,
+      "fio2Correct": 72,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 125,
+    "pathway": "gestalt",
+    "age": 68,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": true,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 2417,
+    "instability": {
+      "sbp": 103,
+      "hr": 65,
+      "fio2Correct": 69,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 126,
+    "pathway": "gestalt",
+    "age": 34,
+    "sex": "M",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 2385,
+    "instability": {
+      "sbp": 170,
+      "hr": 78,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 127,
+    "pathway": "gestalt",
+    "age": 71,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 1305,
+    "instability": {
+      "sbp": 179,
+      "hr": 65,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 128,
+    "pathway": "gestalt",
+    "age": 63,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": true,
+      "hemoptysis": false,
+      "legSwelling": true,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": true
+    },
+    "ddimer": 501,
+    "instability": {
+      "sbp": 118,
+      "hr": 147,
+      "fio2Correct": 30,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 129,
+    "pathway": "gestalt",
+    "age": 57,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 197,
+    "instability": {
+      "sbp": 136,
+      "hr": 118,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 130,
+    "pathway": "gestalt",
+    "age": 58,
+    "sex": "M",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": true
+    },
+    "ddimer": 500,
+    "instability": {
+      "sbp": 168,
+      "hr": 127,
+      "fio2Correct": 86,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 131,
+    "pathway": "gestalt",
+    "age": 86,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 1334,
+    "instability": {
+      "sbp": 107,
+      "hr": 123,
+      "fio2Correct": 35,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 2,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 132,
+    "pathway": "gestalt",
+    "age": 65,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": true,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 2251,
+    "instability": {
+      "sbp": 102,
+      "hr": 71,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 133,
+    "pathway": "gestalt",
+    "age": 84,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": true
+    },
+    "ddimer": 1294,
+    "instability": {
+      "sbp": 88,
+      "hr": 97,
+      "fio2Correct": 70,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": true,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 134,
+    "pathway": "gestalt",
+    "age": 46,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": true,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 607,
+    "instability": {
+      "sbp": 124,
+      "hr": 57,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 135,
+    "pathway": "gestalt",
+    "age": 61,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": true,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1001,
+    "instability": {
+      "sbp": 140,
+      "hr": 122,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 136,
+    "pathway": "gestalt",
+    "age": 86,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 500,
+    "instability": {
+      "sbp": 147,
+      "hr": 128,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 137,
+    "pathway": "gestalt",
+    "age": 79,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 1950,
+    "instability": {
+      "sbp": 78,
+      "hr": 53,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 138,
+    "pathway": "gestalt",
+    "age": 33,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 1937,
+    "instability": {
+      "sbp": 88,
+      "hr": 94,
+      "fio2Correct": 37,
+      "vent": true
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": true,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 139,
+    "pathway": "gestalt",
+    "age": 87,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": true
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 499,
+    "instability": {
+      "sbp": 101,
+      "hr": 58,
+      "fio2Correct": 48,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 2,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 140,
+    "pathway": "gestalt",
+    "age": 36,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": true,
+      "estrogenUse": true,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 956,
+    "instability": {
+      "sbp": 94,
+      "hr": 109,
+      "fio2Correct": 68,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 141,
+    "pathway": "gestalt",
+    "age": 87,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": true,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 263,
+    "instability": {
+      "sbp": 150,
+      "hr": 109,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 2,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 142,
+    "pathway": "gestalt",
+    "age": 34,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": true
+    },
+    "ddimer": 1125,
+    "instability": {
+      "sbp": 72,
+      "hr": 135,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": true,
+      "percScore": 0,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "none_perc_negative"
+    }
+  },
+  {
+    "id": 143,
+    "pathway": "gestalt",
+    "age": 94,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": true,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": true,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": true
+    },
+    "ddimer": 104,
+    "instability": {
+      "sbp": 85,
+      "hr": 113,
+      "fio2Correct": 30,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": true,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 144,
+    "pathway": "gestalt",
+    "age": 76,
+    "sex": "M",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": true,
+      "priorVte": true,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 1110,
+    "instability": {
+      "sbp": 85,
+      "hr": 103,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": true,
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 145,
+    "pathway": "gestalt",
+    "age": 25,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 797,
+    "instability": {
+      "sbp": 150,
+      "hr": 128,
+      "fio2Correct": 95,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 146,
+    "pathway": "gestalt",
+    "age": 55,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1001,
+    "instability": {
+      "sbp": 147,
+      "hr": 98,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 147,
+    "pathway": "gestalt",
+    "age": 80,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 967,
+    "instability": {
+      "sbp": 88,
+      "hr": 69,
+      "fio2Correct": 74,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": true,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 148,
+    "pathway": "gestalt",
+    "age": 87,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 979,
+    "instability": {
+      "sbp": 109,
+      "hr": 77,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 149,
+    "pathway": "gestalt",
+    "age": 63,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 1562,
+    "instability": {
+      "sbp": 161,
+      "hr": 97,
+      "fio2Correct": 58,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 150,
+    "pathway": "gestalt",
+    "age": 38,
+    "sex": "M",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": true
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 1000,
+    "instability": {
+      "sbp": 145,
+      "hr": 74,
+      "fio2Correct": 46,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 151,
+    "pathway": "gestalt",
+    "age": 79,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": true,
+      "surgeryTrauma": true
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 2335,
+    "instability": {
+      "sbp": 81,
+      "hr": 142,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": true,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 152,
+    "pathway": "gestalt",
+    "age": 26,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1678,
+    "instability": {
+      "sbp": 84,
+      "hr": 56,
+      "fio2Correct": 27,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 153,
+    "pathway": "gestalt",
+    "age": 43,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": true,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 1894,
+    "instability": {
+      "sbp": 174,
+      "hr": 86,
+      "fio2Correct": 23,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 154,
+    "pathway": "gestalt",
+    "age": 74,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 500,
+    "instability": {
+      "sbp": 104,
+      "hr": 51,
+      "fio2Correct": 57,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 155,
+    "pathway": "gestalt",
+    "age": 64,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": true,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": true
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 242,
+    "instability": {
+      "sbp": 95,
+      "hr": 89,
+      "fio2Correct": 97,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 156,
+    "pathway": "gestalt",
+    "age": 34,
+    "sex": "M",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": true,
+      "priorVte": false,
+      "estrogenUse": true,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 501,
+    "instability": {
+      "sbp": 95,
+      "hr": 145,
+      "fio2Correct": 73,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 157,
+    "pathway": "gestalt",
+    "age": 60,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": true,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 2064,
+    "instability": {
+      "sbp": 89,
+      "hr": 82,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 158,
+    "pathway": "gestalt",
+    "age": 73,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 608,
+    "instability": {
+      "sbp": 173,
+      "hr": 104,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 159,
+    "pathway": "gestalt",
+    "age": 42,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": true,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 1001,
+    "instability": {
+      "sbp": 88,
+      "hr": 97,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 160,
+    "pathway": "gestalt",
+    "age": 63,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": true
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1333,
+    "instability": {
+      "sbp": 175,
+      "hr": 71,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 161,
+    "pathway": "gestalt",
+    "age": 25,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": true,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": true,
+      "surgeryTrauma": true
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1558,
+    "instability": {
+      "sbp": 142,
+      "hr": 54,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 162,
+    "pathway": "gestalt",
+    "age": 69,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": true
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1001,
+    "instability": {
+      "sbp": 118,
+      "hr": 69,
+      "fio2Correct": 98,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 163,
+    "pathway": "gestalt",
+    "age": 47,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": true
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 2329,
+    "instability": {
+      "sbp": 135,
+      "hr": 82,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 164,
+    "pathway": "gestalt",
+    "age": 22,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": true,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 1479,
+    "instability": {
+      "sbp": 108,
+      "hr": 157,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 165,
+    "pathway": "gestalt",
+    "age": 85,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 225,
+    "instability": {
+      "sbp": 82,
+      "hr": 119,
+      "fio2Correct": 82,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": true,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "bedside_tte"
+    }
+  },
+  {
+    "id": 166,
+    "pathway": "gestalt",
+    "age": 20,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": true,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 2135,
+    "instability": {
+      "sbp": 164,
+      "hr": 109,
+      "fio2Correct": 76,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 167,
+    "pathway": "gestalt",
+    "age": 54,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 1375,
+    "instability": {
+      "sbp": 125,
+      "hr": 93,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 168,
+    "pathway": "gestalt",
+    "age": 37,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 499,
+    "instability": {
+      "sbp": 74,
+      "hr": 73,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 169,
+    "pathway": "gestalt",
+    "age": 81,
+    "sex": "F",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 101,
+    "instability": {
+      "sbp": 102,
+      "hr": 131,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 170,
+    "pathway": "gestalt",
+    "age": 84,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": true,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 1609,
+    "instability": {
+      "sbp": 128,
+      "hr": 160,
+      "fio2Correct": 77,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 171,
+    "pathway": "gestalt",
+    "age": 45,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 2440,
+    "instability": {
+      "sbp": 110,
+      "hr": 137,
+      "fio2Correct": 85,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 0,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "none_perc_negative"
+    }
+  },
+  {
+    "id": 172,
+    "pathway": "gestalt",
+    "age": 32,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": true,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 1116,
+    "instability": {
+      "sbp": 102,
+      "hr": 127,
+      "fio2Correct": 63,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 173,
+    "pathway": "gestalt",
+    "age": 32,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": true,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": true,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 691,
+    "instability": {
+      "sbp": 135,
+      "hr": 76,
+      "fio2Correct": 43,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 174,
+    "pathway": "gestalt",
+    "age": 68,
+    "sex": "M",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": true,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1837,
+    "instability": {
+      "sbp": 115,
+      "hr": 99,
+      "fio2Correct": 53,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 175,
+    "pathway": "gestalt",
+    "age": 50,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": true,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 564,
+    "instability": {
+      "sbp": 179,
+      "hr": 84,
+      "fio2Correct": 82,
+      "vent": true
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 176,
+    "pathway": "gestalt",
+    "age": 31,
+    "sex": "F",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": true,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 1787,
+    "instability": {
+      "sbp": 85,
+      "hr": 132,
+      "fio2Correct": 71,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": true,
+      "percScore": 2,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 177,
+    "pathway": "gestalt",
+    "age": 76,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 718,
+    "instability": {
+      "sbp": 146,
+      "hr": 142,
+      "fio2Correct": null,
+      "vent": true
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 178,
+    "pathway": "gestalt",
+    "age": 55,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": true,
+      "legSwelling": true,
+      "priorVte": false,
+      "estrogenUse": true,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 270,
+    "instability": {
+      "sbp": 169,
+      "hr": 154,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 179,
+    "pathway": "gestalt",
+    "age": 32,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": true,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": true,
+      "surgeryTrauma": true
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 1000,
+    "instability": {
+      "sbp": 136,
+      "hr": 91,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 180,
+    "pathway": "gestalt",
+    "age": 61,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 999,
+    "instability": {
+      "sbp": 152,
+      "hr": 132,
+      "fio2Correct": 55,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 181,
+    "pathway": "gestalt",
+    "age": 47,
+    "sex": "M",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 589,
+    "instability": {
+      "sbp": 159,
+      "hr": 96,
+      "fio2Correct": 39,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 182,
+    "pathway": "gestalt",
+    "age": 47,
+    "sex": "F",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 684,
+    "instability": {
+      "sbp": 81,
+      "hr": 60,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 0,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "none_perc_negative"
+    }
+  },
+  {
+    "id": 183,
+    "pathway": "gestalt",
+    "age": 72,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 541,
+    "instability": {
+      "sbp": 94,
+      "hr": 86,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 184,
+    "pathway": "gestalt",
+    "age": 55,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": false,
+      "hemoptysis": true,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1000,
+    "instability": {
+      "sbp": 165,
+      "hr": 66,
+      "fio2Correct": 61,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 185,
+    "pathway": "gestalt",
+    "age": 58,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 499,
+    "instability": {
+      "sbp": 152,
+      "hr": 153,
+      "fio2Correct": 25,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 186,
+    "pathway": "gestalt",
+    "age": 59,
+    "sex": "M",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": true,
+      "surgeryTrauma": true
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": true
+    },
+    "ddimer": 2059,
+    "instability": {
+      "sbp": 84,
+      "hr": 109,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": true,
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 187,
+    "pathway": "gestalt",
+    "age": 85,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 1001,
+    "instability": {
+      "sbp": 85,
+      "hr": 104,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": true,
+      "percScore": 1,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 188,
+    "pathway": "gestalt",
+    "age": 67,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": true,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 200,
+    "instability": {
+      "sbp": 129,
+      "hr": 143,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 189,
+    "pathway": "gestalt",
+    "age": 90,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": true
+    },
+    "ddimer": 278,
+    "instability": {
+      "sbp": 103,
+      "hr": 153,
+      "fio2Correct": 93,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 190,
+    "pathway": "gestalt",
+    "age": 92,
+    "sex": "F",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 192,
+    "instability": {
+      "sbp": 130,
+      "hr": 66,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 0,
+      "threshold": 1000,
+      "recommendation": "ddimer_ruled_out"
+    }
+  },
+  {
+    "id": 191,
+    "pathway": "gestalt",
+    "age": 29,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": false,
+      "hemoptysis": true,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1442,
+    "instability": {
+      "sbp": 104,
+      "hr": 53,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 192,
+    "pathway": "gestalt",
+    "age": 89,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": true,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": true
+    },
+    "ddimer": 1358,
+    "instability": {
+      "sbp": 76,
+      "hr": 99,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 193,
+    "pathway": "gestalt",
+    "age": 85,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 1825,
+    "instability": {
+      "sbp": 115,
+      "hr": 97,
+      "fio2Correct": 75,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 194,
+    "pathway": "gestalt",
+    "age": 66,
+    "sex": "M",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 2003,
+    "instability": {
+      "sbp": 158,
+      "hr": 111,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 195,
+    "pathway": "gestalt",
+    "age": 33,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": true,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 999,
+    "instability": {
+      "sbp": 71,
+      "hr": 84,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 1,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 196,
+    "pathway": "gestalt",
+    "age": 57,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 546,
+    "instability": {
+      "sbp": 175,
+      "hr": 149,
+      "fio2Correct": null,
+      "vent": true
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 197,
+    "pathway": "gestalt",
+    "age": 63,
+    "sex": "F",
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 2381,
+    "instability": {
+      "sbp": 128,
+      "hr": 125,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "high",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "ctpa_direct"
+    }
+  },
+  {
+    "id": 198,
+    "pathway": "gestalt",
+    "age": 52,
+    "sex": "F",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": true
+    },
+    "ddimer": 500,
+    "instability": {
+      "sbp": 121,
+      "hr": 68,
+      "fio2Correct": 84,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 1,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  },
+  {
+    "id": 199,
+    "pathway": "gestalt",
+    "age": 24,
+    "sex": "M",
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 2072,
+    "instability": {
+      "sbp": 170,
+      "hr": 61,
+      "fio2Correct": null,
+      "vent": true
+    },
+    "reference": {
+      "pretest": "low",
+      "shock": false,
+      "percScore": 0,
+      "yearsCount": null,
+      "threshold": null,
+      "recommendation": "none_perc_negative"
+    }
+  },
+  {
+    "id": 200,
+    "pathway": "gestalt",
+    "age": 31,
+    "sex": "M",
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 1750,
+    "instability": {
+      "sbp": 116,
+      "hr": 64,
+      "fio2Correct": 36,
+      "vent": false
+    },
+    "reference": {
+      "pretest": "intermediate",
+      "shock": false,
+      "percScore": null,
+      "yearsCount": 2,
+      "threshold": 500,
+      "recommendation": "ddimer_imaging"
+    }
+  }
+]

@@ -189,7 +189,7 @@ function assert(cond, msg) {
   const contBtn7 = page.locator('#btn-continue-assoc');
   await contBtn7.click();
   await page.waitForSelector('#scr-judgment.active');
-  await page.click('#seg-altdx [data-val="asLikely"]');
+  await page.click('#altdx-list [data-key="asLikely"]');
   await page.click('#btn-see-results');
   await page.waitForSelector('#scr-results.active');
   const tag7 = await page.textContent('#result-tag-text');
@@ -219,7 +219,7 @@ function assert(cond, msg) {
   await page.fill('#f-raSpo2', '98');
   await page.click('#btn-continue-assoc');
   await page.waitForSelector('#scr-judgment.active');
-  await page.click('#seg-altdx [data-val="asLikely"]');
+  await page.click('#altdx-list [data-key="asLikely"]');
   await page.click('#btn-see-results');
   await page.waitForSelector('#scr-results.active');
   const tag7b = await page.textContent('#result-tag-text');
@@ -254,7 +254,7 @@ function assert(cond, msg) {
   await page.fill('#f-raSpo2', '97');
   await page.click('#btn-continue-assoc');
   await page.waitForSelector('#scr-judgment.active');
-  await page.click('#seg-altdx [data-val="lessLikely"]');
+  await page.click('#altdx-list [data-key="lessLikely"]');
   await page.click('#btn-see-results');
   await page.waitForSelector('#scr-results.active');
   const tag8 = await page.textContent('#result-tag-text');

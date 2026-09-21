@@ -47,6 +47,12 @@ Full citations and methodology notes are also shown in-app, under "About this to
   - `patients.json`, `app_results.json` — raw inputs/outputs from the last run, kept for reproducibility.
   - `VALIDATION_REPORT.md`, `results.csv` — the last run's report (400/400 agreement with the independent reference implementation) and per-patient detail.
 
+- `validation_200/` — an independent 200-synthetic-patient, **end-to-end** validation covering the full pipeline (pretest probability → PERC → YEARS-adjusted D-dimer threshold → D-dimer interpretation → recommended test), split 100 patients through the Wells Expanded Criteria Pathway and 100 through the Clinical Gestalt Pathway:
+  - `generate_reference.py` — generates the 200 patients (seed 2026, distinct from the 400-patient set) and scores each end to end with a from-scratch Python reference implementation. D-dimer values over-sample the exact threshold boundaries (499/500/999/1000) so the strict `<` rule is exercised. Run with `python3 generate_reference.py`.
+  - `run_app_validation.js` — drives the real UI for every patient and records the app's final recommendation, read off the outcome screen's rendered text. The driver never predicts the route — it clicks whichever *Continue* button the app presents and records which screen it lands on, so the routing is the app's answer, not an assumption in the harness. Run with `node run_app_validation.js` (~12 minutes for 200 patients).
+  - `compare_results.py` — scores recommendation agreement plus each intermediate stage separately, so a mismatch can be attributed to the stage that caused it; writes `VALIDATION_REPORT.md` and `results.csv`.
+  - Last run: **200/200 (100%) correct recommendations**, with pretest probability 200/200, PERC score 60/60, and D-dimer threshold 118/118.
+
 Note that "accuracy" in this validation means agreement between the live app and its own documented algorithm (a correctness/regression check) — these are synthetic patients with no real diagnosis, so there's no clinical ground truth involved.
 
 ## Running it

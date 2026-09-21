@@ -52,7 +52,7 @@ async function runPatient(page, patient) {
       await page.click(`#risk-list [data-key="${key}"]`);
     }
   }
-  await page.click(`#seg-altdx [data-val="${patient.altDx}"]`);
+  await page.click(`#altdx-list [data-key="${patient.altDx}"]`);
 
   const seeBtn = page.locator('#btn-see-results');
   const seeDisabled = await seeBtn.getAttribute('disabled');

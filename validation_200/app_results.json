@@ -1,0 +1,2815 @@
+[
+  {
+    "id": 1,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 2,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 3,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 3,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 4,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 5,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 2,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 6,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 7,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 8,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 9,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 3,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 10,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 3,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 11,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 12,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 13,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 14,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 15,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 16,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 17,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 18,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 19,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 2,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 20,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 21,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 4,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 22,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 23,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 2,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 24,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 25,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 26,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 27,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 28,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 29,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 30,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 31,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 4,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 32,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 33,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 34,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 35,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 36,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 37,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 38,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 3,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 39,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 40,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 41,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 2,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 42,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 0,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "perc",
+      "final"
+    ],
+    "appRecommendation": "none_perc_negative",
+    "error": null
+  },
+  {
+    "id": 43,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 4,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 44,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 45,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 46,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 4,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 47,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 48,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 49,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 50,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 4,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 51,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 52,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 53,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 5,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 54,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 55,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 56,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 5,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 57,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 58,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 59,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 60,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 61,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 62,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 0,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "perc",
+      "final"
+    ],
+    "appRecommendation": "none_perc_negative",
+    "error": null
+  },
+  {
+    "id": 63,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 2,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 64,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 65,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 2,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 66,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 67,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 68,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 69,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 70,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 71,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 72,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 73,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 4,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 74,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 75,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 76,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 77,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 3,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 78,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 3,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 79,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 4,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 80,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 81,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 82,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 3,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 83,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 84,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 85,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 86,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 87,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 88,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 89,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 90,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 91,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 92,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 93,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 94,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 95,
+    "pathway": "wells",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "results",
+      "final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 96,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 97,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 98,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 2,
+    "appThreshold": 1000,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 99,
+    "pathway": "wells",
+    "appPretest": "moderate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 100,
+    "pathway": "wells",
+    "appPretest": "low",
+    "appPercScore": 2,
+    "appThreshold": 500,
+    "route": [
+      "results",
+      "perc",
+      "ddimer",
+      "final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 101,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 3,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 102,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 4,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 103,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 3,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 104,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 105,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 106,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 107,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 3,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 108,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 109,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 110,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 111,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 112,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 113,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 114,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 1000,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 115,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 116,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 117,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 118,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 119,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 120,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 1000,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 121,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 122,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 1000,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 123,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 2,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 124,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 125,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 126,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 127,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 128,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 129,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 130,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 131,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 2,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 132,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 133,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 134,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 135,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 136,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 137,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 138,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 139,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 2,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 140,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 141,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 2,
+    "appThreshold": 1000,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 142,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 0,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-final"
+    ],
+    "appRecommendation": "none_perc_negative",
+    "error": null
+  },
+  {
+    "id": 143,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 144,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 145,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 146,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 147,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 148,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 149,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 150,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 151,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 152,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 153,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 154,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 155,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 156,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 157,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 158,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 159,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 160,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 161,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 162,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 163,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 164,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 165,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "bedside_tte",
+    "error": null
+  },
+  {
+    "id": 166,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 167,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 168,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 169,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 1000,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 170,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 171,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 0,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-final"
+    ],
+    "appRecommendation": "none_perc_negative",
+    "error": null
+  },
+  {
+    "id": 172,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 173,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 174,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 175,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 176,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 2,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 177,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 178,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 179,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 180,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 181,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 182,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 0,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-final"
+    ],
+    "appRecommendation": "none_perc_negative",
+    "error": null
+  },
+  {
+    "id": 183,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 184,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 185,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 1000,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 186,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 187,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 188,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 189,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 190,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 1000,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_ruled_out",
+    "error": null
+  },
+  {
+    "id": 191,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 192,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 193,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 194,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 195,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 196,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 197,
+    "pathway": "gestalt",
+    "appPretest": "high",
+    "appPercScore": null,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-instability",
+      "gw-final"
+    ],
+    "appRecommendation": "ctpa_direct",
+    "error": null
+  },
+  {
+    "id": 198,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 1,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  },
+  {
+    "id": 199,
+    "pathway": "gestalt",
+    "appPretest": "low",
+    "appPercScore": 0,
+    "appThreshold": null,
+    "route": [
+      "gw-result",
+      "gw-perc",
+      "gw-final"
+    ],
+    "appRecommendation": "none_perc_negative",
+    "error": null
+  },
+  {
+    "id": 200,
+    "pathway": "gestalt",
+    "appPretest": "intermediate",
+    "appPercScore": null,
+    "appThreshold": 500,
+    "route": [
+      "gw-result",
+      "gw-ddimer",
+      "gw-final"
+    ],
+    "appRecommendation": "ddimer_imaging",
+    "error": null
+  }
+]
