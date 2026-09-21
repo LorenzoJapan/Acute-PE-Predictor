@@ -20,6 +20,8 @@ Either way, pretest probability then routes to the matching next step:
 
 This matches Figure 1 of the 2026 AHA/ACC acute PE guideline: a PERC-positive low-probability patient and an intermediate-probability patient feed into the identical "Perform D-dimer testing and assess YEARS criteria" step, not separate thresholds.
 
+**Numeric entry guards** — every numeric field is bounded to a plausible clinical range, so a slipped digit can't silently drive the algorithm: age 18–120 years (the tool is for adults only), SBP 40–300 mmHg, HR 20–300 bpm, room-air SpO₂ 50–100%, FiO₂ 21–100%, D-dimer 0–50,000 ng/mL FEU. An out-of-range entry is not accepted — the field explains the expected range and that screen's Continue / Interpret button stays disabled until it's corrected. A value still below the minimum is only flagged once the field is left, so typing "88" into a heart-rate field doesn't flash an error at "8".
+
 On the Wells Expanded Criteria Pathway, PERC and YEARS items already captured during the symptoms/vitals/exam steps are carried over rather than asked twice (PERC reuses HR, hemoptysis, signs of DVT, and prior VTE; only age, estrogen use, and recent surgery/trauma are asked fresh). The Clinical Gestalt Pathway starts from nothing, so PERC and YEARS are asked fresh there instead. The High-probability shock assessment (SBP, HR, ventilation, FiO₂) is always asked fresh on both pathways, since neither collects vitals up front at that tier.
 
 ## Clinical basis

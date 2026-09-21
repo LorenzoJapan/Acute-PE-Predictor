@@ -559,6 +559,8 @@
   }
   .num-field .stepper button:active{background:var(--color-primary-soft);}
   .num-field:focus-within{border-color:var(--color-primary);}
+  .num-field.is-invalid{border-color:var(--color-high);background:var(--color-high-soft);}
+  .field-error{font-size:11px;font-weight:600;color:var(--color-high);margin-top:4px;line-height:1.3;}
 
   .section-title{
     font-family:var(--font-mono);
@@ -962,19 +964,19 @@
               <div class="card">
                 <div class="field-block">
                   <label for="f-sbp">SBP at presentation <span class="required-mark">*</span></label>
-                  <div class="num-field"><input id="f-sbp" type="number" inputmode="numeric" placeholder="0" min="0" max="260" required aria-required="true"><span class="unit">mmHg</span></div>
+                  <div class="num-field"><input id="f-sbp" type="number" inputmode="numeric" placeholder="0" min="40" max="300" required aria-required="true"><span class="unit">mmHg</span></div>
                 </div>
                 <div class="field-block" style="border-top:1px solid var(--color-border);">
                   <label for="f-hr">HR at presentation <span class="required-mark">*</span></label>
-                  <div class="num-field"><input id="f-hr" type="number" inputmode="numeric" placeholder="0" min="0" max="260" required aria-required="true"><span class="unit">bpm</span></div>
+                  <div class="num-field"><input id="f-hr" type="number" inputmode="numeric" placeholder="0" min="20" max="300" required aria-required="true"><span class="unit">bpm</span></div>
                 </div>
                 <div class="field-block" style="border-top:1px solid var(--color-border);">
                   <label for="f-raSpo2">Room-air pulse ox <span class="required-mark">*</span></label>
-                  <div class="num-field"><input id="f-raSpo2" type="number" inputmode="numeric" placeholder="0" min="0" max="100" required aria-required="true"><span class="unit">% SpO₂</span></div>
+                  <div class="num-field"><input id="f-raSpo2" type="number" inputmode="numeric" placeholder="0" min="50" max="100" required aria-required="true"><span class="unit">% SpO₂</span></div>
                 </div>
                 <div class="field-block" style="border-top:1px solid var(--color-border);">
                   <label for="f-fio2Correct">FiO₂ to correct to &gt;92% <span class="required-mark" id="fio2-required-mark" style="display:none;">*</span></label>
-                  <div class="num-field"><input id="f-fio2Correct" type="number" inputmode="numeric" placeholder="0" min="0" max="100"><span class="unit">% FiO₂</span></div>
+                  <div class="num-field"><input id="f-fio2Correct" type="number" inputmode="numeric" placeholder="0" min="21" max="100"><span class="unit">% FiO₂</span></div>
                   <p class="field-hint" id="fio2-hint">Only required if room-air pulse ox is below 92%.</p>
                 </div>
               </div>
@@ -1059,7 +1061,7 @@
                 <div class="card-head"><h3>Not yet captured</h3><p class="hint">Finish the PERC rule with these remaining items.</p></div>
                 <div class="field-block">
                   <label for="f-age">Patient age <span class="required-mark">*</span></label>
-                  <div class="num-field"><input id="f-age" type="number" inputmode="numeric" placeholder="0" min="0" max="120" required aria-required="true"><span class="unit">years</span></div>
+                  <div class="num-field"><input id="f-age" type="number" inputmode="numeric" placeholder="0" min="18" max="120" required aria-required="true"><span class="unit">years</span></div>
                 </div>
                 <div id="perc-new-list" style="border-top:1px solid var(--color-border);"></div>
               </div>
@@ -1094,7 +1096,7 @@
               <div class="card" style="margin-top:18px;">
                 <div class="field-block">
                   <label for="f-ddimer">Measured D-dimer</label>
-                  <div class="num-field"><input id="f-ddimer" type="number" inputmode="numeric" placeholder="0"><span class="unit">ng/mL FEU</span></div>
+                  <div class="num-field"><input id="f-ddimer" type="number" inputmode="numeric" placeholder="0" min="0" max="50000"><span class="unit">ng/mL FEU</span></div>
                 </div>
               </div>
             </div>
@@ -1191,7 +1193,7 @@
                 <div class="card-head"><h3>PE rule-out criteria (PERC)</h3><p class="hint">Applies only at low pretest probability. If all 8 criteria are negative, PE is excluded without D-dimer testing.<sup>3</sup></p></div>
                 <div class="field-block">
                   <label for="f-gw-age">Patient age <span class="required-mark">*</span></label>
-                  <div class="num-field"><input id="f-gw-age" type="number" inputmode="numeric" placeholder="0" min="0" max="120" required aria-required="true"><span class="unit">years</span></div>
+                  <div class="num-field"><input id="f-gw-age" type="number" inputmode="numeric" placeholder="0" min="18" max="120" required aria-required="true"><span class="unit">years</span></div>
                 </div>
                 <div id="gw-perc-fresh-list" style="border-top:1px solid var(--color-border);"></div>
               </div>
@@ -1226,7 +1228,7 @@
               <div class="card" style="margin-top:18px;">
                 <div class="field-block">
                   <label for="f-gw-ddimer">Measured D-dimer</label>
-                  <div class="num-field"><input id="f-gw-ddimer" type="number" inputmode="numeric" placeholder="0"><span class="unit">ng/mL FEU</span></div>
+                  <div class="num-field"><input id="f-gw-ddimer" type="number" inputmode="numeric" placeholder="0" min="0" max="50000"><span class="unit">ng/mL FEU</span></div>
                 </div>
               </div>
             </div>
@@ -1246,15 +1248,15 @@
                 <div class="card-head"><h3>Shock assessment</h3><p class="hint">High pretest probability proceeds directly to imaging. These vitals determine whether bedside TTE should be offered as an alternative for a patient too unstable to transport for CTPA.</p></div>
                 <div class="field-block">
                   <label for="f-gw-sbp">SBP at presentation <span class="required-mark">*</span></label>
-                  <div class="num-field"><input id="f-gw-sbp" type="number" inputmode="numeric" placeholder="0" min="0" max="260" required aria-required="true"><span class="unit">mmHg</span></div>
+                  <div class="num-field"><input id="f-gw-sbp" type="number" inputmode="numeric" placeholder="0" min="40" max="300" required aria-required="true"><span class="unit">mmHg</span></div>
                 </div>
                 <div class="field-block" style="border-top:1px solid var(--color-border);">
                   <label for="f-gw-hr">HR at presentation <span class="required-mark">*</span></label>
-                  <div class="num-field"><input id="f-gw-hr" type="number" inputmode="numeric" placeholder="0" min="0" max="260" required aria-required="true"><span class="unit">bpm</span></div>
+                  <div class="num-field"><input id="f-gw-hr" type="number" inputmode="numeric" placeholder="0" min="20" max="300" required aria-required="true"><span class="unit">bpm</span></div>
                 </div>
                 <div class="field-block" style="border-top:1px solid var(--color-border);">
                   <label for="f-gw-fio2Correct">FiO₂ to correct to &gt;92% SpO₂</label>
-                  <div class="num-field"><input id="f-gw-fio2Correct" type="number" inputmode="numeric" placeholder="0" min="0" max="100"><span class="unit">% FiO₂</span></div>
+                  <div class="num-field"><input id="f-gw-fio2Correct" type="number" inputmode="numeric" placeholder="0" min="21" max="100"><span class="unit">% FiO₂</span></div>
                   <p class="field-hint">Leave blank if not applicable.</p>
                 </div>
                 <div id="gw-instability-vent-list" style="border-top:1px solid var(--color-border);"></div>
@@ -1549,12 +1551,82 @@
     respHint.insertAdjacentElement("afterend", toggle);
   })();
 
+  // ---------- Plausible-range guard for numeric fields ----------
+  // A value outside its range is not accepted into state (so the screen's
+  // Continue button stays disabled) and the field explains why.
+  var FIELD_RANGES = {
+    "f-sbp":            {min:40,  max:300,   label:"Systolic BP", unit:"mmHg"},
+    "f-gw-sbp":         {min:40,  max:300,   label:"Systolic BP", unit:"mmHg"},
+    "f-hr":             {min:20,  max:300,   label:"Heart rate",  unit:"bpm"},
+    "f-gw-hr":          {min:20,  max:300,   label:"Heart rate",  unit:"bpm"},
+    "f-raSpo2":         {min:50,  max:100,   label:"Pulse ox",    unit:"%"},
+    "f-fio2Correct":    {min:21,  max:100,   label:"FiO₂",        unit:"%"},
+    "f-gw-fio2Correct": {min:21,  max:100,   label:"FiO₂",        unit:"%"},
+    "f-age":            {min:18,  max:120,   label:"Age",         unit:"years"},
+    "f-gw-age":         {min:18,  max:120,   label:"Age",         unit:"years"},
+    "f-ddimer":         {min:0,   max:50000, label:"D-dimer",     unit:"ng/mL FEU"},
+    "f-gw-ddimer":      {min:0,   max:50000, label:"D-dimer",     unit:"ng/mL FEU"}
+  };
+
+  function fieldErrorNode(el, create){
+    var block = el.closest(".field-block");
+    if(!block) return null;
+    var node = block.querySelector(".field-error");
+    if(!node && create){
+      node = document.createElement("p");
+      node.className = "field-error";
+      node.setAttribute("role", "alert");
+      el.closest(".num-field").insertAdjacentElement("afterend", node);
+    }
+    return node;
+  }
+
+  // Returns the accepted value: a number, or null when blank or out of range.
+  // A value still below the minimum is only flagged once the field is left,
+  // so typing "88" into a heart-rate field doesn't flash an error at "8".
+  function readNumField(el){
+    var range = FIELD_RANGES[el.id];
+    var raw = el.value.trim();
+    var n = raw === "" ? null : Number(raw);
+    var bad = !!(range && n != null && (!isFinite(n) || n < range.min || n > range.max));
+    var stillTyping = bad && isFinite(n) && n < range.min && document.activeElement === el;
+    if(!stillTyping){
+      var wrap = el.closest(".num-field");
+      if(wrap) wrap.classList.toggle("is-invalid", bad);
+      el.setAttribute("aria-invalid", bad ? "true" : "false");
+      var node = fieldErrorNode(el, bad);
+      if(node) node.textContent = bad
+        ? range.label + " must be between " + range.min + " and " + range.max + " " + range.unit + "."
+        : "";
+    }
+    return bad ? null : n;
+  }
+
+  Object.keys(FIELD_RANGES).forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.addEventListener("blur", function(){ readNumField(el); });
+  });
+
+  function clearFieldErrors(root){
+    root.querySelectorAll(".num-field.is-invalid").forEach(function(w){ w.classList.remove("is-invalid"); });
+    root.querySelectorAll(".field-error").forEach(function(n){ n.textContent = ""; });
+    root.querySelectorAll('input[aria-invalid="true"]').forEach(function(i){ i.setAttribute("aria-invalid","false"); });
+  }
+
+  // One item per line, bulleted, so a pasted summary reads cleanly in a note.
+  function formatSummary(title, items, source){
+    return [title, ""]
+      .concat(items.filter(Boolean).map(function(line){ return "• " + line; }))
+      .concat(["", source])
+      .join("\n");
+  }
+
   // Numeric fields
   ["hr","sbp","raSpo2","fio2Correct","ddimer","age"].forEach(function(key){
     var el = document.getElementById("f-"+key);
     if(!el) return;
     el.addEventListener("input", function(){
-      state[key] = el.value === "" ? null : Number(el.value);
+      state[key] = readNumField(el);
       onFieldChange();
     });
   });
@@ -1842,13 +1914,11 @@
 
     val.innerHTML = "&lt;" + threshold + "<span> ng/mL FEU</span>";
 
-    var ddimerInput = document.getElementById("f-ddimer");
-    var interpretBtn = document.getElementById("btn-interpret");
-    interpretBtn.disabled = ddimerInput.value === "";
+    document.getElementById("btn-interpret").disabled = state.ddimer == null;
   }
 
   document.getElementById("f-ddimer").addEventListener("input", function(){
-    document.getElementById("btn-interpret").disabled = this.value === "";
+    document.getElementById("btn-interpret").disabled = state.ddimer == null;
   });
 
   function renderFinal(targetKind){
@@ -1961,7 +2031,6 @@
   document.getElementById("btn-copy").addEventListener("click", function(){
     var r = compute();
     var lines = [
-      "Acute PE Predictor — Assessment Summary",
       "Pretest probability: " + r.pretest,
       "Respiratory points: " + r.respCount + "/7",
       "Presentation category: " + r.category,
@@ -1980,8 +2049,8 @@
       lines.push("Hemodynamic status: " + (r.shock ? "unstable (shock criteria met) — consider bedside TTE if unfit for CTPA transport" : "stable — proceed to CTPA"));
     }
     if(state.ddimer != null) lines.push("D-dimer: " + state.ddimer + " ng/mL FEU");
-    lines.push("Source: Wells 1998 (Ann Intern Med); PEGeD 2019 (NEJM); PROPER 2018 (JAMA, PERC); YEARS 2017 (Lancet)" + (r.pretest === "high" && r.shock ? "; 2019 ESC Guidelines (Eur Heart J 2020)" : ""));
-    lines = lines.filter(Boolean).join("\\n");
+    var source = "Source: Wells 1998 (Ann Intern Med); PEGeD 2019 (NEJM); PROPER 2018 (JAMA, PERC); YEARS 2017 (Lancet)" + (r.pretest === "high" && r.shock ? "; 2019 ESC Guidelines (Eur Heart J 2020)" : "");
+    lines = formatSummary("Acute PE Predictor — Assessment Summary", lines, source);
     var toast = document.getElementById("toast");
     function showToast(msg){
       toast.textContent = msg;
@@ -1998,6 +2067,7 @@
   document.getElementById("btn-restart").addEventListener("click", function(){
     state = {resp:{}, assoc:{}, risk:{}, perc:{}, hr:null, sbp:null, raSpo2:null, fio2Correct:null, age:null, altDx:null, ddimer:null};
     document.querySelectorAll('#app input[type="text"], #app input[type="number"]').forEach(function(i){ i.value=""; });
+    clearFieldErrors(document.getElementById("app"));
     document.querySelectorAll('#app .row.is-checked').forEach(function(r){ r.classList.remove("is-checked"); });
     document.querySelectorAll('#app input[type="checkbox"]').forEach(function(c){ c.checked=false; });
     document.getElementById("btn-see-results").disabled = true;
@@ -2115,6 +2185,7 @@
     gwRenderChecklist(document.getElementById("gw-perc-fresh-list"), gwPercItems(), "perc");
     var ageInput = document.getElementById("f-gw-age");
     ageInput.value = gwState.perc.age != null ? gwState.perc.age : "";
+    clearFieldErrors(document.getElementById("scr-gw-perc"));
     gwUpdatePercState();
   }
 
@@ -2226,9 +2297,8 @@
   }
 
   function gwUpdateDdimerState(){
-    var input = document.getElementById("f-gw-ddimer");
     var btn = document.getElementById("gw-btn-interpret");
-    if(input && btn) btn.disabled = input.value === "";
+    if(btn) btn.disabled = gwState.ddimer == null;
     // Live-update the threshold and pretext if a YEARS checkbox changes while
     // this screen is open (the checklist is interactive on this pathway).
     var val = document.getElementById("gw-ddimer-threshold-value");
@@ -2264,6 +2334,7 @@
     document.getElementById("f-gw-hr").value = gwState.instability.hr != null ? gwState.instability.hr : "";
     document.getElementById("f-gw-fio2Correct").value = gwState.instability.fio2Correct != null ? gwState.instability.fio2Correct : "";
     gwRenderChecklist(document.getElementById("gw-instability-vent-list"), GW_INSTABILITY_VENT_ITEM, "instability");
+    clearFieldErrors(document.getElementById("scr-gw-instability"));
     gwUpdateInstabilityState();
   }
 
@@ -2351,7 +2422,7 @@
     var el = document.getElementById(id);
     if(!el) return;
     el.addEventListener("input", function(){
-      var v = el.value === "" ? null : Number(el.value);
+      var v = readNumField(el);
       if(bucket) gwState[bucket][key] = v; else gwState[key] = v;
       gwOnFieldChange();
     });
@@ -2359,7 +2430,6 @@
 
   document.getElementById("gw-btn-copy").addEventListener("click", function(){
     var lines = [
-      "Acute PE Predictor — Clinical Gestalt Pathway Summary",
       "Method: Clinical gestalt",
       "Pretest probability: " + gwState.pretest
     ];
@@ -2375,8 +2445,11 @@
       lines.push("Hemodynamic status: " + (gwAutoShock() ? "unstable (shock criteria met) — consider bedside TTE if unfit for CTPA transport" : "stable — proceed to CTPA"));
     }
     if(gwState.ddimer != null) lines.push("D-dimer: " + gwState.ddimer + " ng/mL FEU");
-    lines.push("Source: 2019 ESC Guidelines (Eur Heart J 2020); PEGeD 2019 (NEJM); PROPER 2018 (JAMA, PERC); YEARS 2017 (Lancet)");
-    lines = lines.filter(Boolean).join("\\n");
+    lines = formatSummary(
+      "Acute PE Predictor — Clinical Gestalt Pathway Summary",
+      lines,
+      "Source: 2019 ESC Guidelines (Eur Heart J 2020); PEGeD 2019 (NEJM); PROPER 2018 (JAMA, PERC); YEARS 2017 (Lancet)"
+    );
     var toast = document.getElementById("gw-toast");
     function showToast(msg){
       toast.textContent = msg;
@@ -2393,6 +2466,7 @@
   document.getElementById("gw-btn-restart").addEventListener("click", function(){
     gwState = {gestaltPick:null, pretest:null, years:{}, perc:{}, ddimer:null, instability:{sbp:null, hr:null, fio2Correct:null, vent:false}};
     document.querySelectorAll('#scr-gw-perc input[type="number"], #scr-gw-ddimer input[type="number"], #scr-gw-instability input[type="number"]').forEach(function(i){ i.value = ""; });
+    ["scr-gw-perc","scr-gw-ddimer","scr-gw-instability"].forEach(function(id){ clearFieldErrors(document.getElementById(id)); });
     document.querySelectorAll('#scr-gw-perc .row.is-checked, #scr-gw-instability .row.is-checked, #scr-gw-ddimer .row.is-checked').forEach(function(r){ r.classList.remove("is-checked"); });
     document.querySelectorAll('#scr-gw-perc input[type="checkbox"], #scr-gw-instability input[type="checkbox"], #scr-gw-ddimer input[type="checkbox"]').forEach(function(c){ c.checked = false; });
   });
