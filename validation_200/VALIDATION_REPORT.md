@@ -2,7 +2,7 @@
 
 This validates whether the deployed `index.html` app suggests the same **next diagnostic test** as an independent, from-scratch Python re-implementation of its own documented algorithm (`generate_reference.py`), for 200 randomly generated synthetic adult patients — 100 routed through the Wells Expanded Criteria Pathway and 100 through the Clinical Gestalt Pathway.
 
-Unlike `validation_400/`, which stops at pretest probability, this run scores the full pipeline end to end: pretest probability → PERC → the YEARS-adjusted D-dimer threshold → the measured D-dimer's interpretation → the final recommended test. The Playwright driver never predicts the route; it clicks whatever *Continue* button the app presents and records which screen it lands on, so the route is the app's answer rather than an assumption in the harness.
+This run scores the full pipeline end to end: pretest probability → PERC → the YEARS-adjusted D-dimer threshold → the measured D-dimer's interpretation → the final recommended test. The Playwright driver never predicts the route; it clicks whatever *Continue* button the app presents and records which screen it lands on, so the route is the app's answer rather than an assumption in the harness.
 
 **Important scope note:** these are synthetic, randomly generated patients with no real-world diagnosis, so there is no ground-truth PE status. "Accuracy" below means *agreement between the live app and the documented algorithm it is supposed to implement* — a software-correctness/regression check, not a claim about diagnostic performance.
 

@@ -5,8 +5,7 @@ Wells Expanded Criteria Pathway and 100 through the Clinical Gestalt Pathway
 -- and scores each one, end to end, with a from-scratch Python reference
 implementation of the app's documented decision rules.
 
-Unlike validation_400/ (which stops at pretest probability), this run scores
-the FULL pipeline: pretest probability -> PERC -> YEARS-adjusted D-dimer
+This run scores the FULL pipeline: pretest probability -> PERC -> YEARS-adjusted D-dimer
 threshold -> the measured D-dimer's interpretation -> the final recommended
 test. The scored endpoint is the app's recommendation:
 

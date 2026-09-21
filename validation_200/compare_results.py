@@ -108,8 +108,7 @@ L.append(
     "Criteria Pathway and 100 through the Clinical Gestalt Pathway.\n"
 )
 L.append(
-    "Unlike `validation_400/`, which stops at pretest probability, this run scores "
-    "the full pipeline end to end: pretest probability → PERC → the YEARS-adjusted "
+    "This run scores the full pipeline end to end: pretest probability → PERC → the YEARS-adjusted "
     "D-dimer threshold → the measured D-dimer's interpretation → the final recommended "
     "test. The Playwright driver never predicts the route; it clicks whatever "
     "*Continue* button the app presents and records which screen it lands on, so the "

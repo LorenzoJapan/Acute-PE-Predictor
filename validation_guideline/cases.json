@@ -1,0 +1,4390 @@
+[
+  {
+    "id": 1,
+    "pathway": "gestalt",
+    "vignette": "32F, pleuritic chest pain after a long desk day; no risk factors, vitals normal. Gestalt low.",
+    "age": 32,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": null,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "none_perc_negative",
+      "threshold": null
+    },
+    "rule": "PERC 0/8 at low probability -> no D-dimer, no imaging",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 2,
+    "pathway": "gestalt",
+    "vignette": "22M, anxiety-related dyspnea, entirely normal exam and vitals. Gestalt low.",
+    "age": 22,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": null,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "none_perc_negative",
+      "threshold": null
+    },
+    "rule": "PERC 0/8 -> PE excluded",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 3,
+    "pathway": "gestalt",
+    "vignette": "49F, atypical chest pain, HR 88, SpO2 98%, no hormones, no prior VTE. Gestalt low.",
+    "age": 49,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": null,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "none_perc_negative",
+      "threshold": null
+    },
+    "rule": "Age 49 is below the PERC age cut-off of 50",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 4,
+    "pathway": "gestalt",
+    "vignette": "18M, chest wall pain after weightlifting. Gestalt low.",
+    "age": 18,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": null,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "none_perc_negative",
+      "threshold": null
+    },
+    "rule": "PERC 0/8 at the youngest adult age",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 5,
+    "pathway": "gestalt",
+    "vignette": "45M, cough and mild dyspnea, no PERC criteria met. Gestalt low.",
+    "age": 45,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": null,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "none_perc_negative",
+      "threshold": null
+    },
+    "rule": "PERC 0/8 -> no further testing",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 6,
+    "pathway": "gestalt",
+    "vignette": "38F, costochondritis, normal vitals, no estrogen. Gestalt low.",
+    "age": 38,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": null,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "none_perc_negative",
+      "threshold": null
+    },
+    "rule": "PERC 0/8 -> no further testing",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 7,
+    "pathway": "wells",
+    "vignette": "41M, isolated atypical chest discomfort; alternative diagnosis as likely as PE.",
+    "age": 41,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": null,
+    "expected": {
+      "recommendation": "none_perc_negative",
+      "threshold": null
+    },
+    "expected_tier": "low",
+    "rule": "Low tier -> PERC 0/8 -> no testing",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 8,
+    "pathway": "wells",
+    "vignette": "29F, pleuritic pain only; normal vitals; alternative diagnosis as likely as PE.",
+    "age": 29,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": null,
+    "expected": {
+      "recommendation": "none_perc_negative",
+      "threshold": null
+    },
+    "expected_tier": "low",
+    "rule": "Low tier -> PERC 0/8 -> no testing",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 9,
+    "pathway": "gestalt",
+    "vignette": "58F, otherwise unremarkable; age >=50 is the only PERC criterion met. Gestalt low.",
+    "age": 58,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 400,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "PERC age criterion alone -> PERC positive -> D-dimer (YEARS 0 -> <1000)",
+    "source": "2026 AHA/ACC PE guideline diagnostic algorithm \u2014 at low clinical probability apply PERC; if PERC cannot exclude PE, the patient moves into the same D-dimer + YEARS assessment as intermediate probability.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 10,
+    "pathway": "gestalt",
+    "vignette": "34M, HR 104; no other PERC criterion. Gestalt low.",
+    "age": 34,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": true,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 400,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "PERC tachycardia criterion alone -> D-dimer path",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 11,
+    "pathway": "gestalt",
+    "vignette": "36F, room-air SpO2 93%; no other PERC criterion. Gestalt low.",
+    "age": 36,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": true,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 400,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "PERC hypoxia criterion alone -> D-dimer path",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 12,
+    "pathway": "gestalt",
+    "vignette": "30M, hemoptysis; no other PERC criterion. Gestalt low.",
+    "age": 30,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": true,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 600,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "Hemoptysis is both a PERC criterion and a YEARS item -> threshold 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 13,
+    "pathway": "gestalt",
+    "vignette": "28F, unilateral calf swelling; no other PERC criterion. Gestalt low.",
+    "age": 28,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": true,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 600,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "Leg swelling is a PERC criterion and the YEARS DVT item -> threshold 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 14,
+    "pathway": "gestalt",
+    "vignette": "33F, prior DVT; no other PERC criterion. Gestalt low.",
+    "age": 33,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": true,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 900,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "PERC prior-VTE criterion alone -> D-dimer path",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 15,
+    "pathway": "gestalt",
+    "vignette": "26F, combined oral contraceptive use; no other PERC criterion. Gestalt low.",
+    "age": 26,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": true,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 900,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "PERC estrogen criterion alone -> D-dimer path",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 16,
+    "pathway": "gestalt",
+    "vignette": "40M, knee arthroscopy under general anaesthesia 2 weeks ago; no other PERC criterion. Gestalt low.",
+    "age": 40,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": true
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 900,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "PERC recent-surgery criterion alone -> D-dimer path",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 17,
+    "pathway": "wells",
+    "vignette": "62M, low-probability presentation; age 62 is the only PERC criterion.",
+    "age": 62,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 400,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "expected_tier": "low",
+    "rule": "Age carried into PERC -> D-dimer, YEARS 0 -> <1000",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 18,
+    "pathway": "wells",
+    "vignette": "35M, HR 108 carried from Step 2 vitals; otherwise low probability.",
+    "age": 35,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 108,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 400,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "expected_tier": "low",
+    "rule": "HR >=100 carried into PERC -> D-dimer path",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 19,
+    "pathway": "wells",
+    "vignette": "44F, room-air SpO2 93% carried from Step 2; otherwise low probability.",
+    "age": 44,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 93,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 400,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "expected_tier": "low",
+    "rule": "SpO2 <95% carried into PERC -> D-dimer path",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 20,
+    "pathway": "wells",
+    "vignette": "31M, hemoptysis recorded in Step 1; otherwise low probability.",
+    "age": 31,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": true,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 600,
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "expected_tier": "low",
+    "rule": "Hemoptysis carried into both PERC and YEARS -> threshold 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 21,
+    "pathway": "wells",
+    "vignette": "37F, unilateral leg swelling recorded in Step 2; otherwise low probability.",
+    "age": 37,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 600,
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "expected_tier": "low",
+    "rule": "Signs of DVT carried into both PERC and YEARS -> threshold 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 22,
+    "pathway": "gestalt",
+    "vignette": "54M, intermediate probability, no YEARS items.",
+    "age": 54,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 900,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "0 YEARS items -> threshold 1000",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 23,
+    "pathway": "gestalt",
+    "vignette": "54M, intermediate probability, signs of DVT only.",
+    "age": 54,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 900,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "1 YEARS item (DVT) -> threshold 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 24,
+    "pathway": "gestalt",
+    "vignette": "47F, intermediate probability, hemoptysis only.",
+    "age": 47,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 900,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "1 YEARS item (hemoptysis) -> threshold 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 25,
+    "pathway": "gestalt",
+    "vignette": "61M, intermediate probability, PE judged the most likely diagnosis.",
+    "age": 61,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 900,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "1 YEARS item (PE most likely) -> threshold 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 26,
+    "pathway": "gestalt",
+    "vignette": "59F, intermediate probability, DVT signs + hemoptysis.",
+    "age": 59,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 700,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "2 YEARS items -> threshold 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 27,
+    "pathway": "gestalt",
+    "vignette": "66M, intermediate probability, all three YEARS items.",
+    "age": 66,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": true
+    },
+    "ddimer": 520,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "3 YEARS items -> threshold 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 28,
+    "pathway": "gestalt",
+    "vignette": "52F, low probability, PERC positive on age, no YEARS items.",
+    "age": 52,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 800,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "PERC-positive low probability uses the same YEARS-adjusted threshold as intermediate",
+    "source": "2026 AHA/ACC/ACCP/ACEP/CHEST/SCAI/SHM/SIR/SVM/SVN PE guideline (Circulation 2026;153) \u2014 YEARS-adjusted D-dimer endorsed for low or intermediate (<50%) pretest probability, Class 2a LOE B-R.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 29,
+    "pathway": "gestalt",
+    "vignette": "53M, low probability, PERC positive on age, PE most likely diagnosis.",
+    "age": 53,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 800,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "PERC-positive low probability with 1 YEARS item -> threshold 500",
+    "source": "2026 AHA/ACC/ACCP/ACEP/CHEST/SCAI/SHM/SIR/SVM/SVN PE guideline (Circulation 2026;153) \u2014 YEARS-adjusted D-dimer endorsed for low or intermediate (<50%) pretest probability, Class 2a LOE B-R.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 30,
+    "pathway": "wells",
+    "vignette": "50F, moderate-tier presentation with no YEARS items and an alternative diagnosis as likely.",
+    "age": 50,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 95,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 900,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "expected_tier": "moderate",
+    "rule": "0 YEARS items -> threshold 1000",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 31,
+    "pathway": "wells",
+    "vignette": "55M, moderate tier; clinician judges PE the most likely diagnosis (a YEARS item).",
+    "age": 55,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 900,
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "expected_tier": "moderate",
+    "rule": "altDx 'less likely than PE' is the YEARS 'PE most likely' item -> 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 32,
+    "pathway": "wells",
+    "vignette": "48F, moderate tier with hemoptysis carried from Step 1.",
+    "age": 48,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": true,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 95,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 900,
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "expected_tier": "moderate",
+    "rule": "Hemoptysis carried into YEARS -> threshold 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 33,
+    "pathway": "wells",
+    "vignette": "57M, moderate tier with leg swelling carried from Step 2.",
+    "age": 57,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 900,
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "expected_tier": "moderate",
+    "rule": "Signs of DVT carried into YEARS -> threshold 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 34,
+    "pathway": "gestalt",
+    "vignette": "60M, intermediate probability, no YEARS items, D-dimer 999 ng/mL FEU.",
+    "age": 60,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 999,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "0 YEARS items, threshold 1000 \u2014 just below 1000",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 35,
+    "pathway": "gestalt",
+    "vignette": "60M, intermediate probability, no YEARS items, D-dimer 1000 ng/mL FEU.",
+    "age": 60,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1000,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 1000
+    },
+    "rule": "0 YEARS items, threshold 1000 \u2014 exactly at 1000",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 36,
+    "pathway": "gestalt",
+    "vignette": "60M, intermediate probability, no YEARS items, D-dimer 1001 ng/mL FEU.",
+    "age": 60,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1001,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 1000
+    },
+    "rule": "0 YEARS items, threshold 1000 \u2014 just above 1000",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 37,
+    "pathway": "gestalt",
+    "vignette": "60M, intermediate probability, PE most likely diagnosis, D-dimer 499 ng/mL FEU.",
+    "age": 60,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 499,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 500
+    },
+    "rule": "1 YEARS item, threshold 500 \u2014 just below 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 38,
+    "pathway": "gestalt",
+    "vignette": "60M, intermediate probability, PE most likely diagnosis, D-dimer 500 ng/mL FEU.",
+    "age": 60,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 500,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "1 YEARS item, threshold 500 \u2014 exactly at 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 39,
+    "pathway": "gestalt",
+    "vignette": "60M, intermediate probability, PE most likely diagnosis, D-dimer 501 ng/mL FEU.",
+    "age": 60,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 501,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "1 YEARS item, threshold 500 \u2014 just above 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 40,
+    "pathway": "gestalt",
+    "vignette": "62F, intermediate probability, no YEARS items, D-dimer 501 \u2014 below 1000, so excluded.",
+    "age": 62,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 501,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "With 0 YEARS items the 500 threshold does not apply; 501 < 1000 excludes PE",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 41,
+    "pathway": "gestalt",
+    "vignette": "62F, intermediate probability, DVT signs, D-dimer 999 \u2014 at/above 500, so imaging.",
+    "age": 62,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 999,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "With 1 YEARS item the threshold is 500; 999 >= 500 requires imaging",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 42,
+    "pathway": "gestalt",
+    "vignette": "44M, intermediate probability, D-dimer 50 (very low), no YEARS items.",
+    "age": 44,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 50,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "Well below threshold -> excluded",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 43,
+    "pathway": "gestalt",
+    "vignette": "44M, intermediate probability, D-dimer 4800 (markedly elevated).",
+    "age": 44,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 4800,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 1000
+    },
+    "rule": "Elevated D-dimer -> imaging (Class 1)",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 44,
+    "pathway": "gestalt",
+    "vignette": "51F, low probability, PERC positive on age, D-dimer exactly 1000, no YEARS items.",
+    "age": 51,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1000,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 1000
+    },
+    "rule": "Exactly at threshold is not below it -> imaging",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 45,
+    "pathway": "gestalt",
+    "vignette": "51F, low probability, PERC positive on estrogen, D-dimer 999, no YEARS items.",
+    "age": 40,
+    "gestaltPick": "low",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": true,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 999,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "999 < 1000 -> PE excluded without imaging",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 46,
+    "pathway": "wells",
+    "vignette": "63M, moderate tier, no YEARS items, D-dimer exactly 1000.",
+    "age": 63,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 95,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1000,
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 1000
+    },
+    "expected_tier": "moderate",
+    "rule": "Exactly at threshold -> imaging",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 47,
+    "pathway": "wells",
+    "vignette": "63M, moderate tier, no YEARS items, D-dimer 999.",
+    "age": 63,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 95,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 999,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "expected_tier": "moderate",
+    "rule": "999 < 1000 -> excluded",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 48,
+    "pathway": "wells",
+    "vignette": "46F, moderate tier, PE most likely (YEARS item), D-dimer exactly 500.",
+    "age": 46,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 500,
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "expected_tier": "moderate",
+    "rule": "Exactly at the 500 threshold -> imaging",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 49,
+    "pathway": "wells",
+    "vignette": "46F, moderate tier, PE most likely (YEARS item), D-dimer 499.",
+    "age": 46,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 499,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 500
+    },
+    "expected_tier": "moderate",
+    "rule": "499 < 500 -> excluded",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 50,
+    "pathway": "gestalt",
+    "vignette": "70M, sudden dyspnea and pleuritic pain with active malignancy; clinician's gestalt is high. Stable.",
+    "age": 70,
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": null,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ctpa_direct",
+      "threshold": null
+    },
+    "rule": "High probability -> CTPA; D-dimer not indicated",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 51,
+    "pathway": "gestalt",
+    "vignette": "64F, post-operative day 3 with tachycardia and hypoxemia; gestalt high. Stable, HR 96.",
+    "age": 64,
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": null,
+    "instability": {
+      "sbp": 120,
+      "hr": 96,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ctpa_direct",
+      "threshold": null
+    },
+    "rule": "High probability -> CTPA",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 52,
+    "pathway": "gestalt",
+    "vignette": "58M, prior PE off anticoagulation, now dyspneic; gestalt high. SBP 128.",
+    "age": 58,
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": null,
+    "instability": {
+      "sbp": 128,
+      "hr": 92,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ctpa_direct",
+      "threshold": null
+    },
+    "rule": "High probability -> CTPA",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 53,
+    "pathway": "gestalt",
+    "vignette": "75F, high gestalt probability, SBP 96 \u2014 hypotensive but not meeting shock criteria.",
+    "age": 75,
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": null,
+    "instability": {
+      "sbp": 96,
+      "hr": 104,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ctpa_direct",
+      "threshold": null
+    },
+    "rule": "SBP >=90 is not shock -> stable pathway -> CTPA",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 54,
+    "pathway": "wells",
+    "vignette": "68M, syncope with an alternative diagnosis less likely than PE.",
+    "age": 68,
+    "resp": {
+      "syncope": true,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": null,
+    "expected": {
+      "recommendation": "ctpa_direct",
+      "threshold": null
+    },
+    "expected_tier": "high",
+    "rule": "Severe presentation, PE most likely -> high tier -> CTPA directly",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 55,
+    "pathway": "wells",
+    "vignette": "72F, raised JVP with S1Q3T3 on EKG; alternative diagnosis less likely.",
+    "age": 72,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": true,
+      "s1q3t3": true,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": null,
+    "expected": {
+      "recommendation": "ctpa_direct",
+      "threshold": null
+    },
+    "expected_tier": "high",
+    "rule": "Right-heart strain pattern -> severe -> high tier -> CTPA",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 56,
+    "pathway": "wells",
+    "vignette": "66M, raised JVP with new RBBB; alternative diagnosis less likely.",
+    "age": 66,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": true,
+      "s1q3t3": false,
+      "rbbb": true,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": null,
+    "expected": {
+      "recommendation": "ctpa_direct",
+      "threshold": null
+    },
+    "expected_tier": "high",
+    "rule": "Right-heart strain pattern -> severe -> high tier -> CTPA",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 57,
+    "pathway": "wells",
+    "vignette": "59F, atypical presentation, alternative diagnosis less likely, active cancer.",
+    "age": 59,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": null,
+    "expected": {
+      "recommendation": "ctpa_direct",
+      "threshold": null
+    },
+    "expected_tier": "high",
+    "rule": "High tier -> CTPA, no D-dimer",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 58,
+    "pathway": "gestalt",
+    "vignette": "69M, high gestalt probability, SBP 78 with HR 124 \u2014 shock criteria met.",
+    "age": 69,
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": null,
+    "instability": {
+      "sbp": 78,
+      "hr": 124,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "bedside_tte",
+      "threshold": null
+    },
+    "rule": "SBP <90 with tachycardia -> unstable branch",
+    "source": "Konstantinides SV et al. Eur Heart J 2020;41(4):543-603 (2019 ESC) \u2014 in suspected high-risk PE with haemodynamic instability, bedside echocardiography is used when CTPA is not immediately available.",
+    "advisory": true,
+    "note": "Cited authorities conflict: 2019 ESC supports bedside echocardiography in the unstable patient when CTPA is not immediately available, while the 2026 AHA/ACC guideline assigns echocardiography Class 3 (No Benefit) for confirming or refuting PE. The app follows ESC and says CTPA remains the study of choice. Reviewed as a design decision, not scored as a defect.",
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 59,
+    "pathway": "gestalt",
+    "vignette": "74F, high probability, SBP 84, mechanically ventilated.",
+    "age": 74,
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": null,
+    "instability": {
+      "sbp": 84,
+      "hr": 88,
+      "fio2Correct": null,
+      "vent": true
+    },
+    "expected": {
+      "recommendation": "bedside_tte",
+      "threshold": null
+    },
+    "rule": "SBP <90 with mechanical ventilation -> unstable branch",
+    "source": "Konstantinides SV et al. Eur Heart J 2020;41(4):543-603 (2019 ESC) \u2014 in suspected high-risk PE with haemodynamic instability, bedside echocardiography is used when CTPA is not immediately available.",
+    "advisory": true,
+    "note": "Cited authorities conflict: 2019 ESC supports bedside echocardiography in the unstable patient when CTPA is not immediately available, while the 2026 AHA/ACC guideline assigns echocardiography Class 3 (No Benefit) for confirming or refuting PE. The app follows ESC and says CTPA remains the study of choice. Reviewed as a design decision, not scored as a defect.",
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 60,
+    "pathway": "gestalt",
+    "vignette": "61M, high probability, SBP 86 on FiO2 60% to maintain saturation.",
+    "age": 61,
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": null,
+    "instability": {
+      "sbp": 86,
+      "hr": 90,
+      "fio2Correct": 60,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "bedside_tte",
+      "threshold": null
+    },
+    "rule": "SBP <90 with high oxygen requirement -> unstable branch",
+    "source": "Konstantinides SV et al. Eur Heart J 2020;41(4):543-603 (2019 ESC) \u2014 in suspected high-risk PE with haemodynamic instability, bedside echocardiography is used when CTPA is not immediately available.",
+    "advisory": true,
+    "note": "Cited authorities conflict: 2019 ESC supports bedside echocardiography in the unstable patient when CTPA is not immediately available, while the 2026 AHA/ACC guideline assigns echocardiography Class 3 (No Benefit) for confirming or refuting PE. The app follows ESC and says CTPA remains the study of choice. Reviewed as a design decision, not scored as a defect.",
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 61,
+    "pathway": "gestalt",
+    "vignette": "57F, high probability, SBP 88 but HR 84, not ventilated, FiO2 30%.",
+    "age": 57,
+    "gestaltPick": "high",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": null,
+    "instability": {
+      "sbp": 88,
+      "hr": 84,
+      "fio2Correct": 30,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ctpa_direct",
+      "threshold": null
+    },
+    "rule": "Hypotension alone without tachycardia, ventilation or high FiO2 does not meet the app's shock definition -> stable -> CTPA",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": true,
+    "note": "The app requires SBP <90 PLUS one of tachycardia / ventilation / FiO2 >=40%. Isolated hypotension is treated as stable. Worth reviewing against local practice.",
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 62,
+    "pathway": "wells",
+    "vignette": "71M, syncope with SBP 82 and HR 118; alternative diagnosis less likely.",
+    "age": 71,
+    "resp": {
+      "syncope": true,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 82,
+    "hr": 118,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": null,
+    "expected": {
+      "recommendation": "bedside_tte",
+      "threshold": null
+    },
+    "expected_tier": "high",
+    "rule": "Shock criteria met on the Wells pathway -> unstable branch",
+    "source": "Konstantinides SV et al. Eur Heart J 2020;41(4):543-603 (2019 ESC) \u2014 in suspected high-risk PE with haemodynamic instability, bedside echocardiography is used when CTPA is not immediately available.",
+    "advisory": true,
+    "note": "Cited authorities conflict: 2019 ESC supports bedside echocardiography in the unstable patient when CTPA is not immediately available, while the 2026 AHA/ACC guideline assigns echocardiography Class 3 (No Benefit) for confirming or refuting PE. The app follows ESC and says CTPA remains the study of choice. Reviewed as a design decision, not scored as a defect.",
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 63,
+    "pathway": "wells",
+    "vignette": "64F, high tier, SBP 85, HR 112, alternative diagnosis less likely.",
+    "age": 64,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 85,
+    "hr": 112,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": null,
+    "expected": {
+      "recommendation": "bedside_tte",
+      "threshold": null
+    },
+    "expected_tier": "high",
+    "rule": "Shock criteria met -> unstable branch",
+    "source": "Konstantinides SV et al. Eur Heart J 2020;41(4):543-603 (2019 ESC) \u2014 in suspected high-risk PE with haemodynamic instability, bedside echocardiography is used when CTPA is not immediately available.",
+    "advisory": true,
+    "note": "Cited authorities conflict: 2019 ESC supports bedside echocardiography in the unstable patient when CTPA is not immediately available, while the 2026 AHA/ACC guideline assigns echocardiography Class 3 (No Benefit) for confirming or refuting PE. The app follows ESC and says CTPA remains the study of choice. Reviewed as a design decision, not scored as a defect.",
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 64,
+    "pathway": "gestalt",
+    "vignette": "55F, dyspnea 3 days after a transatlantic flight; gestalt intermediate, D-dimer 320.",
+    "age": 55,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 320,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "0 YEARS items, 320 < 1000 -> excluded",
+    "source": "Kearon C et al. N Engl J Med 2019;381(22):2125-2134 (PEGeD) \u2014 D-dimer interpreted against a clinical-probability-adjusted threshold.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 65,
+    "pathway": "gestalt",
+    "vignette": "43M, pleuritic pain and mild tachycardia; gestalt intermediate, D-dimer 1450.",
+    "age": 43,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1450,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 1000
+    },
+    "rule": "0 YEARS items, 1450 >= 1000 -> CTPA",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 66,
+    "pathway": "gestalt",
+    "vignette": "67F, immobilised after hip fracture; gestalt intermediate with DVT signs, D-dimer 420.",
+    "age": 67,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 420,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 500
+    },
+    "rule": "1 YEARS item, 420 < 500 -> excluded",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 67,
+    "pathway": "gestalt",
+    "vignette": "39F, post-partum dyspnea; gestalt intermediate, no YEARS items, D-dimer 780.",
+    "age": 39,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 780,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "0 YEARS items, 780 < 1000 -> excluded",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 68,
+    "pathway": "gestalt",
+    "vignette": "50M, active chemotherapy, dyspnea; gestalt intermediate, PE most likely, D-dimer 620.",
+    "age": 50,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 620,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "1 YEARS item, 620 >= 500 -> CTPA",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 69,
+    "pathway": "gestalt",
+    "vignette": "48F, calf tenderness and dyspnea; gestalt intermediate, DVT signs, D-dimer 480.",
+    "age": 48,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 480,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 500
+    },
+    "rule": "1 YEARS item, 480 < 500 -> excluded",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 70,
+    "pathway": "gestalt",
+    "vignette": "35M, pleuritic pain with hemoptysis; gestalt intermediate, D-dimer 3200.",
+    "age": 35,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 3200,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "1 YEARS item, markedly elevated -> CTPA",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 71,
+    "pathway": "gestalt",
+    "vignette": "72M, COPD exacerbation vs PE; gestalt intermediate, no YEARS items, D-dimer 960.",
+    "age": 72,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 960,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "0 YEARS items, 960 < 1000 -> excluded",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 72,
+    "pathway": "gestalt",
+    "vignette": "29F, oral contraceptive use, pleuritic pain; gestalt intermediate, D-dimer 1100.",
+    "age": 29,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 1100,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 1000
+    },
+    "rule": "0 YEARS items, 1100 >= 1000 -> CTPA",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 73,
+    "pathway": "gestalt",
+    "vignette": "81F, syncope and dyspnea; gestalt intermediate, PE most likely, D-dimer 450.",
+    "age": 81,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 450,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 500
+    },
+    "rule": "1 YEARS item, 450 < 500 -> excluded",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 74,
+    "pathway": "gestalt",
+    "vignette": "24M, chest pain after a bar fight; gestalt intermediate, no YEARS items, D-dimer 200.",
+    "age": 24,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 200,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "rule": "0 YEARS items, 200 < 1000 -> excluded",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 75,
+    "pathway": "gestalt",
+    "vignette": "77M, dyspnea with leg swelling and hemoptysis; gestalt intermediate, D-dimer 505.",
+    "age": 77,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 505,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "2 YEARS items, 505 >= 500 -> CTPA",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 76,
+    "pathway": "wells",
+    "vignette": "42M, dyspnea and pleuritic pain with HR 96; no risk factors; alternative dx as likely.",
+    "age": 42,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 96,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": true,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 700,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "expected_tier": "low",
+    "rule": "Typical presentation, no risk -> low tier -> PERC path",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 77,
+    "pathway": "wells",
+    "vignette": "53F, dyspnea, pleuritic pain, HR 94, recent immobilisation; alternative dx as likely.",
+    "age": 53,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": true,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 94,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 850,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "expected_tier": "moderate",
+    "rule": "Typical + risk -> moderate tier -> YEARS 0 -> <1000",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 78,
+    "pathway": "wells",
+    "vignette": "60M, atypical presentation, alternative dx less likely, no risk factors.",
+    "age": 60,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 700,
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "expected_tier": "moderate",
+    "rule": "Moderate tier; altDx 'less likely' is a YEARS item -> 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 79,
+    "pathway": "wells",
+    "vignette": "33F, pleural rub and abnormal CXR, HR 92; alternative dx as likely; no risk.",
+    "age": 33,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": true,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 92,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": true,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 650,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "expected_tier": "low",
+    "rule": "Typical tier, YEARS 0 -> <1000",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 80,
+    "pathway": "wells",
+    "vignette": "47M, room-air SpO2 90% corrected with FiO2 30%; dyspnea; alternative dx as likely; no risk.",
+    "age": 47,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 90,
+    "fio2Correct": 30,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 700,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "expected_tier": "low",
+    "rule": "Hypoxia point counted; low tier -> PERC positive on SpO2 -> D-dimer",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 81,
+    "pathway": "wells",
+    "vignette": "55F, dyspnea with low-grade fever, HR 98, prior VTE; alternative dx as likely.",
+    "age": 55,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": true,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": true,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 98,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1200,
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 1000
+    },
+    "expected_tier": "moderate",
+    "rule": "Prior VTE carried into PERC; moderate tier -> D-dimer",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 82,
+    "pathway": "wells",
+    "vignette": "38M, hemoptysis and dyspnea, HR 92, no risk; alternative dx as likely.",
+    "age": 38,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": true,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 92,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 560,
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "expected_tier": "low",
+    "rule": "Hemoptysis -> YEARS 1 -> threshold 500",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 83,
+    "pathway": "wells",
+    "vignette": "64F, leg swelling with dyspnea, HR 88, cancer; alternative dx less likely.",
+    "age": 64,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": null,
+    "expected": {
+      "recommendation": "ctpa_direct",
+      "threshold": null
+    },
+    "expected_tier": "high",
+    "rule": "Atypical/typical with risk and PE most likely -> high tier -> CTPA",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 84,
+    "pathway": "wells",
+    "vignette": "27F, pleuritic pain only, oral contraceptives; alternative dx as likely.",
+    "age": 27,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": true,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 300,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "expected_tier": "low",
+    "rule": "Estrogen use entered fresh at PERC -> D-dimer path",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 85,
+    "pathway": "wells",
+    "vignette": "52M, appendicectomy 10 days ago, now pleuritic pain; alternative dx as likely.",
+    "age": 52,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": true
+    },
+    "ddimer": 300,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "expected_tier": "low",
+    "rule": "Recent surgery entered fresh at PERC -> D-dimer path",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 86,
+    "pathway": "wells",
+    "vignette": "45M, dyspnea, pleuritic pain, abnormal CXR, HR 100, family history of VTE; alt dx less likely.",
+    "age": 45,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": true
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": true,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 100,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": null,
+    "expected": {
+      "recommendation": "ctpa_direct",
+      "threshold": null
+    },
+    "expected_tier": "high",
+    "rule": "Typical + risk + PE most likely -> high tier -> CTPA",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 87,
+    "pathway": "wells",
+    "vignette": "70F, non-pleuritic chest pain and dyspnea, HR 91, paralysis; alternative dx as likely.",
+    "age": 70,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": true
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": true
+    },
+    "sbp": 120,
+    "hr": 91,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 1600,
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 1000
+    },
+    "expected_tier": "moderate",
+    "rule": "Moderate tier, YEARS 0 -> <1000, elevated value -> CTPA",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 88,
+    "pathway": "wells",
+    "vignette": "36F, post-partum, dyspnea and pleuritic pain, HR 97; alternative dx as likely.",
+    "age": 36,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": true,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 97,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 850,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "expected_tier": "moderate",
+    "rule": "Moderate tier, YEARS 0 -> 850 < 1000 -> excluded",
+    "source": "van der Hulle T et al. Lancet 2017;390(10091):289-297 (YEARS) \u2014 0 YEARS items: D-dimer <1000 ng/mL FEU excludes PE; >=1 item: <500 ng/mL FEU.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 89,
+    "pathway": "wells",
+    "vignette": "58M, leg fracture 3 weeks ago, dyspnea, pleuritic pain, HR 93; alt dx less likely.",
+    "age": 58,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": true,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 93,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": null,
+    "expected": {
+      "recommendation": "ctpa_direct",
+      "threshold": null
+    },
+    "expected_tier": "high",
+    "rule": "Typical + risk + PE most likely -> high -> CTPA",
+    "source": "2026 AHA/ACC PE guideline \u2014 imaging is recommended for patients deemed high probability (>50%) or with an elevated D-dimer (Class 1, LOE A); CTPA is recommended in preference to V/Q scanning (Class 1, LOE B-R).",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 90,
+    "pathway": "wells",
+    "vignette": "49F, dyspnea alone, HR 85, no risk factors; alternative dx as likely.",
+    "age": 49,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": null,
+    "expected": {
+      "recommendation": "none_perc_negative",
+      "threshold": null
+    },
+    "expected_tier": "low",
+    "rule": "Low tier, PERC 0/8 at age 49 -> no testing",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 91,
+    "pathway": "wells",
+    "vignette": "50F, dyspnea alone, HR 85, no risk factors; alternative dx as likely.",
+    "age": 50,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 400,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "expected_tier": "low",
+    "rule": "Age exactly 50 meets the PERC age criterion -> D-dimer path",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 92,
+    "pathway": "wells",
+    "vignette": "40M, HR exactly 100 with pleuritic pain; no risk; alternative dx as likely.",
+    "age": 40,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 100,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 400,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "expected_tier": "low",
+    "rule": "HR exactly 100 meets the PERC tachycardia criterion",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 93,
+    "pathway": "wells",
+    "vignette": "40M, room-air SpO2 exactly 95% with pleuritic pain; no risk; alternative dx as likely.",
+    "age": 40,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 95,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": null,
+    "expected": {
+      "recommendation": "none_perc_negative",
+      "threshold": null
+    },
+    "expected_tier": "low",
+    "rule": "SpO2 95% does NOT meet the PERC criterion (<95%) -> PERC 0/8",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 94,
+    "pathway": "wells",
+    "vignette": "40M, room-air SpO2 94% with pleuritic pain; no risk; alternative dx as likely.",
+    "age": 40,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 94,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 400,
+    "expected": {
+      "recommendation": "ddimer_ruled_out",
+      "threshold": 1000
+    },
+    "expected_tier": "low",
+    "rule": "SpO2 94% meets the PERC criterion (<95%)",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 95,
+    "pathway": "wells",
+    "vignette": "44F, HR 99 with pleuritic pain; no risk; alternative dx as likely.",
+    "age": 44,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 99,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": null,
+    "expected": {
+      "recommendation": "none_perc_negative",
+      "threshold": null
+    },
+    "expected_tier": "low",
+    "rule": "HR 99 does not meet the PERC tachycardia criterion -> PERC 0/8",
+    "source": "Kline JA et al. J Thromb Haemost 2004;2(8):1247-1255 (PERC derivation); Freund Y et al. JAMA 2018;319(6):559-566 (PROPER) \u2014 PERC applies at low (<15%) pretest probability; all 8 criteria negative excludes PE without further testing.",
+    "advisory": false,
+    "note": null,
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 96,
+    "pathway": "gestalt",
+    "vignette": "78M, intermediate probability, DVT signs, D-dimer 700 (below age-adjusted 780, above 500).",
+    "age": 78,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": true,
+      "hemoptysis": false,
+      "peMostLikely": false
+    },
+    "ddimer": 700,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "YEARS threshold 500 -> imaging; age-adjusted 780 would have excluded PE",
+    "source": "2026 AHA/ACC PE guideline \u2014 an age-adjusted D-dimer threshold (age x 10 ug/L FEU in patients >50) is a reasonable alternative at low or intermediate probability (Class 2a, LOE B-R). The app implements YEARS adjustment only, not age adjustment.",
+    "advisory": true,
+    "note": "The 2026 AHA/ACC guideline lists an age-adjusted threshold (age x 10 ug/L FEU for patients >50) as a Class 2a alternative. The app applies the YEARS adjustment only, so for an older patient with >=1 YEARS item it uses 500 where age adjustment would allow a higher cut-off. Both strategies are endorsed; this is a documented scope choice, not a defect.",
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 97,
+    "pathway": "gestalt",
+    "vignette": "85F, intermediate probability, PE most likely, D-dimer 800 (below age-adjusted 850).",
+    "age": 85,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": false,
+      "peMostLikely": true
+    },
+    "ddimer": 800,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "YEARS threshold 500 -> imaging; age-adjusted 850 would have excluded PE",
+    "source": "2026 AHA/ACC PE guideline \u2014 an age-adjusted D-dimer threshold (age x 10 ug/L FEU in patients >50) is a reasonable alternative at low or intermediate probability (Class 2a, LOE B-R). The app implements YEARS adjustment only, not age adjustment.",
+    "advisory": true,
+    "note": "The 2026 AHA/ACC guideline lists an age-adjusted threshold (age x 10 ug/L FEU for patients >50) as a Class 2a alternative. The app applies the YEARS adjustment only, so for an older patient with >=1 YEARS item it uses 500 where age adjustment would allow a higher cut-off. Both strategies are endorsed; this is a documented scope choice, not a defect.",
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 98,
+    "pathway": "gestalt",
+    "vignette": "66M, intermediate probability, hemoptysis, D-dimer 640 (below age-adjusted 660).",
+    "age": 66,
+    "gestaltPick": "intermediate",
+    "gwPerc": {
+      "hr100": false,
+      "spo2Low": false,
+      "hemoptysis": false,
+      "legSwelling": false,
+      "priorVte": false,
+      "estrogenUse": false,
+      "surgeryTrauma": false
+    },
+    "gwYears": {
+      "dvt": false,
+      "hemoptysis": true,
+      "peMostLikely": false
+    },
+    "ddimer": 640,
+    "instability": {
+      "sbp": 120,
+      "hr": 80,
+      "fio2Correct": null,
+      "vent": false
+    },
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "rule": "YEARS threshold 500 -> imaging; age-adjusted 660 would have excluded PE",
+    "source": "2026 AHA/ACC PE guideline \u2014 an age-adjusted D-dimer threshold (age x 10 ug/L FEU in patients >50) is a reasonable alternative at low or intermediate probability (Class 2a, LOE B-R). The app implements YEARS adjustment only, not age adjustment.",
+    "advisory": true,
+    "note": "The 2026 AHA/ACC guideline lists an age-adjusted threshold (age x 10 ug/L FEU for patients >50) as a Class 2a alternative. The app applies the YEARS adjustment only, so for an older patient with >=1 YEARS item it uses 500 where age adjustment would allow a higher cut-off. Both strategies are endorsed; this is a documented scope choice, not a defect.",
+    "tier_is_app_construct": false
+  },
+  {
+    "id": 99,
+    "pathway": "wells",
+    "vignette": "80F, moderate tier, PE most likely, D-dimer 750 (below age-adjusted 800).",
+    "age": 80,
+    "resp": {
+      "syncope": false,
+      "dyspnea": false,
+      "pleuritic": false,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": false,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": false,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 80,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "lessLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 750,
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "expected_tier": "moderate",
+    "rule": "YEARS threshold 500 -> imaging; age-adjusted 800 would have excluded PE",
+    "source": "2026 AHA/ACC PE guideline \u2014 an age-adjusted D-dimer threshold (age x 10 ug/L FEU in patients >50) is a reasonable alternative at low or intermediate probability (Class 2a, LOE B-R). The app implements YEARS adjustment only, not age adjustment.",
+    "advisory": true,
+    "note": "The 2026 AHA/ACC guideline lists an age-adjusted threshold (age x 10 ug/L FEU for patients >50) as a Class 2a alternative. The app applies the YEARS adjustment only, so for an older patient with >=1 YEARS item it uses 500 where age adjustment would allow a higher cut-off. Both strategies are endorsed; this is a documented scope choice, not a defect.",
+    "tier_is_app_construct": true
+  },
+  {
+    "id": 100,
+    "pathway": "wells",
+    "vignette": "72M, moderate tier with leg swelling, D-dimer 690 (below age-adjusted 720).",
+    "age": 72,
+    "resp": {
+      "syncope": false,
+      "dyspnea": true,
+      "pleuritic": true,
+      "hemoptysis": false,
+      "nonpleuritic": false
+    },
+    "assoc": {
+      "ventilated": false,
+      "lowFever": false,
+      "legSymptoms": true,
+      "pleuralRub": false,
+      "jvp": false,
+      "s1q3t3": false,
+      "rbbb": false,
+      "cxr": false
+    },
+    "risk": {
+      "surgery": false,
+      "immobilization": false,
+      "priorVte": false,
+      "fracture": false,
+      "familyHx": false,
+      "cancer": true,
+      "postpartum": false,
+      "paralysis": false
+    },
+    "sbp": 120,
+    "hr": 95,
+    "raSpo2": 98,
+    "fio2Correct": null,
+    "altDx": "asLikely",
+    "percNew": {
+      "estrogenUse": false,
+      "recentSurgeryTrauma": false
+    },
+    "ddimer": 690,
+    "expected": {
+      "recommendation": "ddimer_imaging",
+      "threshold": 500
+    },
+    "expected_tier": "moderate",
+    "rule": "YEARS threshold 500 -> imaging; age-adjusted 720 would have excluded PE",
+    "source": "2026 AHA/ACC PE guideline \u2014 an age-adjusted D-dimer threshold (age x 10 ug/L FEU in patients >50) is a reasonable alternative at low or intermediate probability (Class 2a, LOE B-R). The app implements YEARS adjustment only, not age adjustment.",
+    "advisory": true,
+    "note": "The 2026 AHA/ACC guideline lists an age-adjusted threshold (age x 10 ug/L FEU for patients >50) as a Class 2a alternative. The app applies the YEARS adjustment only, so for an older patient with >=1 YEARS item it uses 500 where age adjustment would allow a higher cut-off. Both strategies are endorsed; this is a documented scope choice, not a defect.",
+    "tier_is_app_construct": true
+  }
+]
